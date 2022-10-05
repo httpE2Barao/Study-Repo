@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style> 
+    
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+        body{ /* Sempre utiliza varias fontes e uma padrão no final p/ maior compatibilidade */  
+            font-family: 'Bungee Spice', cursive, Arial, Helvetica, sans-serif; 
+            /*
+            Medidas Absolutas
+            --- px, mm, in, cm, pt, pc ---
+
+            Medidas Relativas
+            --- eM, ex, rem, vw, vh, % ---
+            16px geralmente = 1em
+            */
+            font-size: 1.3em; 
+            font-weight: normal;
+            background-color: bisque;
+        }
+        h1, h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 2.5em;
+            font-style: italic;
+            text-decoration: underline;
+            /*
+            Shorthand font 
+            - font-style -> font-weight -> font-size -> font-family
+            */
+            font: italic bold 2.5em Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus voluptatibus voluptates aut, a deserunt, officia quos nam ipsam ipsum dolorem cupiditate voluptate fugit ad accusamus ab et, vitae hic labore.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus voluptatibus voluptates aut, a deserunt, officia quos nam ipsam ipsum dolorem cupiditate voluptate fugit ad accusamus ab et, vitae hic labore.</p>
+    <h2>Subtítulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit id maiores voluptatibus? Suscipit, iusto error architecto quidem rem magnam, praesentium corporis itaque perspiciatis doloribus possimus cumque nisi debitis aliquam voluptas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sit nihil blanditiis voluptatum eligendi at quo officia, enim quaerat? Voluptate suscipit molestiae nesciunt obcaecati illum officia cumque consequatur, deleniti tenetur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate itaque culpa totam veniam at illum tempore quia iusto distinctio cumque dolores deleniti aut ipsa architecto, eum suscipit! Modi, quas molestias?</p>
+    <a href="../HTML/1.Página Inicial.html"><img src="../Downloads/voltar.png" alt="Voltar"></a>
+</body>
+</html>
