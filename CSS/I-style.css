@@ -50,12 +50,10 @@ header > media > p {
     display: inline-block;
     color:#1a5c37;
     background-color: #3ddc84;
-    position: relative;
-    top: 10px;
+    position: absolute;
+    top: 130px;
+    left: 50%;
     text-align: center;
-    margin-left: 55%;
-    margin-top: 10px;
-    min-width: 350px;
     max-width: 390px;   
     padding: 7px;
     border-radius: 10px;
