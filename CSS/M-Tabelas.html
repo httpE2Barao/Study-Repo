@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 1</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        h1{
+            font-size: 3em;
+        }
+        table{
+            height: 500px;
+            width: 500px;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto;
+        }
+        td{
+            border: 1px solid black;
+            padding: 8px;
+            vertical-align: middle;
+        }
+        tr.linha{
+            background-color: lightgrey;
+        }
+        td.dado{
+            background-color: rgba(119, 136, 153, 0.678);
+            text-align: right;
+            vertical-align: bottom;
+        }
+        td:hover{
+            background-color: gray;
+            color: white;
+        }
+        a{
+            display: inline-block;
+            background-color: gray;
+            margin-top: 30px;
+            border-radius: 50%;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas</h1>
+    <!--
+        Hierarqioa de tabelas (simples)
+        TABLE = tabela
+            TABLE ROLL = linha de tabela
+            TABLE DATA = dado de tabela
+
+    -->
+    <table>
+        <tr class="linha"> <!--Primeira linha-->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+            <td class="dado">D1</td>
+        </tr>
+        <tr > <!--Segunda linha-->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+            <td class="dado">D2</td>
+        </tr>
+        <tr> <!--Terceora linha-->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+            <td class="dado">D3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+            <td class="dado">D4</td>
+        </tr>
+    </table>
+    <a href="../HTML/1.Página Inicial.html" class="voltar"><img src="../HTML/Downloads/voltar.png" alt="Voltar"></a>
+</body>
+</html>
