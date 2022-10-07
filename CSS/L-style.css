@@ -53,6 +53,7 @@ section{
 }
 section.normal{
     background-color: rgb(231, 217, 198);
+    box-shadow: inset 0px 0px 20px 9px #00000069;
 }
 section.imagem{
     background-size: cover;
