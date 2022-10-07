@@ -84,11 +84,7 @@ section#img2{
     background-size: cover;
     background-attachment: fixed;
 }
-section a.botao{
-    position: relative;
-    background-color: black;
-    
-}
+
 footer{
     background-color: black;
     color: antiquewhite;
