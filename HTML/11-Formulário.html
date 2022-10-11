@@ -11,16 +11,21 @@
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 600;
     }
+    body {
+        margin: 50px;
+    }
     .dolado {
         display: inline-block;
     }
     p {
         font-weight: normal;
     }
+    h3{
+        padding-top: 30px;
+    }
     a{
             display: inline-block;
             background-color: gray;
-            
             margin-top: 15px;
             border-radius: 50%;
             padding: 0px;
@@ -28,62 +33,88 @@
 </style>
 <body>
     <article>
-        <h1 class="dolado">Formulários</h1><p class="dolado">-(method get, size)</p>
-
-        <form action="11-cadastro.php" method="get" autocomplete="off">
-            <p><label for="inome">Nome:</label>
-                <input type="text" name="Nome" id="inome" size="26"></p>
-            <p><label for="isobrenome">Sobrenome:</label>
-                <input type="text" name="Sobrenome" id="isobrenome"></p>
-            <p><input type="submit" value="Enviar"></p>
-        </form>
-    </article>
-    <article><br>
-        <h4 class="dolado">[type="password"]</h4><p class="dolado">-(post,minlength,maxlength)</p>
-
-        <form action="11-cadastro.php" method="post" autocomplete="off">
-            <p>
-                <label for="iusu">Usuário: </label>
-                <input type="text" name="usu" id="iusu" required minlength="4", maxlength="10" placeholder="nome de usuário">
-            </p>
-            <p>
-                <label for="isen">Senha: </label>
-                <input type="password" name="sen" id="isen" required minlength="8" size="21", placeholder="mínimo 8 letras">
-            </p>
-            <p>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">
-            </p>
-        </form>
+        <fieldset>
+            <form action="11-cadastro.php" method="get" autocomplete="off">
+                <h1 class="dolado">Formulários</h1><p class="dolado">-(method get, size)</p>
+                <p><label for="inome">Nome:</label>
+                    <input type="text" name="Nome" id="inome" size="26"></p>
+                <p><label for="isobrenome">Sobrenome:</label>
+                    <input type="text" name="Sobrenome" id="isobrenome"></p>
+                <p><input type="submit" value="Enviar"></p>
+            </form>
+        </fieldset>
     </article>
     <article>
-        <form action="11-cadastro.php" method="get"><br><br>
-            <h1 class="dolado">Portal do aluno</h1><p class="dolado">-[tipos]</p>
-            <p>
-                <label for="imes">Período Letivo:</label>
-                <input type="month" name="mes" id="imes" value="2022-10">
-            </p>
-            <p>
-                <label for="inome">Nome:</label>
-                <input type="text" name="nome" id="inome" placeholder="Nome completo">
-            </p>
-            <p>
-                <label for="imedia">Média:</label>
-                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step=".1">
-            </p>
-            <p>
-                <label for="idia">Dia da prova:</label>
-                <input type="date" name="dia" id="idia">
-            </p>
-            <p>
-                <label for="ihora">Horário da prova</label>
-                <input type="time" name="hora" id="ihora">
-            </p>
-            <p>
-                <input type="submit" value="Pronto!">
-                <input type="reset" value="Recomeçar">
-            </p>
-        </form>
+        <fieldset>
+            <h4 class="dolado">[type="password"]</h4><p class="dolado">-(post,minlength,maxlength)</p>
+            <form action="11-cadastro.php" method="post" autocomplete="off">
+                <p>
+                    <label for="iusu">Usuário: </label>
+                    <input type="text" name="usu" id="iusu" required minlength="4", maxlength="10" placeholder="nome de usuário">
+                </p>
+                <p>
+                    <label for="isen">Senha: </label>
+                    <input type="password" name="sen" id="isen" required minlength="8" size="21", placeholder="mínimo 8 letras">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </form>
+        </fieldset>
+    </article>
+    <article>
+        <fieldset>
+            <form action="11-cadastro.php" method="get">
+                <h1 class="dolado">Portal do aluno</h1><p class="dolado">-[tipos]</p>
+                <p>
+                    <label for="imes">Período Letivo:</label>
+                    <input type="month" name="mes" id="imes" value="2022-10">
+                </p>
+                <p>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome" placeholder="Nome completo">
+                </p>
+                <p>
+                    <label for="imedia">Média:</label>
+                    <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step=".1">
+                </p>
+                <p>
+                    <label for="idia">Dia da prova:</label>
+                    <input type="date" name="dia" id="idia">
+                </p>
+                <p>
+                    <label for="ihora">Horário da prova</label>
+                    <input type="time" name="hora" id="ihora">
+                </p>
+                <p>
+                    <input type="submit" value="Pronto!">
+                    <input type="reset" value="Recomeçar">
+                </p>
+            </form>
+        </fieldset>
+    </article>
+    <article>
+        <fieldset>
+            <h1>Outros</h1><p></p>
+            <form action="11-cadastro.php" method="get">
+                <p>
+                    <label for="iemail">E-mail</label>
+                    <input type="email" name="email" id="iemail" autocomplete="email">
+                </p>
+                <p>
+                    <label for="itel">Telefone</label>
+                    <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)[0-9]{4}-[0-9]{4}$" required placeholder="(xx)xxxxx-xxxx">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </form>
+        </fieldset>
+    </article>
+    <article>
+
     </article>
     <a href="1.Página Inicial.html"><img src="Downloads/voltar.png" alt="voltar"></a>
 </body>
