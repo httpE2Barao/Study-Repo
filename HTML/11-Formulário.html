@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+    .dolado {
+        display: inline-block;
+    }
+    p {
+        font-weight: normal;
+    }
+    a{
+            display: inline-block;
+            background-color: gray;
+            
+            margin-top: 15px;
+            border-radius: 50%;
+            padding: 0px;
+        }
+</style>
+<body>
+    <article>
+        <h1 class="dolado">Formulários</h1><p class="dolado">-(method get, size)</p>
+
+        <form action="11-cadastro.php" method="get" autocomplete="off">
+            <p><label for="inome">Nome:</label>
+                <input type="text" name="Nome" id="inome" size="26"></p>
+            <p><label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="Sobrenome" id="isobrenome"></p>
+            <p><input type="submit" value="Enviar"></p>
+        </form>
+    </article>
+    <article><br>
+        <h4 class="dolado">[type="password"]</h4><p class="dolado">-(post,minlength,maxlength)</p>
+
+        <form action="11-cadastro.php" method="post" autocomplete="off">
+            <p>
+                <label for="iusu">Usuário: </label>
+                <input type="text" name="usu" id="iusu" required minlength="4", maxlength="10" placeholder="nome de usuário">
+            </p>
+            <p>
+                <label for="isen">Senha: </label>
+                <input type="password" name="sen" id="isen" required minlength="8" size="21", placeholder="mínimo 8 letras">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+    </article>
+    <article>
+        <form action="11-cadastro.php" method="get"><br><br>
+            <h1 class="dolado">Portal do aluno</h1><p class="dolado">-[tipos]</p>
+            <p>
+                <label for="imes">Período Letivo:</label>
+                <input type="month" name="mes" id="imes" value="2022-10">
+            </p>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" placeholder="Nome completo">
+            </p>
+            <p>
+                <label for="imedia">Média:</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step=".1">
+            </p>
+            <p>
+                <label for="idia">Dia da prova:</label>
+                <input type="date" name="dia" id="idia">
+            </p>
+            <p>
+                <label for="ihora">Horário da prova</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            <p>
+                <input type="submit" value="Pronto!">
+                <input type="reset" value="Recomeçar">
+            </p>
+        </form>
+    </article>
+    <a href="1.Página Inicial.html"><img src="Downloads/voltar.png" alt="voltar"></a>
+
+</body>
+</html>
