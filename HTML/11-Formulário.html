@@ -17,11 +17,11 @@
     .dolado {
         display: inline-block;
     }
+    .junto {
+        margin-top: -13px;
+    }
     p {
         font-weight: normal;
-    }
-    h3{
-        padding-top: 30px;
     }
     a{
             display: inline-block;
@@ -30,6 +30,9 @@
             border-radius: 50%;
             padding: 0px;
         }
+    fieldset {
+        margin: 10px;
+    }
 </style>
 <body>
     <article>
@@ -46,7 +49,7 @@
     </article>
     <article>
         <fieldset>
-            <h4 class="dolado">[type="password"]</h4><p class="dolado">-(post,minlength,maxlength)</p>
+            <h1 class="dolado">Login e Senha</h1><p class="dolado">-(post,minlength,maxlength)</p>
             <form action="11-cadastro.php" method="post" autocomplete="off">
                 <p>
                     <label for="iusu">Usuário: </label>
@@ -96,7 +99,7 @@
     </article>
     <article>
         <fieldset>
-            <h1>Outros</h1><p></p>
+        <legend style="font-size: 1.5em;">Endereço eletrônico</legend>
             <form action="11-cadastro.php" method="get">
                 <p>
                     <label for="iemail">E-mail</label>
@@ -114,7 +117,30 @@
         </fieldset>
     </article>
     <article>
-
+        <fieldset>
+        <legend style="font-size: 1.5em;">Esportes praticados</legend>
+            <form action="11-cadastro.php" method="get">
+                <p>
+                    <input type="checkbox" name="esbas" id="iebas"> <label for="iebas">Basquete</label>
+                    <input type="checkbox" name="esna" id="iesna"> <label for="iesna">Natação</label>
+                    <input type="checkbox" name="esvol" id="iesvol"> <label for="iesvol">Vôlei</label>
+                    <input type="checkbox" name="estech" id="iestech"> <label for="iestech">Jogos virtuais (e-games)</label> 
+                </p>
+        </fieldset>
+        <fieldset class="junto">
+            <legend style="font-size: 1.5em;">Gênero</legend>
+                    <!--colocar o mesmo nome faz com que apenas uma caixa seja marcada!-->
+                <p>
+                    <input type="radio" name="genero" id="isxfem" value="F"><label for="isxfem">Fêminino</label>
+                    <input type="radio" name="genero" id="isxnb" value="NB" checked><label for="isxnb">Non-Binary</label>
+                    <input type="radio" name="genero" id="isxmas" value="M"><label for="isxmas">Masculino</label>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </form>
+        </fieldset>
     </article>
     <a href="1.Página Inicial.html"><img src="Downloads/voltar.png" alt="voltar"></a>
 </body>
