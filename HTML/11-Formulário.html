@@ -22,6 +22,8 @@
     }
     h1 {
         text-align: center;
+        font-weight: bolder;
+        font-size: 2.5em;
     }
     a{
             display: inline-block;
@@ -146,7 +148,7 @@
     </article>
     <article>
         <fieldset>
-            <legend style="font-size: 1.5em;">Color, range, file, reset</legend>
+            <legend style="font-size: 1.5em;">Color, range, file</legend>
             <form action="11-cadastro.php" method="post">
                 <p>
                     <label for="icor">Cor: </label>
@@ -205,6 +207,7 @@
         <fieldset>
             <legend style="font-size: 1.5em;">Output</legend>
             <form action="11-cadastro.php" method="post">
+                <h3>Somador numérico</h3>
                 <p>
                     <label for="in1">Número 1: </label>
                     <input type="number" name="n1" id="in1" min="0" value="0" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"> 
