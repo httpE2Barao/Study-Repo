@@ -14,14 +14,14 @@
     body {
         margin: 50px;
     }
-    .dolado {
-        display: inline-block;
-    }
     .junto {
         margin-top: -25px;
     }
     p {
         font-weight: normal;
+    }
+    h1 {
+        text-align: center;
     }
     a{
             display: inline-block;
@@ -33,14 +33,16 @@
     fieldset {
         margin: 10px;
     }
+
 </style>
 <body>
+    <h1>&nbsp; Formulários</h1>
     <article>
         <fieldset>
-            <form action="11-cadastro.php" method="get" autocomplete="off">
-                <h1 class="dolado">Formulários</h1><p class="dolado">-(method get, size)</p>
+            <legend style="font-size: 1.5em;">Method get, size, autocomplete</legend>
+            <form action="11-cadastro.php" method="get" >
                 <p><label for="inome">Nome:</label>
-                    <input type="text" name="Nome" id="inome" size="26"></p>
+                    <input type="text" name="Nome" id="inome" size="26" autocomplete="name"></p>
                 <p><label for="isobrenome">Sobrenome:</label>
                     <input type="text" name="Sobrenome" id="isobrenome"></p>
                 <p><input type="submit" value="Enviar"></p>
@@ -49,7 +51,7 @@
     </article>
     <article>
         <fieldset>
-            <h1 class="dolado">Login e Senha</h1><p class="dolado">-(post,minlength,maxlength)</p>
+            <legend style="font-size: 1.5em;">Placeholder, required, min, max</legend>
             <form action="11-cadastro.php" method="post" autocomplete="off">
                 <p>
                     <label for="iusu">Usuário: </label>
@@ -68,8 +70,8 @@
     </article>
     <article>
         <fieldset>
+            <legend style="font-size: 1.5em;">Date, Text, Number, Time</legend>
             <form action="11-cadastro.php" method="get">
-                <h1 class="dolado">Portal do aluno</h1><p class="dolado">-[tipos]</p>
                 <p>
                     <label for="imes">Período Letivo:</label>
                     <input type="month" name="mes" id="imes" value="2022-10">
@@ -118,7 +120,7 @@
     </article>
     <article>
         <fieldset>
-        <legend style="font-size: 1.5em;">Esportes praticados</legend>
+        <legend style="font-size: 1.5em;">Checkbox</legend>
             <form action="11-cadastro.php" method="get">
                 <p>
                     <input type="checkbox" name="esbas" id="iebas"> <label for="iebas">Basquete</label>
@@ -128,7 +130,7 @@
                 </p>
         </fieldset>
         <fieldset class="junto">
-            <legend style="font-size: 1.5em; background-color: white;">Gênero</legend>
+            <legend style="font-size: 1.5em; background-color: white;">Radio</legend>
                     <!--colocar o mesmo nome faz com que apenas uma caixa seja marcada!-->
                 <p>
                     <input type="radio" name="genero" id="isxfem" value="F"><label for="isxfem">Fêminino</label>
@@ -144,21 +146,110 @@
     </article>
     <article>
         <fieldset>
+            <legend style="font-size: 1.5em;">Color, range, file, reset</legend>
             <form action="11-cadastro.php" method="post">
                 <p>
                     <label for="icor">Cor: </label>
                     <input type="color" name="cor" id="icor" value="#8000ff">
                 </p>
                 <p>
-                    <label for="inivel">Nível de satifação</label>
+                    <label for="inivel">Nível de satifação: </label>
                     <input type="range" name="nivel" id="inivel" min="1" max="5" value="3">
                 </p>
                 <p>
-                    <label for="ifoto">Foto de perfil</label>
+                    <label for="ifoto">Foto de perfil: </label>
                     <input type="file" name="foto" id="ifoto">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Resetar">
                 </p>
             </form>
         </fieldset>
+    </article>
+    <article>
+        <fieldset>
+            <legend style="font-size: 1.5em;">Select, datalist, text-area</legend>
+            <form action="11-cadastro.php" method="post">
+                <p>
+                    <label for="iest">Estado</label>
+                    <select name="estado" id="iest">
+                        <option value="" selected>--- Escolha ---</option>
+                        <option value="MG">Minhas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="PR">Paraná</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="iprof">Profissão: </label>
+                    <input type="text" name="prof" id="ipfor" list="lstprof">
+                    <datalist id="lstprof">
+                        <option>Administrador</option>
+                        <option>Contabilista</option>
+                        <option>Desenvolvedor</option>
+                        <option>Professor</option>
+                        <option>Artista</option>
+                    </datalist>
+                </p>
+                <p>
+                    <label for="imsg">Diga mais sobre você: </label><br>
+                    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Resetar">
+                </p>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend style="font-size: 1.5em;">Output</legend>
+            <form action="11-cadastro.php" method="post">
+                <p>
+                    <label for="in1">Número 1: </label>
+                    <input type="number" name="n1" id="in1" min="0" value="0" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"> 
+                </p>
+                <p>
+                    <label for="in2">Número 2: </label>
+                    <input type="number" name="n2" id="in2" value="0" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"> 
+                </p>
+                <p>
+                    <label for="isoma">Soma: </label>
+                    <output name="soma" id="isoma">0</output>
+                </p>
+            </fieldset>
+            <fieldset style="margin-top: -12px;">
+                    <p>
+                        <h3>Avalie está página [0 a 10]</h3>
+                        <label for="inum">Nota: </label>
+                        <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+                        <output id="ival">5</output>
+                    </p>
+            </fieldset>
+            <fieldset style="margin-top: -12px;">
+                    <p>
+                        <label for="iano">Em qua ano você nasceu? </label>
+                        <input type="number" name="ano" id="iano" min="1900" max="2022" value="2000" oninput="calcIdade()">
+                    </p>
+                    <p>
+                        <label for="iidade">Sua idade é: </label>
+                        <output id="iidade"></output>
+                    </p>
+                    <p>
+
+                    </p>
+                    <p>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Resetar">
+                    </p>
+            </fieldset>
+            </form>
+        <script>
+            function calcIdade() {
+                let atual = new Date().getFullYear()
+                iidade.innerHTML = Number(atual) - Number(iano.value)
+            }
+        </script>
     </article>
     <a href="1.Página Inicial.html"><img src="Downloads/voltar.png" alt="voltar"></a>
 </body>
