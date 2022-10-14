@@ -19,3 +19,6 @@ article::after {
     content: 'Esse artigo foi impresso através do site xyz.moc';
 }
 
+article > img {
+    display: none;
+}

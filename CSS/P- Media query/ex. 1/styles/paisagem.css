@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+body {
+    background-image: url(../img/Sem\ Título-3.png);
+    background-repeat: no-repeat;
+}
+
+* {
+    background-position: center 1200px;
+    position: relative;
+}
