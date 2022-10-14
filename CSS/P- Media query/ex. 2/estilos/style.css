@@ -10,19 +10,21 @@
    box-sizing: border-box; 
 }
 
-body, html {
-    width: 100vw;
-    height: 100vh;
+html {
+    height: 98vh;
 }
 
 body {
     background: black url(../pacote-imagens-cap25/imagens/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 main {
     background-color: rgba(240, 248, 255, 0.521);
     width: 90vw;
     margin: auto;
+    margin-top: 50px;
     border-radius: 20px;
     padding: 15px;
 }
