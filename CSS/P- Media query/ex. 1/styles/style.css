@@ -12,6 +12,7 @@ html {
 
 body {
     background-color: antiquewhite;
+    text-align: justify;
 }
 
 header {
@@ -22,7 +23,8 @@ header {
 }
 
 header > h1 {
-    padding: 20px;
+    color:  rgb(104, 0, 0);
+    padding: 15px;
     font-size: 3em;
     font-weight: 800;
 }

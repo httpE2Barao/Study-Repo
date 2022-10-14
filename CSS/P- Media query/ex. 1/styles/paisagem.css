@@ -2,7 +2,7 @@
 
 body {
     background-image: url(../img/Sem\ Título-3.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
 }
 
 * {
