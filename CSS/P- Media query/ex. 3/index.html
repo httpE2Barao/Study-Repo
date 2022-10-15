@@ -7,10 +7,11 @@
     <title>Media query</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="styles/style.css" >
+    <link rel="stylesheet" href="styles/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
-        <h1>Site</h1>
+        <h1>Media query</h1>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
             menu
             </span>
@@ -25,8 +26,9 @@
     </header>
     <main>
         <h2>Testando Media-query</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur cum officia esse incidunt quia error maiores et explicabo ea, asperiores nisi alias autem excepturi placeat dolores fugiat libero magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, omnis vel rem voluptatibus hic delectus minima nemo error, consectetur, architecto corrupti ad accusantium sequi quia nulla natus eveniet laborum?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur cum officia esse incidunt quia error maiores et explicabo ea, asperiores nisi alias autem excepturi placeat dolores fugiat libero magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque, omnis vel rem voluptatibus hic delectus minima nemo error, consectetur, architecto corrupti ad accusantium sequi quia nulla natus eveniet laborum?</p><br>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae eum porro facilis. Numquam nam unde aperiam commodi quas quae, consequatur ducimus, cumque assumenda in fugiat repellat. Inventore autem fugiat itaque! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis hic iste qui ducimus deserunt labore, praesentium quam rem obcaecati veritatis? Molestiae neque quam molestias saepe eveniet tempora magnam quae labore? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis nobis iure cupiditate libero quibusdam facere, veniam debitis expedita. Earum doloribus quod, quidem aspernatur amet quis ipsam ab non saepe provident!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae eum porro facilis. Numquam nam unde aperiam commodi quas quae, consequatur ducimus, cumque assumenda in fugiat repellat. Inventore autem fugiat itaque! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis hic iste qui ducimus deserunt labore, praesentium quam rem obcaecati veritatis? Molestiae neque quam molestias saepe eveniet tempora magnam quae labore? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis nobis iure cupiditate libero quibusdam facere, veniam debitis expedita. Earum doloribus quod, quidem aspernatur amet quis ipsam ab non saepe provident!</p><br>
     </main>
     <script>
         function clickMenu() {
@@ -37,5 +39,15 @@
             }
         }
     </script>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 992) {
+                opções.style.display = 'block'
+            } else {
+                opções.style.display = 'none'
+            }
+        }
+    </script>
+    <a href="../../../HTML/1.Página Inicial.html" id="voltar"><img src="../../../HTML/Downloads/voltar.png" alt="Voltar"></a>
 </body>
 </html>

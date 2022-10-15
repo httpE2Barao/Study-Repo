@@ -19,17 +19,21 @@ span#burguer {
     cursor: pointer;
 }
  span#burguer:hover {
-    background-color: white;
+    background-color: rgb(0, 207, 207);
     color: black;
  }
 
 header {
     background-color: aqua;
+    padding-bottom: 15px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.301);
 }
 
 header > h1 {
     padding: 10px;
     text-align: center;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.24);
 }
 
 menu {
@@ -55,10 +59,22 @@ menu > ul > li > a:hover {
 }
 
 main {
-    width: 90vw;
+    width: 85vw;
+    max-width: 800px;
     background-color: white;
     margin: auto;
     margin-top: 30px;
     padding: 15px;
     border-radius: 15px;
+}
+
+a#voltar{
+    display: inline-block;
+    background-color: gray;
+    position: relative;
+    left: 50%;
+    transform: translate(-100%);
+    margin: 20px;
+    border-radius: 50%;
+    padding: 0px;
 }
