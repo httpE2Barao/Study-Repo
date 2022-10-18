@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        input {
+            margin-bottom: 15px;
+        }
+        body {
+            text-align: center;
+        }
+        a{
+            display: inline-block;
+            background-color: gray;
+            margin-top: 15px;
+            border-radius: 50%;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detran</h1>
+    <h3>Sistema de Multas</h3>
+    <label for="tvel">Velocidade do carro: </label><input type="text" name="vel" id="tvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    </div>
+    <script>
+        function calcular () {
+            var tvel = window.document.getElementById('tvel')
+            var vel = Number(tvel.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `Sua velocidade atual é de <strong>${vel}Km/h</strong>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>`
+            } else {
+                res.innerHTML += `<p>Melhor perder 1 minuro da vida do que a vida em 1 minuto. <br> Digija sempre com cinto de segurança! </p>`
+            }
+        }
+    </script>
+    <a href="../../HTML/1.Página Inicial.html"><img src="../../HTML/Downloads/voltar.png" alt="voltar"></a>
+</body>
+</html>
