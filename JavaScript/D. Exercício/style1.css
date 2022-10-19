@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(199, 221, 119);
+    background-color: rgb(179, 199, 106);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16pt;
 }
@@ -9,10 +9,10 @@ header {
 }
 section {
     background-color: antiquewhite;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 20px;
-    width: 500px;
-    height: 500px;
+    max-width: 600px;
+    min-height: 550px;
     margin: auto;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.377);
 }
@@ -43,4 +43,30 @@ h4 {
 }
 .centralizar {
     text-align: center;
+}
+img#foto {
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.pe {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-100px);
+    text-decoration: overline;
+    font-size: smaller;
+    color: gray;
+    margin-top: 15px;
+}
+.voltar{
+    display: inline-block;
+    background-color: gray;
+    margin-top: 15px;
+    border-radius: 50%;
+    padding: 0px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
