@@ -1,3 +1,6 @@
+* {
+    overflow: auto;
+}
 body {
     background-color: rgb(179, 199, 106);
     font-family: Arial, Helvetica, sans-serif;
