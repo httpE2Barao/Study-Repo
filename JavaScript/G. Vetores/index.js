@@ -1,5 +1,5 @@
 let valores = [8, 1, 7, 4, 2, 9]
-/*
+
 var num = [5,8,4]
 
 num[3] = 9
@@ -14,7 +14,7 @@ console.log(`O vetor tem ${num.length} posições`)
 for(let pos = 0; pos < valores.length; pos++) {
     console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
 }
-*/
+
         //Simplificado
 for(let pos in valores){
     console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
