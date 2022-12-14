@@ -1,9 +1,12 @@
+@charset "UTF-8";
+
 * { /* Configurações globais das CSS */
     height: auto;
 }
 header {
     display: flex;
     flex-direction: column;
+    height: 170px;
 }
 header > a {
     padding: 10px;
@@ -17,25 +20,25 @@ header > a {
     text-decoration: none;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.466);
 }
-header > a:hover {
+a:hover {
     background-color: #4509eb;
     color: #ffffff;
 }
-header > p {
+#Git {
     width: fit-content;
     position: relative;
-    top: -181px;
+    top: -160px;
     align-self: flex-end;
-    transform: translate(-25px);
+    transform: translate(-55px);
     background-color: #ffffff;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.466);
 }
-header > p:hover {
-    transform: translate(-20px);
-    transition: transform(2s);
-    
+#Git:hover {
+    transform: translate(-55px, -5px);
+    transition: transform .3s;
+    color: #000000;
 }
 header > p > a {
     text-decoration: none;
@@ -51,7 +54,16 @@ body {
 section {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    justify-content: center;
+}
+#HTML {
+    margin-left: 20px;
+}
+#CSS {
+    padding-left: 50px;
+}
+#JS {
+    width: 100px;
 }
 h1{color: #000000;text-align: center;font-size: 3em;text-decoration: underline;text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.671);}
 h2{color: #000000;}
