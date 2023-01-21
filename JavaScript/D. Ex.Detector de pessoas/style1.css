@@ -1,5 +1,6 @@
 * {
     overflow: auto;
+
 }
 body {
     background-color: rgb(179, 199, 106);
@@ -53,11 +54,12 @@ img#foto {
     height: 250px;
     border-radius: 50%;
 }
+footer {
+    display: flex;
+    justify-content: center;
+}
 .pe {
     display: block;
-    position: relative;
-    left: 50%;
-    transform: translate(-100px);
     text-decoration: overline;
     font-size: smaller;
     color: gray;
