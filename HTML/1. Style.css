@@ -56,12 +56,6 @@ section {
     flex-direction: row;
     justify-content: center;
 }
-#HTML {
-    margin-left: 20px;
-}
-#CSS {
-    padding-left: 50px;
-}
 #JS {
     width: 100px;
 }
