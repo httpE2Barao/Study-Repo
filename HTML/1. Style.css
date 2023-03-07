@@ -73,15 +73,15 @@ li:active{color: red;}
     content: '✮';
     padding: 0px 6px 4px 6px ;
     border-radius: 50% 50%;
-.especial_bronze::after{
+._bronze::after{
     background-color: sandybrown;
 }
-.especial_prata::after{
+._prata::after{
     background-color: silver;
 }
-.especial_ouro::after{
+._ouro::after{
     background-color: gold; 
 }
-.especial_rubi::after{
+._rubi::after{
     background-color: slateblue;
 }
