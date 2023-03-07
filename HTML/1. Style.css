@@ -68,20 +68,31 @@ a {
 a:active{color: red;}
 li:active{color: red;}
 
-.especial::after{
+.especial_bronze::after{
     display: inline-block;
     content: '✮';
     padding: 0px 6px 4px 6px ;
     border-radius: 50% 50%;
-.bronze::after{
     background-color: sandybrown;
 }
-.prata::after{
+.especial_prata::after{
+    display: inline-block;
+    content: '✮';
+    padding: 0px 6px 4px 6px ;
+    border-radius: 50% 50%;
     background-color: silver;
 }
-.ouro::after{
+.especial_ouro::after{
+    display: inline-block;
+    content: '✮';
+    padding: 0px 6px 4px 6px ;
+    border-radius: 50% 50%;
     background-color: gold; 
 }
-.rubi::after{
+.especial_rubi::after{
+    display: inline-block;
+    content: '✮';
+    padding: 0px 6px 4px 6px ;
+    border-radius: 50% 50%;
     background-color: slateblue;
 }
