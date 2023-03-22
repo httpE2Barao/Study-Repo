@@ -51,19 +51,23 @@ body {
     padding: auto;
 }
 
-section {
+.conteinner {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
+    gap: 50px;
 }
-
-a {
-    padding-right: 6px;
+.titulo{
+    font-size: 1.5em;
+    font-weight: 600;
 }
-
+#CSS {
+    padding-left: 50px;
+}
 #JS {
     width: 100px;
 }
+
 h1{color: #000000;text-align: center;font-size: 3em;text-decoration: underline;text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.671);}
 h2{color: #000000;}
 
