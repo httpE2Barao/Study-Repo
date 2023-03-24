@@ -1,4 +1,5 @@
 import { NegociacaoController } from "./controllers/controller.js";
+import { NegociacaoView } from "./views/view.js";
 
 const controller = new NegociacaoController();
 const form = document.querySelector('.form');
@@ -26,4 +27,3 @@ mostrarCodigos.addEventListener('click', evento => {
         })
     }
 })
-
