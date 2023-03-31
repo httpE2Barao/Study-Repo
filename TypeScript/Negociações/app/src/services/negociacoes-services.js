@@ -6,7 +6,7 @@ var NegociacoesServices = /** @class */ (function () {
     function NegociacoesServices() {
     }
     NegociacoesServices.prototype.obterNegociacaoDoDia = function () {
-        return fetch('http://localhost:8080/dados')
+        return fetch('http://3.133.118.212:8080/dados')
             .then(function (res) { return res.json(); })
             .then(function (dados) {
             return dados.map(function (dado) {
