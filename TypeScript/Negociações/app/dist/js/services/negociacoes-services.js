@@ -1,7 +1,7 @@
 import { Negociacao } from "../models/negociacao.js";
 export class NegociacoesServices {
     obterNegociacaoDoDia() {
-        return fetch('http://localhost:8080/dados')
+        return fetch('https://negociacoes-valores.vercel.app')
             .then(res => res.json())
             .then((dados) => {
             return dados.map(dado => {
