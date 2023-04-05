@@ -1,6 +1,6 @@
+import style from './App.module.scss';
 import Formulario from '../components/form';
 import Lista from '../components/list';
-import style from './App.module.scss';
 import Cronometro from '../components/stopwatch';
 import { useState } from 'react';
 import { Itarefa } from '../types/tarefa';
