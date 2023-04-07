@@ -16,7 +16,7 @@ function App() {
       selecionado: tarefa.id === tarefaSelecionada.id ? true : false
     })))
   }
-
+  
   return (
     <div className={style.AppStyle}>
       <Formulario setTarefas={setTarefas}/>
