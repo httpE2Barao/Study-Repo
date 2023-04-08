@@ -54,7 +54,7 @@ class Formulario extends React.Component<{
                              tempo: event.target.value})}
                         id="tempo"
                         min="00:00:00"
-                        max="02:30:00"
+                        max="01:39:00"
                         required
                     />
                 </div>
