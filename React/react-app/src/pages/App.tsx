@@ -42,7 +42,7 @@ function App() {
       />
       <Cronometro
         selecionado={selecionado}
-        finalizarTarefa={finalizarTarefa}
+        finalizarTarefa={finalizarTarefa} 
         />
     </div>
   );
