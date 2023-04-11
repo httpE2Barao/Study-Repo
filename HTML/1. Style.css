@@ -51,13 +51,15 @@ body {
     padding: auto;
 }
 
-section {
+.conteinner {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
+    gap: 50px;
 }
-#HTML {
-    margin-left: 20px;
+.titulo{
+    font-size: 1.5em;
+    font-weight: 600;
 }
 #CSS {
     padding-left: 50px;
@@ -65,17 +67,38 @@ section {
 #JS {
     width: 100px;
 }
+
 h1{color: #000000;text-align: center;font-size: 3em;text-decoration: underline;text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.671);}
 h2{color: #000000;}
-
 
 a:active{color: red;}
 li:active{color: red;}
 
-.especial::after{
+.especial_bronze::after{
     display: inline-block;
     content: '✮';
     padding: 0px 6px 4px 6px ;
-    background-color: #ff9100;
     border-radius: 50% 50%;
+    background-color: sandybrown;
+}
+.especial_prata::after{
+    display: inline-block;
+    content: '✮';
+    padding: 0px 6px 4px 6px ;
+    border-radius: 50% 50%;
+    background-color: silver;
+}
+.especial_ouro::after{
+    display: inline-block;
+    content: '✮';
+    padding: 0px 6px 4px 6px ;
+    border-radius: 50% 50%;
+    background-color: gold; 
+}
+.especial_rubi::after{
+    display: inline-block;
+    content: '✮';
+    padding: 0px 6px 4px 6px ;
+    border-radius: 50% 50%;
+    background-color: slateblue;
 }

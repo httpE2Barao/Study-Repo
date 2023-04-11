@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @media screen and (max-width: 550px) {
-    section {
+    .conteinner {
         padding: 15px;
     }
-    section {
+    .conteinner {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -12,7 +12,7 @@
         font-size: 2em;
         margin-top: 80px;
     }
-    section > h2 {
+    .conteinner > h2 {
         align-self: initial;
     }
     header a{
@@ -25,7 +25,7 @@
     }
 }
 @media screen and (min-width: 550px) and (max-width: 1000px) {
-    section {
+    .conteinner {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -34,7 +34,7 @@
         font-size: 2.3em;
         margin-top: 70px;
     }
-    section > h2 {
+    .conteinner > h2 {
         align-self: initial;
     }
 

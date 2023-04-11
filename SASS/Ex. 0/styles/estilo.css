@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.conteiner {
+  height: 100vh;
+  display: flex;
+}
+.conteiner .esquerdo {
+  width: 50%;
+  background-color: #e28d2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner .esquerdo .texto {
+  font-size: 3em;
+  color: #5425ff;
+}
+.conteiner .direito {
+  width: 50%;
+  background-color: #5425ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner .direito .texto {
+  font-size: 3em;
+  color: #e28d2b;
+}/*# sourceMappingURL=estilo.css.map */
