@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Item from "../item";
+import ImageFilter from "../ImageFilter";
 
 const ItemsContainer = styled.div`
     display: flex;
@@ -15,7 +16,9 @@ const ItemsContainer = styled.div`
 export default function Items(props) {
     return (
         <ItemsContainer>
+            {ImageFilter(props.type)}
             <Item {...props} />
+            <span>{props.date}</span>
         </ItemsContainer>
     )
 }
