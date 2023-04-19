@@ -17,10 +17,11 @@ const Formulario = () => {
     const [kin, setKin] = useState('')
     const [caracteristicas, setCaracteristicas] = useState('')
     const [imagem, setImagem] = useState('')
+    const [cla, setCla] = useState('')
 
     const aoSalvar = (event) => {
         event.preventDefault()
-        console.log(kin, caracteristicas, imagem)
+        console.log(kin, caracteristicas, imagem, cla)
     }
 
     return (
@@ -31,23 +32,29 @@ const Formulario = () => {
                     obrigatorio={true} 
                     label='Kin' 
                     placeholder='Digite o kin' 
+                    valor={kin}
                     aoAlterado={valor => setKin(valor)}    
                 />
                 <CampoTexto 
                     obrigatorio={true} 
                     label='Características' 
                     placeholder='Características do kin' 
+                    valor={caracteristicas}
                     aoAlterado={valor => setCaracteristicas(valor)}   
                 /> 
                 <CampoTexto 
                     label='Imagem' 
                     placeholder='Digite o endereço da imagem' 
+                    valor={imagem}
                     aoAlterado={valor => setImagem(valor)}    
                 />
                 <ListaGenerica 
                     obrigatorio={true} 
                     label='Clã' 
-                    itens={opcoes}/>
+                    itens={opcoes}
+                    valor={cla}
+                    aoAlterado={valor => setCla(valor)}
+                />
                 <Botao>
                     Incluir kin
                 </Botao>
