@@ -1,4 +1,4 @@
-import './index.css'
+import './Banner.css'
 
 function Banner() {
     return (
