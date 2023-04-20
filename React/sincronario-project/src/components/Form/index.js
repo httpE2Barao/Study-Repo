@@ -4,7 +4,7 @@ import CampoTexto from './FormText'
 import './Form.css'
 import Botao from './Button'
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const opcoes = [
         'Selecione:',
@@ -21,7 +21,12 @@ const Formulario = () => {
 
     const aoSalvar = (event) => {
         event.preventDefault()
-        console.log(kin, caracteristicas, imagem, cla)
+        props.aoCadastrarKin({
+            kin,
+            caracteristicas,
+            imagem,
+            cla
+        })
     }
 
     return (
