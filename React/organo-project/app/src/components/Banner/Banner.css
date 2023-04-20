@@ -1,8 +1,10 @@
 .banner {
-    background-color: #6278F7;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-height: 330px;
 }
 .banner img {
-    max-width: 100%;
-    max-height: 60vh;
+    width: 100%;
 }
