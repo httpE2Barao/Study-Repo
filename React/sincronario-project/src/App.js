@@ -29,7 +29,6 @@ function App() {
 
   const cadastrarKin = (kin) => {
     setKins([...kins, kin])
-    console.log(kins)
   }
 
   return (
@@ -45,7 +44,9 @@ function App() {
           key={cla.nome} 
           nome={cla.nome} 
           corPrimaria={cla.corPrimaria} 
-          corSecundaria={cla.corSecundaria}/>
+          corSecundaria={cla.corSecundaria}
+          kins={kins.filter(kin => kin.cla == cla.nome)}
+        />
       )}
 
     </div>

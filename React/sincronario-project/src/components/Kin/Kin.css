@@ -1,0 +1,25 @@
+.kin {
+    width: 250px;
+    margin: 30px 0;
+}
+.kin .cabecalho {
+    background-color: #F0F0F0;
+    border-radius: 10px 10px 0 0;
+}
+.kin img {
+    max-width: 100px;
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    bottom: -50px;
+}
+.kin .rodape {
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 10px 10px;
+    padding: 60px 0 40px 0;
+}
+.kin .rodape h5 {
+    color: #727272;
+}

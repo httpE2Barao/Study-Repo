@@ -19,6 +19,10 @@ const Formulario = (props) => {
             imagem,
             cla
         })
+        setKin('')
+        setCaracteristicas('')
+        setImagem('')
+        setCla('')
     }
 
     return (

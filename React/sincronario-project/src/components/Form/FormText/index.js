@@ -3,8 +3,6 @@ import './FormText.css'
 
 const CampoTexto = (props) => {
 
-
-
     return (
         <div className='campo-texto'>
             <label>{props.label}</label>
