@@ -6,14 +6,6 @@ import Botao from './Button'
 
 const Formulario = (props) => {
 
-    const opcoes = [
-        // 'Selecione:',
-        'Fogo',
-        'Sangue',
-        'Verdade',
-        'Céu'
-    ]
-
     const [kin, setKin] = useState('')
     const [caracteristicas, setCaracteristicas] = useState('')
     const [imagem, setImagem] = useState('')
@@ -56,7 +48,7 @@ const Formulario = (props) => {
                 <ListaGenerica 
                     obrigatorio={true} 
                     label='Clã' 
-                    itens={opcoes}
+                    itens={props.clas}
                     valor={cla}
                     aoAlterado={valor => setCla(valor)}
                 />

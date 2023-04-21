@@ -35,7 +35,10 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario aoCadastrarKin={kin => cadastrarKin(kin)}/>
+      <Formulario 
+        clas={clas.map(cla => cla.nome)}
+        aoCadastrarKin={kin => cadastrarKin(kin)}
+      />
 
       {clas.map(cla => 
         <Clas 
