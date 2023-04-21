@@ -7,7 +7,7 @@ import Botao from './Button'
 const Formulario = (props) => {
 
     const opcoes = [
-        'Selecione:',
+        // 'Selecione:',
         'Fogo',
         'Sangue',
         'Verdade',
