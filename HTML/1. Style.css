@@ -54,6 +54,7 @@ body {
 .conteinner {
     display: flex;
     flex-flow: row wrap;
+    padding: 30px;
     justify-content: center;
     gap: 50px;
 }
