@@ -81,6 +81,7 @@ li:active{color: red;}
     padding: 0px 6px 4px 6px ;
     border-radius: 50% 50%;
     background-color: sandybrown;
+    transform: translateX(5px);
 }
 .especial_prata::after{
     display: inline-block;
@@ -88,6 +89,7 @@ li:active{color: red;}
     padding: 0px 6px 4px 6px ;
     border-radius: 50% 50%;
     background-color: silver;
+    transform: translateX(5px);
 }
 .especial_ouro::after{
     display: inline-block;
@@ -95,6 +97,7 @@ li:active{color: red;}
     padding: 0px 6px 4px 6px ;
     border-radius: 50% 50%;
     background-color: gold; 
+    transform: translateX(5px);
 }
 .especial_rubi::after{
     display: inline-block;
@@ -102,4 +105,5 @@ li:active{color: red;}
     padding: 0px 6px 4px 6px ;
     border-radius: 50% 50%;
     background-color: slateblue;
+    transform: translateX(5px);
 }
