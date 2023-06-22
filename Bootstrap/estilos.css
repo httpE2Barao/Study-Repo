@@ -5,7 +5,17 @@ body {
   font-family: 'Barlow', sans-serif;
 
 }
-
+@media screen and (max-width: 350px){
+  .navbar .navbar-brand img {
+    width: 200px
+  }
+}
+#pag_servicos, #pag_contato {
+  scroll-margin-top: 100px;
+}
+.offcanvas-header{
+  padding: 17px;
+}
 input[type=checkbox] {
   border: 2px solid var(--marrom-claro);
   box-shadow: none;
@@ -94,4 +104,16 @@ input[type="checkbox"]:focus {
   text-decoration: none;
   font-weight: 600;
   color: #000;
+}
+[data-bs-theme="dark"] {
+  color: #fff;
+  .nav-link, .card-body, .offcanvas, .offcanvas-header, .accordion{
+   --bs-nav-link-color: #fff;
+   --bs-card-color: #fff;
+   --bs-offcanvas-color: #fff;
+   --bs-body-color: #fff;
+  }
+  .link{
+    color: #fff;
+  }
 }
