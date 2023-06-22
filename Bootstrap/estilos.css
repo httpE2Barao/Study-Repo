@@ -1,0 +1,62 @@
+body {
+  --bege: #E6E0D6;
+  --marrom-escuro: #816D4F;
+  --marrom-claro: #B29463;
+  font-family: 'Barlow', sans-serif;
+
+}
+
+input[type=checkbox] {
+  border: 2px solid var(--marrom-claro);
+  box-shadow: none;
+}
+input[type=checkbox]:checked,
+input[type="checkbox"]:focus {
+  background-color: var(--marrom-claro);
+  border-color: var(--marrom-claro);
+  box-shadow: none;
+  outline: none;
+}
+.btn{
+  color: #fff;
+  background-color: var(--marrom-claro);
+}
+.btn:hover{
+  color: #000;
+  background-color: #fff;
+}
+
+.banners{
+  width: 100%;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; /* Efeito Parallax */
+}
+.banners-titulo{
+  color: #fff;
+  padding: 0 1em;
+}
+.banners-titulo p{
+  font-size: 17px;
+}
+.banner-1{
+  margin-top: 100px;
+  background-image: url(./assets/banner-1.png);
+}
+.banner-2{
+  background-image: url(./assets/banner-2.png);
+}
+.banner-3{
+  background-image: url(./assets/banner-3.png);
+}
+
+.produtos{
+  margin: 0 auto;
+  gap: 2em;
+  max-width: 1000px;
+}
+.card:hover {
+  cursor: pointer;
+}
