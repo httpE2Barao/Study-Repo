@@ -60,3 +60,38 @@ input[type="checkbox"]:focus {
 .card:hover {
   cursor: pointer;
 }
+
+.formulario{
+  margin: 2em auto;
+  width: 80vw;
+}
+.form-floating:not(.form-control:disabled)::before{
+  width: 0;
+}
+.form-range-label{
+  margin: 1em 0 0 5px;
+}
+.form-range::-webkit-slider-thumb{
+  background-color: var(--marrom-claro);
+}
+
+.footer{
+  display: flex;
+  flex-flow: column;
+  background-color: var(--marrom-claro);
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.footer-flex{
+  display: flex;
+  gap: 2em;
+}
+.footer-flex i:hover{
+  cursor: pointer;
+}
+.link{
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+}
