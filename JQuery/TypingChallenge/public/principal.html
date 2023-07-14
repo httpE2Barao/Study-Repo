@@ -4,28 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Typing Challenge</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <main>
         <section class="flex flex-col items-center text-center 
-        mt-16 gap-6">
+        justify-center h-screen my-auto gap-6">
             <h1 class="text-5xl font-bold">Typing Challenge</h1>
-            <p class="conteudo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi consequuntur explicabo
+            <p class="conteudo
+            mx-10
+            ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi consequuntur explicabo
                 excepturi vero veniam non! Modi minus sit ratione eveniet quam, numquam veniam, quia placeat reiciendis
-                quae dolores repellendus nesciunt.</p>
+                quae dolores repellendus nesciunt.
+            </p>
+
             <ul class="info">
-                <li><span id="tamanho_frase"></span> Palavras</li>
-                <li>10 segundos</li>
+                <li class="flex items-center gap-2">
+                    <i class="small material-icons centraliz">chat</i>
+                    <span id="tamanho_frase"></span> Palavras
+                </li>
+                <li class="flex items-center gap-2">
+                    <i class="small material-icons centraliz">query_builder</i>
+                    <span id="tempo_digitacao">10</span> Segundos
+                </li>
             </ul>
 
-            <textarea class="campo_digitar rounded outline" cols="60" rows="10"></textarea>
+            <textarea class="campo_digitar rounded outline p-4 w-10/12 h-52" cols="60" rows="10"></textarea>
 
-            <ul>
-                <li><span class="contador_letras"></span> caracteres</li>
-                <li><span class="contador_palavras"></span> palavras</li>
-            </ul>
+            <div class="flex gap-10">
+                <ul>
+                    <li><span class="contador_letras">0</span> Caracteres</li>
+                    <li><span class="contador_palavras">0</span> Palavras</li>
+                </ul>
+
+                <button id="btn_reiniciar" class="bg-slate-400 py-2 px-4 rounded">Reiniciar</button>
+
+                
+            </div>
         </section>
     </main>
 
