@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main>
+        <section class="flex flex-col items-center text-center 
+        mt-16 gap-6">
+            <h1 class="text-5xl font-bold">Typing Challenge</h1>
+            <p class="conteudo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi consequuntur explicabo
+                excepturi vero veniam non! Modi minus sit ratione eveniet quam, numquam veniam, quia placeat reiciendis
+                quae dolores repellendus nesciunt.</p>
+            <ul class="info">
+                <li><span id="tamanho_frase"></span> Palavras</li>
+                <li>10 segundos</li>
+            </ul>
+
+            <textarea class="campo_digitar rounded outline" cols="60" rows="10"></textarea>
+
+            <ul>
+                <li><span class="contador_letras"></span> caracteres</li>
+                <li><span class="contador_palavras"></span> palavras</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
