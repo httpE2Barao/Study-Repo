@@ -8,10 +8,11 @@ $(() => {
   $("#btn_reiniciar").click(reinicializador)
 })
 
+var acertos = 0
+
 function atualizaTamanho() {
   var frase = $(".conteudo").text();
   var tamanhoFrase = frase.split(' ').length;
-  var contadorLetras = $("#contador_letras");
   var mostradorFrase = $("#tamanho_frase");
   mostradorFrase.text(tamanhoFrase);
 }
@@ -19,15 +20,28 @@ function atualizaTamanho() {
 const campo = $(".campo_digitar");
 
 function inicializadorContadores() {
-  campo.on('input', () => {
+  var isEspacoPressionado = false;
+
+  campo.on('input', (event) => {
     var conteudo = campo.val();
 
     var contadorPalavras = conteudo.split(/\S+/).length - 1;
-    $(".contador_palavras").text(contadorPalavras)
+    $(".contador_palavras").text(contadorPalavras);
 
     var contadorLetras = conteudo.length;
-    $(".contador_letras").text(contadorLetras)
-  })
+    $(".contador_letras").text(contadorLetras);
+
+    if (isEspacoPressionado) {
+      comparador();
+      isEspacoPressionado = false;
+    }
+  });
+
+  campo.on('keydown', (event) => {
+    if (event.key === " ") {
+      isEspacoPressionado = true;
+    }
+  });
 }
 
 function inicializadorCronometro() {
@@ -46,8 +60,36 @@ function inicializadorCronometro() {
   })
 }
 
+var fraseOriginal = $(".conteudo").html();
+
 function comparador() {
-  
+  var conteudoDigitado = campo.val().trim();
+  var novoConteudo = fraseOriginal;
+  var acertou = false
+
+  var palavrasFrase = fraseOriginal.split(' ');
+  var palavrasDigitadas = conteudoDigitado.split(' ');
+
+  for (var i = 0; i < palavrasFrase.length; i++) {
+    var palavraFrase = palavrasFrase[i];
+    var palavraDigitada = palavrasDigitadas[i] || "";
+
+    if (palavraDigitada !== "") {
+      if (palavraDigitada === palavraFrase) {
+        novoConteudo = novoConteudo.replace(palavraFrase, palavraDigitada);
+        acertou = true
+      } else {
+        novoConteudo = novoConteudo.replace(palavraFrase, '<mark>' + palavraDigitada + '</mark>');
+        acertou = false
+      }
+    }
+  }
+  if (acertou) {
+    acertos = acertos + 1
+    console.log(acertos)
+  } 
+
+  $(".conteudo").html(novoConteudo);
 }
 
 function reinicializador() {
@@ -58,4 +100,6 @@ function reinicializador() {
   $("#tempo_digitacao").text(tempoInicial)
   inicializadorCronometro()
   campo.css('background-color','white')
+  $(".conteudo").text(fraseOriginal)
+  acertos = 0
 }
