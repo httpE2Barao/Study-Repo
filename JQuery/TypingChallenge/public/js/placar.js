@@ -1,7 +1,7 @@
 function inserePlacar() {
   var placar = $('.placar').find('tbody');
   var usuario = 'Elias';
-  var palavrasMinuto = $(".contador_palavras").text() * 6
+  var palavrasMinuto = $(".contador_palavras").text()
   var linha = $("<tr>" +
     "<td>" + usuario + "</td>" +
     "<td>" + palavrasMinuto + "ppm" + "</td>" +
