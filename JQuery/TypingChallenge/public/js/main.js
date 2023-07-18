@@ -9,6 +9,7 @@ $(() => {
 })
 
 var acertos = 0
+var erros = 0
 
 function atualizaTamanho() {
   var frase = $(".conteudo").text();
@@ -86,8 +87,11 @@ function comparador() {
   }
   if (acertou) {
     acertos = acertos + 1
-    console.log(acertos)
-  } 
+    $('.contador_acertos').text(acertos)
+  } else {
+    erros = erros + 1
+    $('.contador_erros').text(erros)
+  }
 
   $(".conteudo").html(novoConteudo);
 }
@@ -101,5 +105,9 @@ function reinicializador() {
   inicializadorCronometro()
   campo.css('background-color','white')
   $(".conteudo").text(fraseOriginal)
+  
   acertos = 0
+  $('.contador_acertos').text(acertos)
+  erros = 0
+  $('.contador_erros').text(erros)
 }
