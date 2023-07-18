@@ -1,4 +1,7 @@
-var tempoInicial = $("#tempo_digitacao").text()
+var tempoInicial = parseInt($("#tempo_digitacao").text());
+var fraseOriginal = $(".conteudo").html();
+var acertos = 0
+var erros = 0
 
 // $(document).ready(...)
 $(() => {
@@ -7,9 +10,6 @@ $(() => {
   inicializadorCronometro();
   $("#btn_reiniciar").click(reinicializador)
 })
-
-var acertos = 0
-var erros = 0
 
 function atualizaTamanho() {
   var frase = $(".conteudo").text();
@@ -50,18 +50,21 @@ function inicializadorCronometro() {
   campo.one('focus', () => {
     var cronometroID = setInterval(() => {
       tempoRestante--;
-      $("#tempo_digitacao").text(tempoRestante)
-      campo.attr("")
+      $("#tempo_digitacao").text(tempoRestante);
+      campo.attr("");
       if (tempoRestante < 1) {
-        campo.attr('disabled', true)
-        clearInterval(cronometroID)
-        campo.css('background-color','lightgray')
+        clearInterval(cronometroID);
+        finalizaJogo();
       }
     }, 1000);
   })
 }
 
-var fraseOriginal = $(".conteudo").html();
+function finalizaJogo() {
+  campo.attr('disabled', true);
+  campo.css('background-color', 'lightgray');
+  inserePlacar();
+}
 
 function comparador() {
   var conteudoDigitado = campo.val().trim();
@@ -103,9 +106,9 @@ function reinicializador() {
   $(".contador_letras").text('0')
   $("#tempo_digitacao").text(tempoInicial)
   inicializadorCronometro()
-  campo.css('background-color','white')
+  campo.css('background-color', 'white')
   $(".conteudo").text(fraseOriginal)
-  
+
   acertos = 0
   $('.contador_acertos').text(acertos)
   erros = 0
