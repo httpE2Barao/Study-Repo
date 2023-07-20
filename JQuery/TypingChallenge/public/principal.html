@@ -13,24 +13,31 @@
 <body>
     <main>
         <section class="flex flex-col items-center text-center 
-        justify-center my-24 gap-6">
+        justify-center mx-10 my-24 gap-6">
             <h1 class="text-5xl font-bold">Typing Challenge</h1>
             <p class="conteudo
-            mx-10 text-justify
+             text-justify
             ">O sol brilhava no céu azul enquanto os pássaros voavam em harmonia. As flores exalavam seu perfume no ar, e o vento sussurrava suavemente entre as árvores. Era uma manhã serena e tranquila, perfeita para contemplar a beleza da natureza e se deixar envolver pela paz que ela proporciona.
             </p>
 
-            <ul class="info">
-                <li class="flex items-center gap-2">
-                    <i class="small material-icons centraliz">chat</i>
-                    <span id="tamanho_frase"></span> Palavras
-                </li>
-                <li class="flex items-center gap-2">
-                    <i class="small material-icons centraliz">query_builder</i>
-                    <span id="tempo_digitacao">60</span> Segundos
-                </li>
-            </ul>
-
+            <div class="
+            flex items-center w-full justify-evenly
+            ">
+                <ul class="info">
+                    <li class="flex items-center gap-2">
+                        <i class="small material-icons centraliz">chat</i>
+                        <span id="tamanho_frase"></span> Palavras
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="small material-icons centraliz">query_builder</i>
+                        <span id="tempo_digitacao">60</span> Segundos
+                    </li>
+                </ul>
+                <a class="btn-floating" id="troca_frase">
+                    <i class="material-icons">shuffle</i>
+                </a>
+            </div>
+                
             <textarea class="campo_digitar rounded outline p-4 w-10/12 h-52" cols="60" rows="10"></textarea>
 
             <div class="flex gap-10">
@@ -70,6 +77,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/frase.js"></script>
     <script src="js/placar.js"></script>
 </body>
 
