@@ -64,6 +64,7 @@ function finalizaJogo() {
   campo.attr('disabled', true);
   campo.css('background-color', 'lightgray');
   inserePlacar();
+  scrollPlacar();
 }
 
 function comparador() {

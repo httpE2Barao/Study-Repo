@@ -14,6 +14,17 @@ function inserePlacar() {
   linha.find('.botao_remover').click(removeLinha)
 }
 
+function scrollPlacar() {
+  var posicaoPlacar = $('.placar').offset().top - $(window).scrollTop() + "px";
+  $("html, body").animate({
+    scrollTop: posicaoPlacar
+  }, 1000);
+}
+
+
 function removeLinha() {
-  $(this).parent().parent().remove();
+  $(this).parent().parent().fadeOut();
+  setTimeout(() => {
+    $(this).parent().parent().remove();
+  },1000)
 }
