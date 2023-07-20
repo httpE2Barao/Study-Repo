@@ -9,7 +9,7 @@ function atualizaTamanho() {
 }
 
 function fraseAleatoria() {
-  $.get('http://localhost:5500/frases.json', (data) => {
+  $.get('https://typping-frases.vercel.app/', (data) => {
     var frase = $('.conteudo');
     var numAleatorio = Math.floor(Math.random() * data.length);
     frase.text(data[numAleatorio].texto)
