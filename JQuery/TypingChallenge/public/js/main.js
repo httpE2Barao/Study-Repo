@@ -10,6 +10,7 @@ var erros = 0
 $(() => {
   fraseAleatoria();
   atualizaTamanho();
+  atualizaPlacar()
   inicializadorContadores();
   inicializadorCronometro();
   $("#btn_reiniciar").click(reinicializador)
@@ -67,8 +68,9 @@ function inicializadorCronometro() {
 function finalizaJogo() {
   campo.attr('disabled', true);
   campo.css('background-color', 'lightgray');
-  inserePlacar();
+  inserePlacar('Elias', $(".contador_palavras").text(), acertos, erros);
   scrollPlacar();
+  sincronizaPlacar();
   countdownActive = false;
 }
 

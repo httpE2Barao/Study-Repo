@@ -7,14 +7,15 @@ function atualizaTamanho() {
   var mostradorFrase = $("#tamanho_frase");
   mostradorFrase.text(tamanhoFrase);
 }
-
-function fraseAleatoria() {
+function fraseAleatoria() {         
   $.get('https://typping-frases.vercel.app/', (data) => {
     var frase = $('.conteudo');
     var numAleatorio = Math.floor(Math.random() * data.length);
     frase.text(data[numAleatorio].texto)
     fraseAtual = frase.html();
     atualizaTamanho();
+  }).fail(() => {
+    $('#erro_req').show();
   })
 }
 
@@ -35,7 +36,7 @@ function comparador() {
         novoConteudo = novoConteudo.replace(palavraFrase, palavraDigitada);
         acertou = true
       } else {
-        novoConteudo = novoConteudo.replace(palavraFrase, '<mark>' + palavraDigitada + '</mark>');
+        novoConteudo = novoConteudo.replace(palavraFrase, '<mark class="bg-red-500 px-1 rounded">' + palavraFrase + '</mark>');
         acertou = false
       }
     }
