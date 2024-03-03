@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <h4><strong class="idd">Idade</strong>
+        <div id="form">
+            <label for="tano">Ano de Nascimento:</label>
+            <input type="number" name="tano" id="tano"><br>
+        </h4>
+        <h4>
+            <strong>Gênero</strong> <br>
+        <input type="radio" name="tsex" id="masc">
+            <label for="masc">Masculino</label>
+        <input type="radio" name="tsex" id="nbin" checked>
+            <label for="nbin">Não Binário</label>
+        <input type="radio" name="tsex" id="femi">
+            <label for="femi">Feminino</label><br>
+        </h4>
+            <input type="button" value="Verificar" id="verif" onclick="verificar()">
+        </div>
+        <div id="res" class="centralizar">
+            <strong>Preencha os dados acima para ver o resultado!</strong>
+        </div>
+    </section>
+    <footer>
+        <a class="pe" href="https:www.github.com/httpE2Barao" target="_blank">Github.com/httpE2Barao</a>
+    </footer>
+    <script src="script.js"></script>
+    <a href="../../index.html"><img src="../../HTML/Downloads/voltar.png" alt="voltar" class="voltar"></a>
+</body>
+</html>
