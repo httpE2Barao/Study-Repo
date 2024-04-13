@@ -10,7 +10,7 @@ int main() {
     printf("Informe uma palavra: ");
     gets(palavra);
 
-    t = strlen(palavra);
+    t =  (palavra);
     
     for (x=1; x<=t-1; x++) {
         if (palavra[x] == procurarLetra[0]) {
