@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>undefined</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #0000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>undefined</h1>
+    <div>
+      <h2>✨ Apresentação do Ambiente e Conceitos Básicos</h2><p>Bem-vindos à primeira parte de nossa aula de Programação II! Aqui vamos explorar os fundamentos essenciais para o desenvolvimento de software, utilizando ferramentas como ==Node.js==, Visual Studio Code (VS Code), ==Postman==, dentre outras.</p><h2>🎯 Objetivo Geral da Disciplina</h2><p>Aprender a consumir APIs, entendendo como se comunicam e como integrá-las.</p><p>Aprender boas práticas de arquitetura, organização de código e padrões de projeto.</p><p>Focar em testes e controle de autenticação, garantindo qualidade e segurança.</p><h2>🚀 1. Ambiente de Desenvolvimento</h2><h2>💡 Dica: O ambiente de desenvolvimento reúne todos os recursos necessários para criar, testar e depurar aplicações. Ele costuma começar na sua máquina local, mas pode se estender para ambientes de teste, homologação e produção.</h2><p>Tipos de Ambiente</p><p>Local: Onde cada desenvolvedor trabalha individualmente.</p><p>Desenvolvimento: Centraliza as alterações de código para a equipe.</p><p>Teste: Focado em validações mais profundas, evitando bugs em produção.</p><p>Homologação: Versão quase final, conferida pelo time ou cliente.</p><p>Produção: Versão que o usuário final acessa.</p><h2>🌐 2. Introdução ao Node.js</h2><p>==Node.js== é um runtime que executa ==JavaScript== fora do navegador. Ele se destaca porque:</p><p>Compartilha a mesma linguagem do front-end e do back-end (JavaScript).</p><p>Tem curva de aprendizado relativamente rápida.</p><p>Permite construir APIs e serviços escaláveis de forma simples.</p><pre><code>// Verificando versão do Node.js
+node --version
+</code></pre><p>Se você não tem o Node instalado, baixe do site oficial: Node.js.</p><h2>🔀 3. Versionamento de Código</h2><p>==Versionar código== é registrar todas as mudanças feitas ao longo do tempo, permitindo trabalhar em equipe sem perder histórico.</p><p>Principais Tipos</p><p>Local: Arriscado e pouco colaborativo (ex.: manter somente na sua máquina).</p><p>Centralizado: Melhor que local, mas pode gerar conflitos se muitos trabalharem ao mesmo tempo (ex.: SVN).</p><p>Distribuído: O mais utilizado (ex.: Git), cada desenvolvedor tem uma cópia completa do repositório, facilitando ramificações e fusões de código.</p><p>Exemplo de fluxos de versão:</p><h2>📡 4. Postman e Ferramentas de Teste de API</h2><p>O ==Postman== é a ferramenta mais conhecida para:</p><p>Testar requisições (GET, POST, PUT, DELETE etc.).</p><p>Documentar APIs.</p><p>Colaborar em equipes.</p><p>⚠️ Atenção à segurança: Confira onde seus dados (chaves de autenticação, tokens) são armazenados.</p><p>Ferramentas similares:</p><p>Insomnia, Swagger, SoapUI, Apigee etc.</p><h2>🛠️ 5. IDE, Plugins e Navegadores</h2><p>IDE</p><p>Uma ==IDE (Integrated Development Environment)== facilita a edição, compilação e depuração de código.</p><p>Visual Studio Code (VS Code): Leve, multiplataforma e muito extensível.</p><p>Outras opções: IntelliJ, Eclipse, NetBeans etc.</p><p>Plugins (Extensões)</p><p>Code Runner: Executar código rapidamente.</p><p>SonarLint: Detectar problemas e sugerir melhorias.</p><p>GitLens: Integrar o histórico do Git diretamente no editor.</p><p>Navegadores</p><p>Google Chrome, Microsoft Edge, Firefox e Safari.</p><p>Cada um pode exibir e interpretar JavaScript de maneiras ligeiramente diferentes. Teste em múltiplos navegadores!</p><h2>💻 Passo a Passo: Configurando o Ambiente</h2><p>1) Instalando o VS Code</p><p>Acesse o site oficial do Visual Studio Code.</p><p>Faça o download e instale a versão compatível com seu sistema.</p><p>Abra o VS Code e personalize (tema, extensões etc.).</p><p>2) Criando um Projeto Node.js</p><p># Dentro do VS Code, abra o terminal e digite:</p><p>npm init -y</p><p>Isso criará o arquivo package.json com configurações iniciais.</p><p>3) Servidor HTTP Básico</p><p>Crie o arquivo index.js e adicione:</p><pre><code>const http = require('http');
+</code></pre><pre><code>const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Olá, Mundo!');
+});
+</code></pre><pre><code>const PORT = 3000;
+server.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+</code></pre><p>Para rodar, use no terminal:</p><p>node index.js</p><p>Acesse http://localhost:3000 no navegador e veja a mensagem "Olá, Mundo!".</p><h2>🤝 Testando APIs com Postman</h2><p>Abra o ==Postman==.</p><p>Crie uma requisição GET para http://localhost:3000.</p><p>Envie a requisição e observe a resposta "Olá, Mundo!".</p><h2>🏆 Conclusão e Próximos Passos</h2><p>Você configurou seu ambiente local com ==Node.js==, VS Code e ==Postman==.</p><p>Exploramos o conceito de versionamento de código e ambientes de desenvolvimento.</p><p>Nos próximos módulos, iremos aprofundar na programação server-side e em boas práticas de projeto.</p><h2>🎉 Parabéns pela conclusão desta primeira etapa!</h2><h2>🌐 GitHub da Disciplina</h2><p>Acesse o repositório oficial da disciplina em:</p><p>FaculdadeDescomplica/ProgramacaoII</p><p>Nele, você encontrará exemplos de código, APIs com Node.js, além de boas práticas de controle de autenticação e padrões de mercado.</p><h2>🎬 Conteúdo Bônus</h2><p>Para reforçar suas habilidades no VS Code, assista ao vídeo "Como Baixar e Configurar o Visual Studio Code Para Iniciantes" no canal Dev em Dobro.</p><h2>📚 Referências Bibliográficas</h2><p>ELMASRI, R.; NAVATHE, S. B. Sistemas de banco de dados. 7.ed. Pearson, 2018.</p><p>MEDEIROS, L. F. de. Banco de dados: princípios e prática. Intersaberes, 2013.</p><p>VICCI, C. (Org.). Banco de dados. Pearson, 2014.</p><p>CARDOSO, L. da C. Design de aplicativos. Intersaberes, 2022.</p><p>JOÃO, B. do N. Usabilidade e interface homem-máquina. Pearson, 2017.</p><p>LEAL, G. C. L. Linguagem, programação e banco de dados: guia prático de aprendizagem. Intersaberes, 2015.</p><p>PUGA, S.; FRANÇA, E.; GOYA, M. Banco de dados: implementação em SQL, PL/SQL e Oracle 11g. Pearson, 2013.</p><p>SETZER, V. W.; SILVA, F. S. C. Bancos de dados. Blucher, 2005.</p><h2>🔑 Dica: Continue revisitando estes tópicos conforme avançamos na disciplina. Prática e experimentação são fundamentais para solidificar o aprendizado!</h2><h2>📝 Bons estudos e até a próxima aula!</h2>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
