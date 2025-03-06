@@ -1,0 +1,63 @@
+{
+    "nodes": [
+      {
+        "parameters": {
+          "operation": "list",
+          "returnAll": true,
+          "options": {
+            "path": "Faculdade - Engenharia de Software",
+            "recursive": true
+          }
+        },
+        "name": "GitHub - Listar Arquivos",
+        "type": "n8n-nodes-base.github",
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "functionCode": "const items = $input.all();\n\nconst processPath = (path) => {\n  const parts = path.split('/');\n  return {\n    module: parts[1] || 'Geral',\n    lesson: parts[2] ? parts[2].replace('.html', '') : '',\n    fullPath: path\n  };\n};\n\nconst modulesMap = items.reduce((acc, item) => {\n  const { module, lesson, fullPath } = processPath(item.json.path);\n  \n  if (!acc[module]) {\n    acc[module] = {\n      name: module,\n      lessons: []\n    };\n  }\n  \n  if (lesson) {\n    acc[module].lessons.push({\n      name: lesson.replace(/-/g, ' '),\n      path: fullPath\n    });\n  }\n  \n  return acc;\n}, {});\n\nconst sortedModules = Object.values(modulesMap)\n  .sort((a, b) => a.name.localeCompare(b.name))\n  .map(module => ({\n    ...module,\n    lessons: module.lessons.sort((a, b) => a.name.localeCompare(b.name))\n  }));\n\nconst jsonData = JSON.stringify({ \n  modules: sortedModules, \n  updatedAt: new Date().toISOString() \n}, null, 2);\nconst content = Buffer.from(jsonData).toString('base64');\n\nreturn [{\n  json: {\n    content: content,\n    fileSha: $input.first().json.find(f => f.path === 'data.json')?.sha\n  }\n}];"
+        },
+        "name": "Processar Estrutura",
+        "type": "n8n-nodes-base.function",
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "operation": "create",
+          "additionalFields": {
+            "sha": "={{ $json.fileSha }}"
+          },
+          "content": "={{ $json.content }}",
+          "filePath": "data.json",
+          "message": "Atualização automática do data.json"
+        },
+        "name": "GitHub - Atualizar Data",
+        "type": "n8n-nodes-base.github",
+        "typeVersion": 1
+      }
+    ],
+    "connections": {
+      "GitHub - Listar Arquivos": {
+        "main": [
+          [
+            {
+              "node": "Processar Estrutura",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Processar Estrutura": {
+        "main": [
+          [
+            {
+              "node": "GitHub - Atualizar Data",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    }
+  }
