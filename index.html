@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositório de Estudos - Engenharia de Software</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #2d3436;
+            --primary-color: #0984e3;
+            --card-bg: #f8f9fa;
+            --border-color: #dfe6e9;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #f8f9fa;
+                --primary-color: #74b9ff;
+                --card-bg: #2d2d2d;
+                --border-color: #4d4d4d;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--card-bg);
+        }
+
+        .modules-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .module-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+        }
+
+        .module-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .module-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .lessons-list {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .lesson-item {
+            padding: 0.8rem;
+            border-radius: 6px;
+            background: var(--bg-color);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: var(--text-color);
+            border: 1px solid transparent;
+        }
+
+        .lesson-item:hover {
+            border-color: var(--primary-color);
+            background: rgba(116, 185, 255, 0.1);
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Repositório de Estudos</h1>
+            <div class="search-bar" role="search">
+                🔍 Pesquisar aulas...
+            </div>
+        </header>
+
+        <main>
+            <div class="modules-grid">
+                <!-- Módulo 1B -->
+                <section class="module-card">
+                    <h2 class="module-title">
+                        <span class="icon">📂</span>
+                        1B - Programming I
+                    </h2>
+                    <div class="lessons-list">
+                        <a href="Faculdade - Engenharia de Software/1B - Programming I/Abstração de dados.html" class="lesson-item">
+                            <span class="icon">📄</span>
+                            Abstração de dados
+                        </a>
+                        <!-- Adicione os demais links seguindo o mesmo padrão -->
+                        <a href="Faculdade - Engenharia de Software/1B - Programming I/Algoritmos.html" class="lesson-item">
+                            <span class="icon">📄</span>
+                            Algoritmos
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Módulo 2A -->
+                <section class="module-card">
+                    <h2 class="module-title">
+                        <span class="icon">📂</span>
+                        2A - POO
+                    </h2>
+                    <div class="lessons-list">
+                        <a href="Faculdade - Engenharia de Software/2A - POO/Ambiente-Java.html" class="lesson-item">
+                            <span class="icon">📄</span>
+                            Ambiente Java
+                        </a>
+                        <!-- Adicione os demais links -->
+                    </div>
+                </section>
+
+                <!-- Módulo 3A -->
+                <section class="module-card">
+                    <h2 class="module-title">
+                        <span class="icon">📂</span>
+                        3A - Smart Data Structures
+                    </h2>
+                    <div class="lessons-list">
+                        <a href="Faculdade - Engenharia de Software/3A - Smart Data Structure/Aplicação-com-Banco-de-Dados.html" class="lesson-item">
+                            <span class="icon">📄</span>
+                            Aplicação com Banco de Dados
+                        </a>
+                        <!-- Adicione os demais links -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Script para funcionalidade básica de busca
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchBox = document.querySelector('.search-bar');
+            
+            searchBox.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                document.querySelectorAll('.lesson-item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+                });
+            });
+        });
+
+        // Adicionar toggle para módulos
+        document.querySelectorAll('.module-title').forEach(title => {
+            title.addEventListener('click', () => {
+                title.parentElement.querySelector('.lessons-list').classList.toggle('collapsed');
+            });
+        });
+    </script>
+</body>
+</html>
