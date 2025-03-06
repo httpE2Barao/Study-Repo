@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>String e Arrays</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>String e Arrays</h1>
+    <div>
+      <h2>📖 Introdução a Strings e Arrays em Java</h2><p>Strings e Arrays são fundamentais na manipulação e armazenamento de dados em Java. Vamos explorar conceitos essenciais, boas práticas e exemplos práticos.</p><h2>📝 Introdução a Strings</h2><p>Strings são cadeias de caracteres representadas entre aspas, utilizadas para armazenar e manipular texto em Java. Embora pareçam tipos primitivos, Strings são objetos da classe String.</p><h2>🔍 Exemplos de criação de Strings:</h2><p>String texto = "Olá, Java!";</p><p>String mensagem = new String("Bem-vindo ao mundo das Strings!");</p><p>💡 Dica: Utilize equals() para comparar o conteúdo de duas strings.</p><h2>🔍 Lendo Strings com Scanner</h2><p>Podemos ler Strings utilizando a classe Scanner com os métodos next() e nextLine().</p><p>next(): lê até o primeiro espaço.</p><p>nextLine(): lê toda a linha, incluindo espaços.</p><p>import java.util.Scanner;</p><p>public class LeituraString {</p><p>    public static void main(String[] args) {</p><p>        Scanner scanner = new Scanner(System.in);</p><p>        System.out.print("Digite seu nome: ");</p><p>        String nome = scanner.nextLine();</p><p>        System.out.println("Olá, " + nome + "!");</p><p>        scanner.close();</p><p>    }</p><p>}</p><p>📍 Boa prática: Sempre feche o scanner após o uso para evitar vazamentos de recursos.</p><h2>🎓 Manipulando Strings no Java</h2><p>Operações comuns:</p><p>Concatenação: +</p><p>Comparação: equals()</p><p>Tamanho: length()</p><p>String nome = "Java";</p><p>System.out.println(nome + " é incrível!");</p><p>System.out.println("Tamanho: " + nome.length());</p><p>System.out.println("Comparação: " + nome.equals("java"));</p><p>🔑 Importante: equalsIgnoreCase() compara desconsiderando maiúsculas/minúsculas.</p><h2>🧮 Introdução a Arrays (Vetores)</h2><p>Arrays são estruturas que armazenam múltiplos elementos do mesmo tipo.</p><p>Declaração e inicialização:</p><p>int[] numeros = new int[5];</p><p>int[] valores = {1, 2, 3, 4, 5};</p><h2>🔹 Indexação inicia em 0 e vai até length - 1.</h2><p>Acessando e manipulando elementos:</p><p>numeros[0] = 10;</p><p>System.out.println(numeros[0]);</p><p>⚠️ Erro comum: Acessar índices inválidos causa ArrayIndexOutOfBoundsException.</p><h2>🛠️ Arrays Multidimensionais (Matrizes)</h2><p>Matrizes armazenam dados em múltiplas dimensões.</p><p>int[][] matriz = new int[3][3];</p><p>matriz[0][0] = 1;</p><p>System.out.println(matriz[0][0]);</p><h2>📐 Exemplo de matriz 2x3:</h2><p>int[][] matriz = {</p><p>    {1, 2, 3},</p><p>    {4, 5, 6}</p><p>};</p><h2>🖥️ Exibindo Arrays com java.util.Arrays</h2><p>A classe java.util.Arrays facilita operações com arrays.</p><p>import java.util.Arrays;</p><p>int[] valores = {5, 2, 4, 3, 1};</p><p>Arrays.sort(valores);</p><p>System.out.println(Arrays.toString(valores));</p><p>🔍 Dica: Arrays.sort() ordena os elementos em ordem crescente.</p><h2>🚨 Erros Comuns e Boas Práticas</h2><p>Esquecer de inicializar arrays.</p><p>Acessar índices inválidos.</p><p>Comparar strings com == ao invés de equals().</p><h2>🎯 Pratique sempre!</h2><h2>🔗 Vídeo Recomendado: Aprendendo sobre Matrizes</h2><h2>📚 Referências:</h2><p>BARNES, D. J.; KOLLING, M. Programação Orientada a Objetos com Java. Pearson, 2009.</p><p>ORACLE. Documentação Oficial do Java. https://docs.oracle.com/en/java/</p><p>💡 Mãos à obra! Crie e manipule suas próprias Strings e Arrays no Java! 🚀</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
