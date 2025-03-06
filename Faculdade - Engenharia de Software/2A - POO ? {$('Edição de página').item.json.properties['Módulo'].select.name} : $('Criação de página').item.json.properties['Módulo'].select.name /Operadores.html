@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operadores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Operadores</h1>
+    <div>
+      <p>💻 Introdução aos Operadores e Tipos de Dados em Java 🛠️</p><p>Java é uma linguagem de programação fortemente tipada, o que significa que precisamos definir o tipo de dado ao declarar uma variável. Isso garante eficiência e precisão nas operações realizadas. Vamos explorar os principais operadores e tipos de dados em Java de maneira prática e visual! 🌟</p><h2>🧮 Tipos de Dados Primitivos em Java</h2><p>Java oferece diversos tipos primitivos para armazenar diferentes tipos de informações:</p><p>byte: números inteiros (-128 a 127)</p><p>short: números inteiros (-32.768 a 32.767)</p><p>int: números inteiros (até ~2 bilhões)</p><p>long: números inteiros muito grandes (necessita do sufixo L)</p><p>float: números decimais (necessita do sufixo F)</p><p>double: números decimais com maior precisão</p><p>boolean: verdadeiro (true) ou falso (false)</p><p>char: caracteres únicos (ex.: 'A')</p><h2>🔹 Exemplo de declaração:</h2><p>int idade = 25;</p><p>double altura = 1.75;</p><p>boolean ativo = true;</p><p>char letra = 'J';</p><h2>🛠️ Operadores de Atribuição</h2><p>Os operadores de atribuição permitem atribuir e modificar valores nas variáveis.</p><h2>🔹 Atribuição Simples</h2><p>int x = 10;</p><p>String nome = "Abel";</p><h2>🔹 Atribuição com Expressão</h2><p>int soma = x + 5;</p><p>int produto = x * soma;</p><p>⚠️ Casting (Conversão de Tipos)</p><p>Em algumas situações, precisamos converter explicitamente o tipo de dado:</p><p>int a = 130;</p><p>byte b = (byte) a; // possível perda de precisão</p><p>System.out.println(b); // Resultado: -126</p><p>📍 Explicação: O valor 130 excede o limite do byte (127), então o Java aplica o método de Complemento de Dois.</p><p>⚡ Operadores de Atribuição Composta</p><p>Esses operadores combinam uma operação aritmética com a atribuição:</p><h2>🔹 Exemplo prático:</h2><p>int valor = 10;</p><p>valor += 5;</p><p>System.out.println(valor); // Resultado: 15</p><h2>➗ Operadores Aritméticos</h2><p>Java suporta as quatro operações matemáticas tradicionais, além do operador de módulo (%).</p><h2>🔹 Exemplos no código:</h2><p>int a = 15;</p><p>int b = 2;</p><p>System.out.println(a / b); // Resultado: 7 (divisão inteira)</p><p>System.out.println(a % b); // Resultado: 1 (resto da divisão)</p><p>🔔 Atenção: Dividir um número inteiro por zero lança a exceção ArithmeticException.</p><h2>🔁 Operadores de Incremento e Decremento</h2><p>Estes operadores são atalhos para adicionar ou subtrair 1 de uma variável.</p><h2>🔹 Exemplos:</h2><p>int x = 5;</p><p>System.out.println(x++); // Resultado: 5 (pós-incremento)</p><p>System.out.println(++x); // Resultado: 7 (pré-incremento)</p><h2>🔍 Diferença:</h2><p>Pós-incremento: usa o valor atual e depois incrementa.</p><p>Pré-incremento: incrementa primeiro e depois usa o valor.</p><h2>🔍 Operadores Relacionais</h2><p>Esses operadores comparam valores e retornam true ou false.</p><h2>🔹 Exemplo prático:</h2><p>int idade = 20;</p><p>boolean maiorDeIdade = idade >= 18;</p><p>System.out.println(maiorDeIdade); // true</p><h2>🎯 Atividade Extra 🚀</h2><p>🎥 Vídeo Recomendado: Fazendo conversões entre tipos primitivos</p><h2>📚 Referências Bibliográficas:</h2><p>📘 BARNES, D. J.; KOLLING, M. Programação Orientada a Objetos com Java. Pearson, 2009.</p><p>📙 FELIX, R. Programação Orientada a Objetos. Pearson, 2017.</p><p>📗 MEDEIROS, L. F. Banco de Dados: Princípios e Prática. Intersaberes, 2013.</p><h2>🌐 Documentação Oficial Java</h2><p>🧠 Pronto para praticar? Teste os exemplos no seu editor de código favorito e observe os resultados. Java é uma linguagem que recompensa a prática! 🚀</p><h2>✨ Happy Coding! ☕</h2>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
