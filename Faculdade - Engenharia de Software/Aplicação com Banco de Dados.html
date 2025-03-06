@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aplicação com Banco de Dados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Aplicação com Banco de Dados</h1>
+    <div>
+      <h2>🚀 Aplicação com Banco de Dados - Resumo Geral</h2><h2>🔎 1. Introdução ao NoSQL</h2><p>NoSQL (🟣) refere-se a bancos de dados não relacionais, que diferem dos tradicionais bancos relacionais (🟢) por não utilizarem tabelas para armazenar dados. Em vez disso, os dados são mantidos em coleções que contêm documentos (geralmente no formato JSON), cada um deles organizado em pares chave-valor.</p><p>Exemplo: Imagine uma coleção chamada medicos, em que cada documento armazena informações como nome, telefone e especialidade, tudo em formato JSON.</p><p>:round_pushpin: Exemplos de Bancos de Dados NoSQL</p><p>MongoDB (🟢)</p><p>Redis (🔴)</p><p>Cassandra (🟡)</p><p>Amazon Dynamo (🟧)</p><p>O MongoDB se destaca por utilizar documentos em JSON, facilitando o armazenamento de dados no formato chave-valor.</p><p>🖥️ 2. Instalação e Configuração do MongoDB Compass Community</p><p>Faça o download da versão Community do MongoDB Compass (gratuita).</p><p>Instale conforme seu sistema operacional (Windows, macOS ou Linux).</p><p>Abra o MongoDB Compass e conectese ao seu servidor local (porta padrão: 27017).</p><p>Dica: Sempre verifique se o serviço do MongoDB está em execução antes de abrir o Compass.</p><p>🌐 3. Conexão com o Banco de Dados e Criação de Banco & Coleção</p><p>Na tela inicial do MongoDB Compass, clique em New Database.</p><p>Nomeie seu banco e crie uma nova coleção (p. ex.: medicos).</p><p>Após a criação, você já consegue inserir documentos em JSON diretamente por meio da interface.</p><p>Importe ou exporte dados em JSON usando as opções de import/export do MongoDB Compass.</p><p>🗂️ 4. Estrutura do MongoDB Compass e Importação de Dados JSON</p><p>O Compass exibe documentos JSON em um formato de tabela, mas permite visualizar cada registro em formato original.</p><p>É possível usar filtros para encontrar documentos específicos.</p><p>Você pode importar dados em massa diretamente no Compass, bastando selecionar o arquivo .json correspondente.</p><p>🛠️ 5. Introdução ao Express e Configuração do Projeto</p><p>O Express.js (🔵) é um framework para Node.js (🟢) que facilita a criação de aplicações web:</p><p>Gerencia rotas (GET, POST, PUT, DELETE).</p><p>Simplifica a adição de middlewares.</p><p>Facilita a resposta às requisições HTTP.</p><h2>🏷️ Estrutura de Pastas</h2><h2>📦 med-app</h2><p> ┣ 📂 models</p><p> ┣ 📂 routes</p><p> ┣ 📂 repositories</p><p> ┣ 📂 services</p><p> ┗ 📜 index.js</p><p>Dica: Use npm init para inicializar o projeto e depois instale o Express com npm install express.</p><p>📑 6. Criando a Estrutura do Projeto e Configurando Rotas</p><p>Dentro do Express (🔵), criamos diferentes métodos:</p><p>GET: busca de dados</p><p>POST: inserção de dados</p><p>PUT: atualização de dados</p><p>DELETE: remoção de dados</p><p>Exemplo de rota simples:</p><pre><code>// index.js
+const express = require('express');
+const app = express();
+</code></pre><p>app.get('/', (req, res) => {</p><pre><code>  res.send('Bem-vindo à MedApp!');
+});
+</code></pre><pre><code>app.listen(3000, () => {
+  console.log('Aplicação escutando na porta 3000');
+});
+</code></pre><p>Observação: Separe as rotas em arquivos dentro da pasta routes para manter o código organizado.</p><p>⚙️ 7. Introdução aos Bancos de Dados Relacionais e Não Relacionais</p><p>Relacionais (🟢): utilizam SQL e organizam dados em tabelas. Ex.: MySQL, PostgreSQL.</p><p>Não Relacionais (🟣): utilizam documentos e coleções, sendo mais flexíveis. Ex.: MongoDB.</p><h2>🏗️ 8. Instalação e Configuração do Mongoose</h2><p>O Mongoose (🟣) é um ODM (Object Data Modeling) para MongoDB. Ele:</p><p>Simplifica a interação com o banco de dados.</p><p>Fornece um sistema de Schemas e Models para validar e estruturar os dados.</p><p>Instalação:</p><pre><code>npm install mongoose
+</code></pre><p>Configuração:</p><pre><code>// database.js
+const mongoose = require('mongoose');
+</code></pre><pre><code>mongoose.connect('mongodb://localhost:27017/medDB', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+</code></pre><pre><code>module.exports = mongoose;
+</code></pre><h2>📝 9. Criação de Modelos no Mongoose</h2><p>Schemas definem a estrutura dos documentos e Models são a representação do schema para interagir com o banco.</p><pre><code>// medicoModel.js
+const mongoose = require('./database');
+const Schema = mongoose.Schema;
+</code></pre><pre><code>const medicoSchema = new Schema({
+  nome: String,
+  especialidade: String,
+  contato: String
+});
+</code></pre><pre><code>const Medico = mongoose.model('Medico', medicoSchema);
+</code></pre><pre><code>module.exports = Medico;
+2
+</code></pre><p>Dica: Exporte o model e utilize-o em rotas, controllers ou services para realizar consultas, inserções e alterações.</p><h2>🏗️ 10. Preparação do Banco de Dados Local</h2><p>Por que usar um BD local?</p><p>Rapidez e controle total do ambiente de desenvolvimento.</p><p>Possibilidade de teste e aprendizado de forma mais livre, sem custos de hospedagem.</p><p>Uso do MongoDB Compass (interface gráfica) para gerenciar coleções e documentos.</p><p>Em projetos maiores, você pode migrar para o MongoDB Atlas (versão em nuvem) ou outro serviço de banco de dados gerenciado.</p><h2>🌐 11. Criação da Aplicação com Express</h2><p>O projeto Med App (💊) serve de exemplo para conectar:</p><p>Node.js + Express</p><p>Banco de dados MongoDB</p><p>Organização de pastas (models, services, routes, etc.)</p><p>Exemplo de inicialização:</p><pre><code>// index.js
+const express = require('express');
+const app = express();
+</code></pre><pre><code>app.use(express.json());
+</code></pre><pre><code>// Rotas
+app.get('/', (req, res) => {
+  res.send('Bem-vindo à MedApp!');
+});
+</code></pre><pre><code>app.listen(3000, () => {
+  console.log('Servidor rodando na porta 3000!');
+});
+</code></pre><p>O próximo passo é definir rotas específicas e integrar o banco de dados via Mongoose.</p><h2>🏢 12. Adição de Bancos de Dados na Aplicação</h2><h2>🔵 ORM (Sequelize) para Relacionais</h2><p>Exemplo de uso do Sequelize (🟦):</p><pre><code>const Sequelize = require('sequelize');
+const sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'localhost',
+  dialect: 'mysql' // ou 'postgres', etc.
+});
+</code></pre><p>🟣 ODM (Mongoose) para MongoDB</p><p>Exemplo de configuração do Mongoose (🟣):</p><pre><code>const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/medDB', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+</code></pre><p>Em NoSQL, não há tabelas, mas sim coleções; cada documento possui uma estrutura dinâmica, definida pelo seu Schema no Mongoose.</p><h2>🤝 13. Integração Final e Próximos Passos</h2><p>Configurar um ambiente local com MongoDB (compass ou atlas).</p><p>Criar as rotas Express que consomem seus Models Mongoose.</p><p>Validar os dados (tanto no Schema Mongoose quanto em middlewares).</p><p>Testar a aplicação localmente e depois considerar deploy em nuvem.</p><h2>📂 14. GitHub da Disciplina</h2><p>Confira o repositório oficial no GitHub (🐙), onde você encontra:</p><p>Exemplos de código das aulas.</p><p>Projetos para estudo de APIs com autenticação.</p><p>Boas práticas de programação e padrões de mercado.</p><h2>🎥 15. Conteúdo Bônus</h2><p>Para complementar, assista ao vídeo:</p><p>“Criando uma API Completa com Node.js, Express e MongoDB - Passo a Passo do Zero!” do canal</p><p>Gabriel Rangel - Fala, Coders! (🔗 YouTube)</p><p>Esse material reforça a teoria com a prática de desenvolvimento real.</p><h2>📚 16. Referências Bibliográficas</h2><p>Bibliografia Básica</p><p>ELMASRI, R.; NAVATHE, S. B. Sistemas de banco de dados. 7.ed. Pearson: 2018.</p><p>MEDEIROS, L. F. de. Banco de dados: princípios e prática. Intersaberes: 2013.</p><p>VICCI, C. (Org.). Banco de dados. Pearson: 2014.</p><p>Bibliografia Complementar</p><p>CARDOSO, L. da C. Design de aplicativos. Intersaberes: 2022.</p><p>JOÃO, B. do N. Usabilidade e interface homem-máquina. Pearson: 2017.</p><p>LEAL, G. C. L. Linguagem, programação e banco de dados: guia prático de aprendizagem. Intersaberes: 2015.</p><p>PUGA, S.; FRANÇA, E.; GOYA, M. Banco de dados: implementação em SQL, PL/SQL e Oracle 11g. Pearson: 2013.</p><p>SETZER, V. W.; SILVA, F. S. C. Bancos de dados. Blucher: 2005.</p><h2>🏁 Conclusão</h2><p>Este material aborda os conceitos fundamentais de NoSQL e bancos de dados relacionais, bem como a configuração e uso de ferramentas como MongoDB (via Mongoose) e Express para criar aplicações web. A estrutura modular proposta (models, routes, repositories, services) visa manter o código organizado e escalável.</p><p>Sugestão: Inclua imagens de diagramas de como o MongoDB organiza coleções e documentos, ou um print da tela do MongoDB Compass, diretamente no Notion para enriquecer sua documentação.</p><p>Bons estudos e boas práticas no desenvolvimento! ✨</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
