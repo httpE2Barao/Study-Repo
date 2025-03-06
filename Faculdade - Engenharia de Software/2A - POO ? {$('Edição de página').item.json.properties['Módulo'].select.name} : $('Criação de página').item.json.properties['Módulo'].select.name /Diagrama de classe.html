@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diagrama de classe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Diagrama de classe</h1>
+    <div>
+      <h2>🏗 Introdução ao Diagrama de Classes</h2><p>O Diagrama de Classes é um dos mais importantes na UML, permitindo visualizar, estruturar e modelar sistemas. Ele facilita a comunicação entre a equipe e ajuda a especificar um sistema de maneira precisa e clara. Além disso, pode ser integrado a diferentes linguagens de programação, servindo como um guia para o desenvolvimento.</p><h2>📌 Por que utilizar diagramas de classes?</h2><h2>✅ Organiza e estrutura sistemas complexos.</h2><p>✅ Facilita a comunicação entre desenvolvedores, designers e clientes.</p><h2>✅ Melhora a compreensão e a manutenção do código.</h2><h2>🔹 Elementos dos Diagramas de Classe</h2><p>Os Diagramas de Classe descrevem a estrutura estática de um sistema. Seus principais elementos incluem:</p><h2>📌 Classes → Modelam entidades do sistema.</h2><h2>📌 Objetos → Instâncias específicas das classes.</h2><p>📌 Pacotes → Agrupam classes relacionadas, organizando o modelo.</p><p>💡 Exemplo prático: Um sistema bancário pode ter classes como Conta, Cliente e Transação.</p><h2>🏗 Composição e Agregação</h2><p>🟢 Composição</p><p>A composição é um tipo forte de relacionamento, onde as partes não podem existir sem o todo.</p><h2>📌 Exemplo:</h2><p>Casa e Banheiro → Se a casa deixa de existir, o banheiro também deixa.</p><p>Árvore e Folha → A folha não pode existir sem a árvore.</p><p>Escola e Sala de Aula → As salas pertencem a uma escola específica.</p><h2>🔹 Agregação</h2><p>A agregação representa uma relação mais fraca, onde as partes podem existir independentemente do todo.</p><h2>📌 Exemplo:</h2><p>Casa e Móveis → Os móveis podem ser movidos para outra casa.</p><p>Escola e Professores → Professores podem trabalhar em várias escolas.</p><p>Lojas e Produtos → Produtos podem estar em diferentes lojas.</p><h2>🛠 Diferença essencial:</h2><p>✔️ Composição → Dependência forte (um todo e suas partes).</p><p>✔️ Agregação → Dependência fraca (associação flexível entre elementos).</p><h2>🔗 Multiplicidade nos Relacionamentos</h2><p>A multiplicidade define quantas instâncias de uma classe podem estar associadas a outra.</p><h2>📌 Tipos comuns:</h2><h2>1..1 → Um objeto para um único outro.</h2><p>1..→ Um objeto pode estar associado a vários outros.</p><p>0..1 → Um objeto pode ou não estar associado a outro.</p><p>0..→ Um objeto pode estar associado a nenhum ou a vários outros.</p><h2>💡 Exemplo prático:</h2><p>Um professor pode lecionar para várias turmas (1..*).</p><p>Um carro pode ter apenas um motor (1..1).</p><h2>🎯 Orientação a Objetos (OO)</h2><p>A Programação Orientada a Objetos (OO) é um paradigma que organiza o código em objetos.</p><h2>📌 Os 4 Pilares da OO</h2><p>1️⃣ Abstração 🎭 → Representa um objeto focando apenas em suas características essenciais.</p><p>2️⃣ Encapsulamento 🔒 → Protege dados sensíveis dentro de classes.</p><p>3️⃣ Herança 🏛 → Permite que uma classe herde atributos e métodos de outra.</p><p>4️⃣ Polimorfismo 🎭 → Permite que métodos sejam usados de diferentes formas em classes derivadas.</p><h2>💡 Exemplo prático:</h2><p>📌 Classe Veículo 🚗 pode ser abstraída com atributos como marca, modelo e ano.</p><h2>🚀 Evolução das Linguagens de Programação</h2><p>📜 Décadas de 60 e 70 → Linguagens imperativas como COBOL, FORTRAN.</p><p>📌 Anos 80 → Introdução do paradigma OO com Smalltalk e C++.</p><p>📌 Atualmente → Linguagens como Java, Python, C# e TypeScript utilizam a OO como base.</p><p>🔍 A OO revolucionou a programação, permitindo código mais organizado, reutilizável e escalável!</p><h2>📌 Resumo Final: Por que usar a OO?</h2><p>✅ Facilita a manutenção de sistemas grandes e complexos.</p><p>✅ Permite reutilização de código, reduzindo esforço e tempo.</p><p>✅ Facilita a modelagem de sistemas reais por meio de objetos e classes.</p><p>🎯 Atividade Prática 4 – Aplicação dos Pilares da OO</p><h2>🔹 Objetivo</h2><p>✅ Aplicar conceitos de abstração, encapsulamento, herança e polimorfismo na prática.</p><h2>🛠 Ferramentas Necessárias</h2><h2>📌 Astah UML (para modelagem de classes)</h2><h2>📌 Android Studio (para implementação)</h2><h2>📍 Passos da Atividade</h2><p>1️⃣ Reproduza o diagrama de classes no Astah UML com as classes Veículo, Carro e Moto.</p><p>2️⃣ Responda às perguntas a seguir para aprofundar os conceitos.</p><h2>📝 Perguntas e Respostas</h2><p>📌 1) O que acontece se outra classe tentar acessar o atributo marca da classe Veiculo?</p><p>💡 Resposta: Isso geraria um erro, pois o atributo marca é privado (- no diagrama). Esse é um exemplo de encapsulamento.</p><p>📌 2) O método ligarMotor da classe Veículo está em itálico. Por quê?</p><p>💡 Resposta: Ele está abstrato, ou seja, precisa ser implementado nas subclasses Carro e Moto.</p><p>📌 3) Por que ligarMotor é implementado tanto na classe Moto quanto na classe Carro?</p><p>💡 Resposta: Isso demonstra polimorfismo, pois o mesmo método pode ter implementações diferentes em subclasses.</p><p>📌 4) O que acontece se uma subclasse não implementar o método ligarMotor?</p><p>💡 Resposta: O compilador gera um erro, pois um método abstrato deve ser obrigatoriamente implementado em classes derivadas.</p><h2>📚 Referências Bibliográficas</h2><p>📖 SOMMERVILLE, I. Engenharia de software. Pearson, 2019.</p><p>📖 MEDEIROS, E. Desenvolvendo software com UML 2.0 definitivo. Pearson, 2004.</p><p>📖 GALLOTTI, G. M. A. Arquitetura de software. Pearson, 2017.</p><h2>🎥 Conteúdo Bônus</h2><h2>📺 Assista ao vídeo:</h2><p>📌 “PROGRAMANDO com Abstração, Herança e Polimorfismo” – DevMedia no YouTube.</p><h2>🔗 Acesse aqui: DevMedia</h2><h2>🛠 Dicas para Melhorar sua Organização no Notion</h2><p>📌 Adicione um índice interativo no topo usando o bloco Table of Contents.</p><p>📌 Destaque trechos importantes com cores e ícones 🟢🔹🎭.</p><p>📌 Use toggle lists para esconder respostas de perguntas.</p><p>📌 Adicione imagens e diagramas para tornar a leitura mais dinâmica.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
