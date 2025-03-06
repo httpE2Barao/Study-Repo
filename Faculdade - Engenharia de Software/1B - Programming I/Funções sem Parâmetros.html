@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Funções sem Parâmetros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Funções sem Parâmetros</h1>
+    <div>
+      <p>Página Detalhada: Funções sem Parâmetros</p><p>Funções sem Parâmetros</p><p>Bem-vindo ao estudo sobre Funções! Vamos explorar conceitos fundamentais e exemplos práticos que ajudam a compreender como as funções podem simplificar e organizar a programação.</p><p>O que são Funções?</p><p>Funções são módulos que permitem organizar um programa em blocos menores e mais gerenciáveis. Elas têm uma tarefa principal: realizar operações específicas e retornar um valor ao final de sua execução. A principal diferença entre funções e procedimentos é que funções sempre retornam um valor, enquanto procedimentos apenas executam instruções sem retornar nada.</p><p>Vantagens de Usar Funções</p><p>Reutilização de Código: Uma função pode ser chamada várias vezes, evitando duplicação de código.</p><p>Organização: Funções dividem o programa em partes menores, facilitando a leitura e a manutenção.</p><p>Facilidade de Teste: Cada função pode ser testada separadamente para garantir que funciona corretamente.</p><p>Flexibilidade: Elas podem ser usadas para realizar cálculos complexos ou operações simples.</p><p>Estrutura de uma Função em Pseudocódigo</p><p>A sintaxe geral de uma função em pseudocódigo é:</p><p>função <nome-da-função> [(<parâmetros>)]: <tipo-de-dado></p><pre><code>  // Declaração de variáveis locais
+  início
+    // Bloco de instruções
+    retorne <valor>
+  fimfunção
+</code></pre><p>Componentes</p><p>função: Palavra reservada para declarar uma função.</p><p><nome-da-função>: Identificador único da função.</p><p><parâmetros> (opcional): Valores de entrada, se necessários.</p><p><tipo-de-dado>: Define o tipo do valor que será retornado (ex.: inteiro, real, caractere).</p><p>retorne: Instrução que especifica o valor a ser retornado.</p><p>Exemplo Prático: Função sem Parâmetros</p><p>Descrição</p><p>Uma função que retorna uma mensagem de saudação.</p><p>Pseudocódigo</p><p>função saudacao: caractere</p><p>  início</p><p>    retorne "Olá, bem-vindo ao mundo da programação!"</p><p>  fimfunção</p><p>Como Utilizar no Programa Principal</p><p>programa Principal</p><p>  início</p><p>    escreva(saudacao())</p><p>  fim</p><p>Saída:</p><p>Olá, bem-vindo ao mundo da programação!</p><p>Exemplo Prático: Cálculo de Volume de uma Esfera</p><p>Descrição</p><p>Uma função que calcula o volume de uma esfera com base no raio informado.</p><p>Pseudocódigo</p><p>função calcularVolume: real</p><pre><code>  var
+    raio, volume: real
+  início
+    escreva("Digite o raio da esfera: ")
+    leia(raio)
+    volume <- (4/3) * 3.1416 * (raio^3)
+    retorne volume
+  fimfunção
+</code></pre><p>Programa Principal</p><p>programa Principal</p><pre><code>  var
+    resultado: real
+  início
+    resultado <- calcularVolume()
+    escreva("O volume da esfera é: ", resultado)
+  fim
+</code></pre><p>Saída:</p><p>Se o usuário digitar o raio 3, a saída será:</p><p>O volume da esfera é: 113.097</p><p>Boas Práticas no Uso de Funções</p><p>Evite Dependência de Variáveis Globais: Prefira usar variáveis locais e passar dados como parâmetros para evitar efeitos colaterais.</p><p>Escolha Nomes Descritivos: Use nomes que descrevam claramente a tarefa da função.</p><p>Mantenha a Simplicidade: Uma função deve realizar apenas uma tarefa específica.</p><p>Documentação: Comente o que a função faz, quais são seus parâmetros e o que ela retorna.</p><p>Funções no VisualG</p><p>O VisualG é uma excelente ferramenta para criar e executar algoritmos com funções. Ele utiliza uma linguagem de pseudocódigo intuitiva que facilita o aprendizado e a prática de conceitos fundamentais, como o uso de funções.</p><p>Atividade Prática</p><p>Título: Soma de Dois Números com Função</p><p>Objetivo: Criar um algoritmo que utiliza uma função sem parâmetros para somar dois números digitados pelo usuário.</p><p>Instruções:</p><p>Peça ao usuário para digitar dois números.</p><p>Crie uma função que calcula a soma desses números.</p><p>Exiba o resultado no programa principal.</p><p>Pseudocódigo:</p><p>função soma: inteiro</p><pre><code>  var
+    num1, num2: inteiro
+  início
+    escreva("Digite o primeiro número: ")
+    leia(num1)
+    escreva("Digite o segundo número: ")
+    leia(num2)
+    retorne num1 + num2
+  fimfunção
+</code></pre><p>programa Principal</p><pre><code>  var
+    resultado: inteiro
+  início
+    resultado <- soma()
+    escreva("A soma dos números é: ", resultado)
+  fim
+</code></pre><p>Conclusão</p><p>As funções são ferramentas poderosas que permitem criar programas organizados, reutilizáveis e fáceis de manter. Ao dominar o conceito de funções, você estará preparado para resolver problemas complexos de maneira eficiente e eficaz.</p><p>Explore, pratique e aproveite ao máximo as funções na programação! 🚀</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
