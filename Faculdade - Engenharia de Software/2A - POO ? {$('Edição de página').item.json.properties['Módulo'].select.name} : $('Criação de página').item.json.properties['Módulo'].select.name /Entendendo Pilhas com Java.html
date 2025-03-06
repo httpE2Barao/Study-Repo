@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Entendendo Pilhas com Java</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Entendendo Pilhas com Java</h1>
+    <div>
+      <p>Introdução a Pilhas</p><p>A pilha é uma estrutura de dados linear e pode ser homogênea ou heterogênea. Ela funciona segundo o princípio LIFO (Last-In, First-Out), onde o último elemento adicionado é o primeiro a ser removido. O acesso é restrito ao topo, permitindo apenas as operações de inserção (push) e remoção (pop).</p><p>Representação e Operações de Pilhas</p><p>A representação computacional de uma pilha utiliza uma variável "topo" para indicar o elemento no topo. Uma pilha vazia é representada por topo = -1. As operações de inserção e remoção modificam o valor do topo, enquanto o acesso aos elementos é restrito.</p><p>Aplicações de Pilhas em Programação e Sistemas</p><p>Compiladores: Decodificação de expressões aritméticas e gestão de prioridades matemáticas.</p><p>Recursão: Armazena variáveis locais para preservar o contexto de cada chamada de função.</p><p>Sistemas Operacionais: Gerencia prioridades de tarefas e execução de processos.</p><p>Java Virtual Machine (JVM): Armazena resultados temporários durante a execução de programas.</p><p>Algoritmos de Pesquisa: Utilizada em árvores binárias e algoritmos de decisão. </p><p>Exemplo Prático: Bandejas em uma Lanchonete</p><p>O funcionamento de uma pilha pode ser comparado ao empilhamento de bandejas em uma lanchonete:</p><p>Quando alguém pega uma bandeja, remove a do topo.</p><p>Quando alguém devolve, coloca no topo.</p><p>Caso a pilha esteja vazia, não é possível remover bandejas.</p><p>Caso esteja cheia, não é possível adicionar mais bandejas.</p><p>Entendendo a Pilha com um Exemplo Visual</p><p>Inicialmente, a pilha está vazia (topo = -1):</p><p>Empilhamos A, B e C na pilha, mudando o topo:</p><p>Ao desempilhar, o elemento C é removido primeiro:</p><p>Operações Fundamentais da Pilha</p><p>Empilhar (push) - Adiciona um elemento no topo da pilha.</p><p>Desempilhar (pop) - Remove o elemento do topo.</p><p>Pilha Vazia - Verifica se a pilha está vazia.</p><p>Pilha Cheia - Verifica se a pilha atingiu sua capacidade.</p><p>Elemento do Topo (peek) - Retorna o elemento no topo sem removê-lo.</p><p>Mostrar Pilha - Exibe os elementos armazenados na pilha.</p><p>Pilha no Java</p><p>Java oferece a biblioteca java.util.Stack para manipulação de pilhas. Alguns métodos importantes são:</p><p>push(obj): Insere um elemento na pilha.</p><p>pop(): Remove e retorna o elemento do topo.</p><p>peek(): Retorna o topo sem removê-lo.</p><p>empty(): Verifica se a pilha está vazia.</p><p>Mesmo com essa biblioteca, a ideia é aprender a implementar a pilha manualmente para entender seu funcionamento.</p><p>Implementação Manual da Pilha em Java</p><p>class Pilha {</p><p>    private int tamanho;</p><p>    private int topo;</p><p>    private int[] elementos;</p><p>    public Pilha(int tamanho) {</p><p>        this.tamanho = tamanho;</p><p>        this.topo = -1;</p><p>        this.elementos = new int[tamanho];</p><p>    }</p><p>    public boolean pilhaVazia() {</p><p>        return topo == -1;</p><p>    }</p><p>    public boolean pilhaCheia() {</p><p>        return topo == tamanho - 1;</p><p>    }</p><p>    public void empilhar(int elemento) {</p><p>        if (!pilhaCheia()) {</p><p>            elementos[++topo] = elemento;</p><p>        } else {</p><p>            System.out.println("Pilha cheia!");</p><p>        }</p><p>    }</p><p>    public int desempilhar() {</p><p>        if (!pilhaVazia()) {</p><p>            return elementos[topo--];</p><p>        } else {</p><p>            System.out.println("Pilha vazia!");</p><p>            return -1;</p><p>        }</p><p>    }</p><p>    public int elementoTopo() {</p><p>        if (!pilhaVazia()) {</p><p>            return elementos[topo];</p><p>        } else {</p><p>            return -1;</p><p>        }</p><p>    }</p><p>    public void mostrarPilha() {</p><p>        for (int i = topo; i >= 0; i--) {</p><p>            System.out.println(elementos[i]);</p><p>        }</p><p>    }</p><p>}</p><p>public class TestePilha {</p><p>    public static void main(String[] args) {</p><p>        Pilha pilha = new Pilha(5);</p><p>        pilha.empilhar(10);</p><p>        pilha.empilhar(20);</p><p>        pilha.empilhar(30);</p><p>        pilha.mostrarPilha();</p><p>        System.out.println("Topo: " + pilha.elementoTopo());</p><p>        pilha.desempilhar();</p><p>        pilha.mostrarPilha();</p><p>    }</p><p>}</p><p>Indicação de Leitura</p><p>"Estrutura de Dados: algoritmos, análise da complexidade e implementações em Java e C/C++", Ana Fernanda Gomes Ascencio e Graziela Santos de Araújo, Capítulo 4.</p><p>Referências Bibliográficas</p><p>PUGA, S.; RISSETTI, G. Lógica de Programação e Estruturas de Dados, com aplicações em Java. 3ª edição. Pearson, 2016.</p><p>FORBELLONE, A.L.V.; EBERSPACHER, H.F. Lógica de Programação: a construção de algoritmos e estruturas de dados. 3ª edição. Prentice Hall, 2005.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
