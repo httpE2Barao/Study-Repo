@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ordenação de Dados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ordenação de Dados</h1>
+    <div>
+      <p>Entendendo Ordenação (JavaScript)</p><p>Ordenar dados é crucial para organizar informações e otimizar algoritmos. Nesta página, exploraremos os conceitos e exemplos de alguns dos algoritmos de ordenação mais conhecidos – BubbleSort, QuickSort e MergeSort – utilizando implementações em JavaScript.</p><p>Conceitos Gerais</p><p>Importância da Ordenação:</p><p>Notação Big O:</p><p>BubbleSort</p><p>Conceito e Funcionamento do BubbleSort</p><p>O BubbleSort é um algoritmo de ordenação simples que compara pares de elementos adjacentes e os troca de posição se estiverem na ordem errada. Esse processo é repetido várias vezes até que a lista esteja ordenada.</p><p>Exemplo:</p><p>Considere a lista:</p><p>[26, 47, 38, 11, 95]</p><p>Primeira passagem:</p><p>Passagens seguintes:</p><p>Pseudocódigo do BubbleSort</p><p>função Bolha(numeros[] inteiro)</p><p>    n ← tamanho de numeros</p><p>    para i de 0 até n-2 faça</p><p>        para j de 0 até n-2-i faça</p><p>            se (numeros[j] > numeros[j+1]) então</p><p>                trocar numeros[j] e numeros[j+1]</p><p>            fim_se</p><p>        fim_para</p><p>    fim_para</p><p>fim_função</p><p>Implementação em JavaScript do BubbleSort</p><p>function bubbleSort(numeros) {</p><pre><code>  const n = numeros.length;
+  for (let i = 0; i < n - 1; i++) {
+    // A cada iteração, o último elemento já está ordenado
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (numeros[j] > numeros[j + 1]) {
+        // Troca os elementos
+        let aux = numeros[j];
+        numeros[j] = numeros[j + 1];
+        numeros[j + 1] = aux;
+      }
+    }
+  }
+  return numeros;
+}
+</code></pre><pre><code>// Exemplo de uso:
+const arr = [26, 47, 38, 11, 95];
+console.log("Ordenado:", bubbleSort(arr));  // Saída: [11, 26, 38, 47, 95]
+</code></pre><p>QuickSort</p><p>Introdução ao QuickSort</p><p>O QuickSort é um algoritmo de ordenação por comparação que utiliza a técnica de divisão e conquista. Ele escolhe um pivô e particiona a lista em duas sublistas:</p><p>Elementos menores que o pivô</p><p>Elementos maiores que o pivô</p><p>Depois, o algoritmo aplica recursivamente a mesma lógica a cada sublista.</p><p>Exemplo e Funcionamento do QuickSort</p><p>Considere a lista:</p><p>[25, 57, 48, 37, 12, 92, 86, 33]</p><p>Escolhe-se um pivô (por exemplo, o último elemento ou o primeiro elemento).</p><p>A lista é particionada com os elementos menores à esquerda e os maiores à direita.</p><p>O processo é repetido recursivamente até que a lista esteja ordenada, resultando em:[12, 25, 33, 37, 48, 57, 86, 92].</p><p>Pseudocódigo do QuickSort</p><p>função quicksort(p, q, vetor[] inteiro)</p><p>    se (p < q) então</p><p>        x ← particao(p, q, vetor)</p><p>        quicksort(p, x - 1, vetor)</p><p>        quicksort(x + 1, q, vetor)</p><p>    fim_se</p><p>fim_função</p><p>função particao(p, q, vetor[] inteiro) retorna inteiro</p><p>    j ← p - 1</p><p>    pivô ← vetor[q]</p><p>    para i de p até q faça</p><p>        se (vetor[i] ≤ pivô) então</p><p>            j ← j + 1</p><p>            trocar vetor[i] e vetor[j]</p><p>        fim_se</p><p>    fim_para</p><p>    retornar j</p><p>fim_função</p><p>Implementação em JavaScript do QuickSort</p><p>function quickSort(array) {</p><p>  if (array.length <= 1) {</p><p>    return array;</p><p>  }</p><pre><code>  // Escolhe o pivô (último elemento)
+  const pivot = array[array.length - 1];
+  const left = [];
+  const right = [];
+</code></pre><pre><code>  // Divide os elementos em duas sublistas
+  for (let i = 0; i < array.length - 1; i++) {
+    if (array[i] < pivot) {
+      left.push(array[i]);
+    } else {
+      right.push(array[i]);
+    }
+  }
+</code></pre><pre><code>  // Aplica recursivamente o QuickSort nas sublistas e junta os resultados
+  return [...quickSort(left), pivot, ...quickSort(right)];
+}
+</code></pre><pre><code>// Exemplo de uso:
+const arr2 = [25, 57, 48, 37, 12, 92, 86, 33];
+console.log("QuickSort:", quickSort(arr2));  // Saída: [12, 25, 33, 37, 48, 57, 86, 92]
+</code></pre><p>MergeSort</p><p>Introdução ao MergeSort</p><p>O MergeSort é um algoritmo recursivo que utiliza a técnica de divisão e conquista. Ele divide a lista em sublistas até que cada sublista contenha um único elemento, e então as mescla de forma ordenada para formar a lista final.</p><p>Exemplo de Funcionamento do MergeSort</p><p>Dada a lista:</p><p>[25, 57, 48, 37, 12, 92, 86, 33]</p><p>Divisão:</p><p>Recursão:</p><p>Mesclagem (Merge):</p><p>Pseudocódigo do MergeSort</p><p>função merge(a[], inicio, meio, fim)</p><p>    n ← fim - inicio + 1</p><p>    criar vetor b[n]</p><p>    i1 ← inicio; i2 ← meio + 1; j ← 0</p><p>    enquanto (i1 ≤ meio e i2 ≤ fim) faça</p><p>        se (a[i1] < a[i2]) então</p><p>            b[j] ← a[i1]</p><p>            i1 ← i1 + 1</p><p>        senão</p><p>            b[j] ← a[i2]</p><p>            i2 ← i2 + 1</p><p>        fim_se</p><p>        j ← j + 1</p><p>    fimenquanto</p><p>    enquanto (i1 ≤ meio) faça</p><p>        b[j] ← a[i1]</p><p>        i1 ← i1 + 1; j ← j + 1</p><p>    fimenquanto</p><p>    enquanto (i2 ≤ fim) faça</p><p>        b[j] ← a[i2]</p><p>        i2 ← i2 + 1; j ← j + 1</p><p>    fimenquanto</p><p>    para j de 0 até n-1 faça</p><p>        a[inicio + j] ← b[j]</p><p>    fim_para</p><p>fim_função</p><p>função mergeSort(a[], inicio, fim)</p><p>    se (inicio == fim) então</p><p>        retornar</p><p>    fim_se</p><p>    meio ← (inicio + fim) / 2</p><p>    mergeSort(a, inicio, meio)</p><p>    mergeSort(a, meio + 1, fim)</p><p>    merge(a, inicio, meio, fim)</p><p>fim_função</p><p>Implementação em JavaScript do MergeSort</p><p>function mergeSort(array) {</p><p>  if (array.length <= 1) {</p><p>    return array;</p><p>  }</p><pre><code>  const middle = Math.floor(array.length / 2);
+  const left = array.slice(0, middle);
+  const right = array.slice(middle);
+</code></pre><p>  return merge(mergeSort(left), mergeSort(right));</p><p>}</p><p>function merge(left, right) {</p><pre><code>  const result = [];
+</code></pre><p>  while (left.length && right.length) {</p><p>    if (left[0] < right[0]) {</p><p>      result.push(left.shift());</p><p>    } else {</p><p>      result.push(right.shift());</p><p>    }</p><p>  }</p><p>  return result.concat(left, right);</p><p>}</p><pre><code>// Exemplo de uso:
+const arr3 = [25, 57, 48, 37, 12, 92, 86, 33];
+console.log("MergeSort:", mergeSort(arr3));  // Saída: [12, 25, 33, 37, 48, 57, 86, 92]
+</code></pre><p>Análise e Comparação dos Algoritmos</p><p>BubbleSort:</p><p>QuickSort:</p><p>MergeSort:</p><p>Atividade Prática – Ordenação BubbleSort em JavaScript</p><p>Título da Prática: Ordenação BubbleSort</p><p>Objetivos:</p><p>Desenvolver e compreender a implementação do algoritmo BubbleSort em JavaScript utilizando um editor de código (pode ser o VS Code, CodePen, ou outro ambiente online).</p><p>Materiais, Métodos e Ferramentas:</p><p>Computador</p><p>Editor de código (VS Code, Sublime Text, etc.)</p><p>Navegador Web para executar o código JavaScript</p><p>Descrição da Atividade</p><p>Contextualização:</p><p>Passos da Atividade:</p><p>Código-Fonte (Gabarito):</p><pre><code>// Função BubbleSort em JavaScript
+function bubbleSort(numeros) {
+  const n = numeros.length;
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (numeros[j] > numeros[j + 1]) {
+        let aux = numeros[j];
+        numeros[j] = numeros[j + 1];
+        numeros[j + 1] = aux;
+      }
+    }
+  }
+  return numeros;
+}
+</code></pre><pre><code>// Exemplo interativo usando prompt (executar no navegador)
+function executarBubbleSort() {
+  const num = [];
+  for (let i = 0; i < 10; i++) {
+    let valor = parseInt(prompt("Digite um número inteiro:"), 10);
+    num.push(valor);
+  }
+  const ordenado = bubbleSort(num);
+  alert("Array ordenado: " + ordenado.join(" "));
+}
+</code></pre><pre><code>// Chama a função para executar a prática
+executarBubbleSort();
+</code></pre><p>Execução:</p><p>Referências Bibliográficas</p><p>PUGA, S.; RISSETTI, G. Lógica de Programação e Estruturas de Dados, com aplicações em Java. São Paulo: Pearson, 3ª Edição, 2016.</p><p>FORBELLONE, A.L.V.; EBERSPACHER, H.F. Lógica de Programação: a construção de algoritmos e estruturas de dados. 3ª Edição, São Paulo: Prentice Hall, 2005.</p><p>Outros materiais e referências sobre algoritmos de ordenação e estruturas de dados podem ser consultados para aprofundamento.</p><p>Conclusão</p><p>A compreensão dos algoritmos de ordenação – BubbleSort, QuickSort e MergeSort – é essencial para otimizar a manipulação de dados em diversas aplicações. Os exemplos em JavaScript apresentados aqui demonstram como implementar essas técnicas de forma prática, possibilitando a criação de soluções eficientes para ordenação de arrays.</p><p>Você pode personalizar essa estrutura no Notion, adicionar imagens, links e outras seções conforme necessário para complementar seus estudos. Bom aprendizado!</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
