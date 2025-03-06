@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Procedimentos sem Parâmetros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Procedimentos sem Parâmetros</h1>
+    <div>
+      <p>Procedimentos sem Parâmetros</p><p>O que é Modularização?</p><p>A modularização é uma prática fundamental na programação que consiste em dividir um programa grande e complexo em partes menores chamadas módulos ou subprogramas. Essa abordagem traz inúmeras vantagens:</p><p>Facilita a escrita e a leitura do código.</p><p>Melhora o processo de teste e depuração.</p><p>Reduz a repetição de código, promovendo reutilização.</p><p>Torna a manutenção mais simples e eficiente.</p><p>Os dois principais tipos de subprogramas são procedimentos e funções. A diferença principal entre eles é:</p><p>Funções retornam um valor.</p><p>Procedimentos não retornam valores e são utilizados para realizar ações específicas.</p><p>Nesta página, focaremos nos procedimentos, explicando suas características e como utilizá-los.</p><p>O que são Procedimentos sem Parâmetros?</p><p>Os procedimentos sem parâmetros são subprogramas que realizam uma tarefa específica sem receber valores externos para sua execução. Eles são úteis quando as informações necessárias para o procedimento já estão disponíveis como variáveis globais no programa.</p><p>Estrutura de um Procedimento</p><p>Para declarar um procedimento em pseudocódigo, utilizamos a seguinte sintaxe:</p><p>procedimento <nome_do_procedimento></p><pre><code>  // Declaração de variáveis locais (se necessário)
+inicio
+  // Bloco de comandos do procedimento
+fimprocedimento
+</code></pre><p>Exemplo: Olá Mundo</p><p>Um exemplo simples de procedimento que imprime "Olá Mundo" na tela:</p><p>procedimento olaMundo</p><p>inicio</p><p>  escreva("Olá Mundo!")</p><p>fimprocedimento</p><p>Como chamar um Procedimento</p><p>Dentro do programa principal, o procedimento pode ser chamado pelo nome:</p><p>algoritmo "ExemploProcedimento"</p><p>inicio</p><p>  olaMundo() // Chamando o procedimento</p><p>fim</p><p>Variáveis Globais e Locais</p><p>Variáveis Locais:</p><p>Variáveis Globais:</p><p>Exemplo de Uso:</p><pre><code>var
+  globalVar: inteiro // Variável global
+</code></pre><p>procedimento exemplo</p><pre><code>var
+  localVar: inteiro // Variável local
+inicio
+  localVar <- 10
+  globalVar <- 20 // Modifica a variável global
+fimprocedimento
+</code></pre><p>Benefícios dos Procedimentos</p><p>Organização do Código:</p><p>Reutilização de Código:</p><p>Facilidade de Manutenção:</p><p>Foco em Tarefas Específicas:</p><p>Exemplo Prático: Cálculo de Velocidade Média</p><p>Vamos criar um procedimento que calcula a velocidade média de um veículo, dado o tempo e a distância percorrida.</p><p>Código em Pseudocódigo:</p><p>procedimento calcularVelocidade</p><pre><code>var
+  tempo: real
+  velocidade: real
+inicio
+  tempo <- tempofinal - tempoinicial
+  velocidade <- distancia / tempo
+  escreva("Velocidade média: ", velocidade, " km/h")
+fimprocedimento
+</code></pre><p>algoritmo "ExemploVelocidade"</p><pre><code>var
+  tempoinicial, tempofinal, distancia: real
+inicio
+  tempoinicial <- 8
+  tempofinal <- 10
+  distancia <- 120
+  calcularVelocidade()
+fim
+</code></pre><p>Explicação:</p><p>A variável tempo é calculada dentro do procedimento.</p><p>A velocidade média é calculada e exibida no console.</p><p>Cuidados ao Usar Procedimentos</p><p>Escopo de Variáveis:</p><p>Divisão Lógica:</p><p>Nomes Significativos:</p><p>Conclusão</p><p>Os procedimentos sem parâmetros são ferramentas essenciais na programação, permitindo que criemos programas mais organizados, reutilizáveis e eficientes. Ao entender o funcionamento dos procedimentos e sua integração com variáveis globais e locais, conseguimos desenvolver soluções mais robustas e de fácil manutenção.</p><p>Resumo das Vantagens:</p><p>Reutilização de código.</p><p>Organização e clareza.</p><p>Redução de erros e maior facilidade de depuração.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
