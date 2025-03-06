@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Procedimentos com Parâmetros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Procedimentos com Parâmetros</h1>
+    <div>
+      <p>Procedimentos com Parâmetros</p><p>Introdução</p><p>A modularização é um conceito fundamental na programação, que divide problemas complexos em partes menores e mais gerenciáveis, chamadas de módulos. Um dos tipos mais comuns de módulos são os procedimentos, que executam tarefas específicas e podem receber parâmetros para trabalhar com diferentes valores.</p><p>O que são Procedimentos com Parâmetros?</p><p>Procedimentos são blocos de código que executam tarefas específicas. Quando utilizamos parâmetros, enviamos "presentes" para o procedimento, permitindo que ele trabalhe com diferentes dados a cada execução.</p><p>Características dos Parâmetros:</p><p>Declarados na definição do procedimento, entre parênteses.</p><p>Podem ser de diferentes tipos de dados (inteiros, reais, caracteres, etc.).</p><p>Os valores dos parâmetros são copiados para variáveis internas do procedimento e utilizados para realizar as tarefas.</p><p>Diferença entre Variáveis Globais e Locais</p><p>Variáveis Globais:</p><p>Variáveis Locais:</p><p>Exemplo de Uso: Multiplicação com Parâmetros</p><p>Imagine um algoritmo que calcula a multiplicação de dois números. O procedimento pode:</p><p>Receber dois parâmetros (os números a serem multiplicados).</p><p>Realizar a multiplicação dentro do seu bloco de código.</p><p>Exibir o resultado diretamente ou retorná-lo para o programa principal.</p><p>Pseudocódigo no Visualg:</p><p>algoritmo "MultiplicacaoComProcedimento"</p><p>procedimento multiplicar(num1: real, num2: real)</p><pre><code>var
+    resultado: real
+inicio
+    resultado <- num1 * num2
+    escreval("O resultado da multiplicação é: ", resultado)
+fimprocedimento
+</code></pre><pre><code>var
+    numero1, numero2: real
+inicio
+    escreval("Digite o primeiro número: ")
+    leia(numero1)
+    escreval("Digite o segundo número: ")
+    leia(numero2)
+</code></pre><pre><code>    // Chamada do procedimento
+    multiplicar(numero1, numero2)
+fim
+</code></pre><p>Vantagens de Procedimentos com Parâmetros</p><p>Organização do código:</p><p>Reutilização:</p><p>Divisão de tarefas:</p><p>Testagem mais fácil:</p><p>Dicas de Aprendizado</p><p>Utilize ferramentas como o Visualg para praticar a criação e execução de algoritmos.</p><p>Experimente criar diferentes procedimentos com parâmetros e varie os tipos de dados.</p><p>Sempre priorize boas práticas de programação, como o uso de variáveis locais e a organização modular do código.</p><p>Conclusão</p><p>A modularização e o uso de procedimentos com parâmetros são técnicas essenciais para desenvolver software de qualidade. Ao praticar e aplicar esses conceitos, você estará construindo uma base sólida para enfrentar desafios do desenvolvimento moderno.</p><p>Lembre-se: A prática é a chave para o aprendizado em programação. Explore, experimente e nunca hesite em buscar ajuda quando necessário!</p><p>Se precisar de mais ajustes ou complementos, é só avisar! 🚀</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
