@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Entendendo Vetores e Matrizes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Entendendo Vetores e Matrizes</h1>
+    <div>
+      <p>Vetores e Matrizes: Estruturas de Dados</p><p>Esta página apresenta os conceitos fundamentais sobre Vetores e Matrizes, abordando sua definição, características, operações e aplicações práticas.</p><h2>1. Introdução a Vetores e Matrizes</h2><p>Vetores: São estruturas de dados homogêneas e unidimensionais, armazenando um único tipo de dado em uma sequência de elementos indexados.</p><p>Matrizes: São estruturas bidimensionais, organizadas em linhas e colunas, permitindo armazenar dados de maneira mais estruturada.</p><h2>📌 Exemplo</h2><p>Um vetor pode armazenar as notas de um aluno em diferentes disciplinas, enquanto uma matriz pode armazenar as notas de vários alunos em várias disciplinas.</p><h2>2. Declaração e Atribuição de Vetores e Matrizes</h2><p>Vetores</p><p>A declaração de um vetor em Java segue o formato:</p><p>int notas[] = new int[5];  // Declaração de um vetor de 5 posições</p><p>Atribuição de valores ao vetor:</p><p>notas[0] = 9;</p><p>notas[1] = 8;</p><p>notas[2] = 7;</p><p>notas[3] = 10;</p><p>notas[4] = 6;</p><p>Matrizes</p><p>A declaração de uma matriz em Java:</p><p>int matriz[][] = new int[3][2];  // Declaração de uma matriz com 3 linhas e 2 colunas</p><p>Atribuição de valores à matriz:</p><p>matriz[0][0] = 9;</p><p>matriz[0][1] = 8;</p><p>matriz[1][0] = 7;</p><p>matriz[1][1] = 10;</p><p>matriz[2][0] = 6;</p><p>matriz[2][1] = 5;</p><h2>3. Algoritmos com Vetores e Matrizes</h2><p>Percorrendo um Vetor</p><p>Usamos estruturas de repetição para percorrer todas as posições de um vetor:</p><p>for (int i = 0; i < notas.length; i++) {</p><p>    System.out.println("Nota " + (i + 1) + ": " + notas[i]);</p><p>}</p><p>Percorrendo uma Matriz</p><p>Utilizamos loops aninhados para percorrer todas as células de uma matriz:</p><p>for (int i = 0; i < 3; i++) {</p><p>    for (int j = 0; j < 2; j++) {</p><p>        System.out.println("Valor na posição [" + i + "][" + j + "]: " + matriz[i][j]);</p><p>    }</p><p>}</p><h2>4. Aplicações no Dia a Dia</h2><p>Vetores</p><p>Armazenamento de notas de alunos.</p><p>Listas de compras.</p><p>Armazenamento de temperaturas diárias.</p><p>Matrizes</p><p>Representação de tabelas de notas por turma.</p><p>Manipulação de imagens (onde cada pixel pode ser representado por uma matriz).</p><p>Sistemas de cálculos financeiros (como planilhas).</p><h2>5. Exercícios Práticos</h2><p>1️⃣ Algoritmo para Somar 100 Números Usando Vetores</p><p>import java.util.Scanner;</p><p>public class SomaVetor {</p><p>    public static void main(String[] args) {</p><p>        Scanner scanner = new Scanner(System.in);</p><p>        int[] numeros = new int[100];</p><p>        int soma = 0;</p><p>        for (int i = 0; i < 100; i++) {</p><p>            System.out.println("Digite um número:");</p><p>            numeros[i] = scanner.nextInt();</p><p>            soma += numeros[i];</p><p>        }</p><p>        System.out.println("A soma dos 100 números é: " + soma);</p><p>    }</p><p>}</p><p>2️⃣ Algoritmo para Somar 120 Números Usando Matrizes</p><p>import java.util.Scanner;</p><p>public class SomaMatriz {</p><p>    public static void main(String[] args) {</p><p>        Scanner scanner = new Scanner(System.in);</p><p>        int[][] matriz = new int[10][12];</p><p>        int soma = 0;</p><p>        for (int i = 0; i < 10; i++) {</p><p>            for (int j = 0; j < 12; j++) {</p><p>                System.out.println("Digite um número:");</p><p>                matriz[i][j] = scanner.nextInt();</p><p>                soma += matriz[i][j];</p><p>            }</p><p>        }</p><p>        System.out.println("A soma dos 120 números é: " + soma);</p><p>    }</p><p>}</p><h2>6. Implementação com NetBeans</h2><p>Caso esteja utilizando NetBeans, siga estas etapas:</p><p>Crie um novo projeto Java no NetBeans.</p><p>Adicione uma classe Java e copie um dos códigos acima.</p><p>Compile e execute o programa usando o atalho Shift + F6.</p><h2>📌 Dicas:</h2><p>Sempre indente o código corretamente.</p><p>Utilize comentários para documentar suas funções.</p><h2>7. Referências e Leituras Complementares</h2><h2>📚 Livros Recomendados</h2><p>CORMEN, T. H.; LEISERSON, C. E.; RIVEST, R. L.; STEIN, C. Algoritmos: Teoria e Prática – Editora Campus, 3ª Edição, 2012.</p><p>GOODRICH, M. T.; TAMASSIA, R. Estruturas de Dados & Algoritmos em Java – Grupo A: Bookman, 5ª Edição, 2013.</p><h2>📺 Vídeos Recomendados</h2><p>Playlist sobre Estruturas de Dados no YouTube</p><h2>🔗 Ferramentas Online</h2><p>Compilador Java Online</p><p>Conclusão</p><p>O estudo de vetores e matrizes é essencial para o desenvolvimento de algoritmos eficientes. Compreender essas estruturas ajuda a otimizar código, melhorar a organização de dados e aprimorar o desempenho de aplicações.</p><p>Utilize esta página como um guia de referência para aprimorar seu conhecimento em Vetores e Matrizes! 🚀</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
