@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intruções Condicionais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Intruções Condicionais</h1>
+    <div>
+      <p>💻 Operadores Relacionais e Estruturas Condicionais em Java</p><p>⚙️ Operadores Relacionais</p><p>Os operadores relacionais constroem expressões lógicas com resultado booleano: true ou false. São frequentemente utilizados em instruções condicionais como if e while.</p><h2>🛠️ Operadores básicos:</h2><p>== Igual</p><p>!= Diferente</p><p>< Menor que</p><p>> Maior que</p><p><= Menor ou igual</p><p>>= Maior ou igual</p><h2>🔍 Exemplos práticos:</h2><p>int nota = 7;</p><p>if(nota >= 7) {</p><p>    System.out.println("Aprovado");</p><p>} else {</p><p>    System.out.println("Reprovado");</p><p>}</p><p>🧠 Dica: Esses operadores são essenciais para estruturas de decisão e loops.</p><h2>🛑 Instrução IF</h2><p>O if permite executar blocos de código condicionalmente.</p><h2>📍 Sintaxe básica:</h2><p>if (condição) {</p><pre><code>    // bloco de código
+} else {
+    // bloco alternativo
+}
+</code></pre><h2>🛠️ Exemplo:</h2><p>int idade = 18;</p><p>if (idade >= 18) {</p><p>    System.out.println("Maior de idade");</p><p>} else {</p><p>    System.out.println("Menor de idade");</p><p>}</p><h2>✅ Tipos de IF:</h2><p>Simples</p><p>Com ELSE</p><p>Aninhado (nested IF)</p><p>IF-ELSE-IF (escada)</p><h2>📍 Exemplo de IF aninhado:</h2><p>int nota = 7;</p><p>if (nota >= 7) {</p><p>    System.out.println("Aprovado");</p><p>} else {</p><p>    if (nota >= 4) {</p><p>        System.out.println("Prova final");</p><p>    } else {</p><p>        System.out.println("Reprovado");</p><p>    }</p><p>}</p><p>🧠 Boas práticas: Mantenha os blocos aninhados organizados para facilitar a leitura.</p><h2>🔄 Instrução SWITCH</h2><p>O switch compara um valor com casos específicos, dispensando múltiplos if-else.</p><h2>📍 Sintaxe:</h2><p>switch (expressão) {</p><p>    case valor1:</p><pre><code>        // instruções
+        break;
+    case valor2:
+        // instruções
+        break;
+    default:
+        // instruções padrão
+}
+</code></pre><p>⚡ Exemplo:</p><p>int dia = 3;</p><p>switch (dia) {</p><p>    case 1:</p><p>        System.out.println("Domingo");</p><p>        break;</p><p>    case 2:</p><p>        System.out.println("Segunda-feira");</p><p>        break;</p><p>    case 3:</p><p>        System.out.println("Terça-feira");</p><p>        break;</p><p>    default:</p><p>        System.out.println("Dia inválido");</p><p>}</p><h2>🔍 Observações:</h2><p>O break impede a execução de cases subsequentes.</p><p>O default é opcional e executado se nenhum case corresponder.</p><h2>🔢 Operadores Lógicos (AND, OR, NOT)</h2><p>✅ Curto-circuito: Os operadores && e || avaliam apenas o necessário.</p><p>⚙️ Exemplos:</p><p>if ((5 > 3) && (2 < 4)) {</p><p>    System.out.println("Verdadeiro"); // Executado</p><p>}</p><p>boolean ativo = true;</p><p>if (!ativo) {</p><p>    System.out.println("Inativo"); // Não executado</p><p>}</p><h2>🧠 Operador Ternário</h2><p>O operador ternário simplifica decisões em uma única linha.</p><h2>📍 Sintaxe:</h2><p>variável = (condição) ? valor_se_verdadeiro : valor_se_falso;</p><p>⚡ Exemplo:</p><p>int idade = 20;</p><p>String mensagem = (idade >= 18) ? "Maior de idade" : "Menor de idade";</p><p>System.out.println(mensagem);</p><h2>🎯 Dica: Use o ternário para expressões simples.</h2><h2>🛠️ Operadores Bitwise</h2><p>Operadores que manipulam bits diretamente.</p><h2>🔍 Exemplo:</h2><p>int a = 5; // 0101</p><p>int b = 3; // 0011</p><p>int and = a & b; // 0001 (1)</p><p>int or = a | b;  // 0111 (7)</p><p>int xor = a ^ b; // 0110 (6)</p><p>int notA = ~a;   // 1010 (-6)</p><p>System.out.println("AND: " + and);</p><p>System.out.println("OR: " + or);</p><p>System.out.println("XOR: " + xor);</p><p>System.out.println("NOT: " + notA);</p><h2>🎯 Conclusão</h2><p>Entender os operadores relacionais e as estruturas condicionais permite desenvolver programas dinâmicos e com lógica sólida. Java oferece diversas ferramentas para tomada de decisão eficiente, desde o clássico if até o poderoso switch.</p><h2>🔗 Material complementar:</h2><h2>📺 Vídeo: Operadores em Java</h2><h2>📖 Referências:</h2><h2>🚀 Bons estudos e feliz codificação! 💡</h2>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
