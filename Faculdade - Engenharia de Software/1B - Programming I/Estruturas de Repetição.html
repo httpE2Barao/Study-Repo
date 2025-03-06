@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Estruturas de Repetição</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Estruturas de Repetição</h1>
+    <div>
+      <p>Introdução às Estruturas de Repetição</p><p>As estruturas de repetição, ou laços, são elementos essenciais na programação, permitindo que blocos de código sejam executados repetidamente com base em uma condição. Essa funcionalidade é crucial para automatizar tarefas repetitivas e tornar os programas mais eficientes. As três principais estruturas de repetição são: "Para", "Enquanto" e "Repita-Até".</p><p>Estrutura de Repetição "Para"</p><p>A estrutura "para" é utilizada quando se sabe previamente o número de vezes que o bloco de código deve ser repetido. Ela utiliza uma variável de controle, geralmente um contador, para definir o valor inicial, o valor final e, opcionalmente, o passo de incremento. A sequência de comandos dentro do laço "para" é executada até que a condição seja atingida, sendo particularmente útil para situações onde o número de repetições é conhecido, como iterar sobre elementos de uma lista ou realizar operações de contagem.</p><p>Solução do Problema de Multiplicação com Estrutura de Repetição "Para"</p><p>O algoritmo em pseudocódigo utiliza a estrutura de repetição "para" para solicitar cinco números ao usuário e calcular a multiplicação. A variável "multi" é inicializada com 1 e, em seguida, o laço "para" itera de 1 a 5, solicitando um número ao usuário em cada iteração, multiplicando o valor atual de "multi" pelo número digitado e armazenando o resultado em "multi".</p><p>Exemplo de "Para" Aninhado</p><p>É possível usar laços "para" aninhados, criando um laço dentro de outro. No exemplo, o laço interno "para j" será executado completamente para cada iteração do laço externo "para i", resultando em múltiplas execuções do bloco de código interno. Laços aninhados são frequentemente usados em situações que envolvem múltiplas dimensões, como percorrer matrizes ou tabelas, permitindo o processamento de cada elemento de forma organizada e sistemática.</p><p>Estrutura de Repetição "Enquanto"</p><p>A estrutura de repetição "enquanto" é utilizada quando o número de repetições é desconhecido, sendo a execução do bloco de código condicionada a uma expressão lógica. Enquanto a expressão lógica for verdadeira, o bloco de código será executado. O laço "enquanto" verifica a condição antes de cada iteração, garantindo que o bloco de código seja executado apenas enquanto a condição for satisfeita. Isso é ideal para situações em que a quantidade de repetições depende de uma condição dinâmica, que pode variar durante a execução do programa.</p><p>Exemplo de Algoritmo com Estrutura de Repetição "Enquanto"</p><p>O algoritmo "enquanto i a 5" utiliza uma estrutura de repetição "enquanto" para solicitar ao usuário a digitação de 5 números inteiros. A cada iteração, o algoritmo realiza a leitura do número, calcula a soma acumulada e incrementa o contador "i". O processo se repete até que "i" seja maior que 5, quando a soma total é exibida.</p><p>Estrutura de Repetição "Repita Até"</p><p>A estrutura "repita até" é similar à estrutura "enquanto", mas com a diferença de que o bloco de código é executado pelo menos uma vez, pois a verificação da condição lógica ocorre ao final do laço. O bloco de código será repetido até que a condição lógica se torne verdadeira. Essa estrutura é particularmente útil quando é necessário garantir que uma ação seja realizada pelo menos uma vez antes de verificar se deve ser repetida.</p><p>Solução do Problema de Multiplicação com Estrutura de Repetição "Repita Até"</p><p>A estrutura de repetição "repita até" oferece uma alternativa para solucionar o problema de multiplicação. O algoritmo solicita ao usuário que digite um número inteiro repetidamente até que o contador "i" atinja 5. A cada iteração, o número digitado é multiplicado pelo valor atual da variável "multi", que armazena o resultado da multiplicação.</p><p>Atividade Prática: Algoritmos com Estruturas de Repetição "Para" e "Repita Até"</p><p>A atividade prática propõe a criação de dois algoritmos em pseudocódigo. Ambos solicitam ao usuário a digitação de 5 números e calculam a multiplicação. A diferença reside na estrutura de repetição utilizada: o primeiro algoritmo deve utilizar "para" e o segundo "repita até". Essa prática é fundamental para entender as nuances de cada estrutura e como elas podem ser aplicadas de acordo com a necessidade do programa.</p><p>Resumo das Estruturas de Repetição</p><p>As estruturas de repetição são essenciais na programação, pois permitem automatizar tarefas repetitivas e tornar os algoritmos mais eficientes. A estrutura "para" é indicada quando o número de repetições é conhecido, utilizando uma variável de controle para definir o início e o fim do laço. A estrutura "enquanto" é utilizada quando o número de repetições não é conhecido, sendo a execução do código condicionada a uma expressão lógica que deve ser verdadeira. Já a estrutura "repita até" garante a execução do bloco de código pelo menos uma vez, verificando a condição ao final do laço. A escolha da estrutura de repetição mais adequada depende da natureza do problema a ser resolvido, e a prática constante é fundamental para dominar a lógica de programação e a aplicação eficiente desses conceitos.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
