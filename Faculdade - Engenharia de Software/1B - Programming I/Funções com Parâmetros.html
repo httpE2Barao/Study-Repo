@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Funções com Parâmetros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Funções com Parâmetros</h1>
+    <div>
+      <p>Página Detalhada: Funções com Parâmetros</p><p>Introdução às Funções com Parâmetros</p><p>Funções com parâmetros desempenham um papel crucial na modularização de programas, permitindo que dados sejam passados para funções durante sua chamada. Essa prática evita a repetição de código e organiza o fluxo de informações, facilitando o desenvolvimento e a manutenção.</p><p>Os parâmetros são declarados na definição da função e recebem valores, chamados de argumentos, quando a função é chamada. Esses valores podem ser fornecidos por variáveis, constantes ou até mesmo expressões calculadas no momento da chamada.</p><p>Estrutura Geral de Funções com Parâmetros</p><p>A estrutura de uma função com parâmetros inclui:</p><p>Cabeçalho: onde o nome da função e os parâmetros são definidos.</p><p>Bloco de Código: onde as operações internas são realizadas.</p><p>Instrução de Retorno: que especifica o valor a ser devolvido ao chamador.</p><p>Exemplo básico em pseudocódigo:</p><p>função multiplica(numero1: inteiro, numero2: inteiro): inteiro</p><p>    início</p><p>        retorne numero1 * numero2</p><p>    fimfunção</p><p>Vantagens de Usar Parâmetros</p><p>Reutilização de Código: A mesma função pode ser chamada com diferentes valores.</p><p>Redução de Variáveis Globais: Minimiza os efeitos colaterais e aumenta a segurança do código.</p><p>Facilidade de Manutenção: Alterações na lógica da função não impactam outras partes do programa diretamente.</p><p>Legibilidade: Torna o propósito do código mais claro.</p><p>Exemplo Prático</p><p>Um exemplo simples de função que retorna o maior entre dois números:</p><p>função maiorValor(a: inteiro, b: inteiro): inteiro</p><p>    início</p><p>        se (a > b) então</p><p>            retorne a</p><p>        senão</p><p>            retorne b</p><p>        fimse</p><p>    fimfunção</p><p>Programa Principal:</p><p>programa principal</p><p>    variável num1, num2, resultado: inteiro</p><p>    início</p><p>        escreva("Digite o primeiro número: ")</p><p>        leia(num1)</p><p>        escreva("Digite o segundo número: ")</p><p>        leia(num2)</p><p>        resultado ← maiorValor(num1, num2)</p><p>        escreva("O maior número é: ", resultado)</p><p>    fimprograma</p><p>Atividade Prática</p><p>Desenvolva um algoritmo em pseudocódigo que use uma função com parâmetros para somar dois números fornecidos pelo usuário.</p><p>Exemplo de Resolução:</p><p>função soma(numero1: inteiro, numero2: inteiro): inteiro</p><p>    início</p><p>        retorne numero1 + numero2</p><p>    fimfunção</p><p>programa principal</p><p>    variável a, b, resultado: inteiro</p><p>    início</p><p>        escreva("Digite o primeiro número: ")</p><p>        leia(a)</p><p>        escreva("Digite o segundo número: ")</p><p>        leia(b)</p><p>        resultado ← soma(a, b)</p><p>        escreva("A soma é: ", resultado)</p><p>    fimprograma</p><p>Conclusão</p><p>Funções com parâmetros tornam o desenvolvimento mais eficiente, organizado e menos suscetível a erros. Ao dominar o uso de parâmetros, programadores podem criar soluções robustas e escaláveis para problemas complexos.</p><p>Referência Bibliográfica</p><p>MANZANO, J. A. N. G.; OLIVEIRA, J. F. Estudo Dirigido de Algoritmos. 15. ed. São Paulo: Érica, 2012.</p><p>RIBEIRO, J. A. Introdução à Programação e aos Algoritmos. 1. ed. Rio de Janeiro: LTC, 2019.</p><p>GUEDES, S. (Org.). Lógica de Programação Algorítmica. Pearson, 2014.</p><p>Pronto para criar suas próprias funções com parâmetros? Vamos começar! 🚀</p><p>Funções com Parâmetros</p><h2>1. O que é Modularização?</h2><p>Definição: Dividir programas extensos em partes menores e independentes chamadas módulos ou subprogramas.</p><p>Vantagens:</p><h2>2. Funções e Parâmetros</h2><p>Funções:</p><p>Parâmetros:</p><h2>3. Retorno de Funções</h2><p>O valor devolvido ao final da execução da função.</p><p>Deve ser compatível com o tipo definido na declaração.</p><p>Palavra-chave: retorne, seguida do valor ou expressão a ser retornada.</p><p>Importante garantir que o retorno seja relevante para a função.</p><h2>4. Exemplo Prático</h2><p>Problema: Calcular o produto de dois números inteiros.</p><p>Função:</p><p>Algoritmo:</p><h2>5. Uso do VisualG</h2><p>Ambiente prático para aprendizado de algoritmos e programação.</p><p>Vantagens:</p><h2>6. Benefícios do Uso de Funções com Parâmetros</h2><p>Organização: Torna o código mais estruturado.</p><p>Reutilização: Funções podem ser usadas em diferentes partes do programa.</p><p>Eficiência: Reduz duplicação de código, facilitando alterações futuras.</p><p>Abstração: Permite focar em partes menores e mais gerenciáveis de um problema.</p><h2>7. Aprendizado e Prática</h2><p>A prática constante é fundamental para dominar o uso de funções.</p><p>Dicas:</p><h2>8. Pensamento Modular</h2><p>Dividir problemas em partes menores facilita a resolução e a colaboração em projetos maiores.</p><p>A programação modular melhora a capacidade de lidar com a complexidade.</p><p>Conclusão</p><p>As funções com parâmetros são ferramentas indispensáveis para qualquer programador. Elas permitem a criação de códigos mais organizados, eficientes e reutilizáveis. Com a prática, o aprendizado de novas tecnologias e o desenvolvimento do pensamento lógico, programadores podem enfrentar desafios mais complexos e criar soluções inovadoras. O domínio das funções representa um marco importante na jornada de qualquer profissional de programação.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
