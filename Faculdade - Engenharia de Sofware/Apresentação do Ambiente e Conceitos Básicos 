@@ -1,69 +1,167 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>undefined</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background-color: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    }
-    h1 {
-      color: #333;
-      text-align: center;
-    }
-    h2 {
-      font-size: 20px;
-      margin-top: 20px;
-      color: #222;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #444;
-      margin: 8px 0;
-    }
-    pre {
-      background-color: #00000;
-      color: #fffff;
-      padding: 10px;
-      border-radius: 4px;
-      overflow-x: auto;
-      font-family: Consolas, monospace;
-      margin: 8px 0;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>undefined</h1>
-    <div>
-      <h2>✨ Apresentação do Ambiente e Conceitos Básicos</h2><p>Bem-vindos à primeira parte de nossa aula de Programação II! Aqui vamos explorar os fundamentos essenciais para o desenvolvimento de software, utilizando ferramentas como ==Node.js==, Visual Studio Code (VS Code), ==Postman==, dentre outras.</p><h2>🎯 Objetivo Geral da Disciplina</h2><p>Aprender a consumir APIs, entendendo como se comunicam e como integrá-las.</p><p>Aprender boas práticas de arquitetura, organização de código e padrões de projeto.</p><p>Focar em testes e controle de autenticação, garantindo qualidade e segurança.</p><h2>🚀 1. Ambiente de Desenvolvimento</h2><h2>💡 Dica: O ambiente de desenvolvimento reúne todos os recursos necessários para criar, testar e depurar aplicações. Ele costuma começar na sua máquina local, mas pode se estender para ambientes de teste, homologação e produção.</h2><p>Tipos de Ambiente</p><p>Local: Onde cada desenvolvedor trabalha individualmente.</p><p>Desenvolvimento: Centraliza as alterações de código para a equipe.</p><p>Teste: Focado em validações mais profundas, evitando bugs em produção.</p><p>Homologação: Versão quase final, conferida pelo time ou cliente.</p><p>Produção: Versão que o usuário final acessa.</p><h2>🌐 2. Introdução ao Node.js</h2><p>==Node.js== é um runtime que executa ==JavaScript== fora do navegador. Ele se destaca porque:</p><p>Compartilha a mesma linguagem do front-end e do back-end (JavaScript).</p><p>Tem curva de aprendizado relativamente rápida.</p><p>Permite construir APIs e serviços escaláveis de forma simples.</p><pre><code>// Verificando versão do Node.js
-node --version
-</code></pre><p>Se você não tem o Node instalado, baixe do site oficial: Node.js.</p><h2>🔀 3. Versionamento de Código</h2><p>==Versionar código== é registrar todas as mudanças feitas ao longo do tempo, permitindo trabalhar em equipe sem perder histórico.</p><p>Principais Tipos</p><p>Local: Arriscado e pouco colaborativo (ex.: manter somente na sua máquina).</p><p>Centralizado: Melhor que local, mas pode gerar conflitos se muitos trabalharem ao mesmo tempo (ex.: SVN).</p><p>Distribuído: O mais utilizado (ex.: Git), cada desenvolvedor tem uma cópia completa do repositório, facilitando ramificações e fusões de código.</p><p>Exemplo de fluxos de versão:</p><h2>📡 4. Postman e Ferramentas de Teste de API</h2><p>O ==Postman== é a ferramenta mais conhecida para:</p><p>Testar requisições (GET, POST, PUT, DELETE etc.).</p><p>Documentar APIs.</p><p>Colaborar em equipes.</p><p>⚠️ Atenção à segurança: Confira onde seus dados (chaves de autenticação, tokens) são armazenados.</p><p>Ferramentas similares:</p><p>Insomnia, Swagger, SoapUI, Apigee etc.</p><h2>🛠️ 5. IDE, Plugins e Navegadores</h2><p>IDE</p><p>Uma ==IDE (Integrated Development Environment)== facilita a edição, compilação e depuração de código.</p><p>Visual Studio Code (VS Code): Leve, multiplataforma e muito extensível.</p><p>Outras opções: IntelliJ, Eclipse, NetBeans etc.</p><p>Plugins (Extensões)</p><p>Code Runner: Executar código rapidamente.</p><p>SonarLint: Detectar problemas e sugerir melhorias.</p><p>GitLens: Integrar o histórico do Git diretamente no editor.</p><p>Navegadores</p><p>Google Chrome, Microsoft Edge, Firefox e Safari.</p><p>Cada um pode exibir e interpretar JavaScript de maneiras ligeiramente diferentes. Teste em múltiplos navegadores!</p><h2>💻 Passo a Passo: Configurando o Ambiente</h2><p>1) Instalando o VS Code</p><p>Acesse o site oficial do Visual Studio Code.</p><p>Faça o download e instale a versão compatível com seu sistema.</p><p>Abra o VS Code e personalize (tema, extensões etc.).</p><p>2) Criando um Projeto Node.js</p><p># Dentro do VS Code, abra o terminal e digite:</p><p>npm init -y</p><p>Isso criará o arquivo package.json com configurações iniciais.</p><p>3) Servidor HTTP Básico</p><p>Crie o arquivo index.js e adicione:</p><pre><code>const http = require('http');
-</code></pre><pre><code>const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Olá, Mundo!');
-});
-</code></pre><pre><code>const PORT = 3000;
-server.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
-</code></pre><p>Para rodar, use no terminal:</p><p>node index.js</p><p>Acesse http://localhost:3000 no navegador e veja a mensagem "Olá, Mundo!".</p><h2>🤝 Testando APIs com Postman</h2><p>Abra o ==Postman==.</p><p>Crie uma requisição GET para http://localhost:3000.</p><p>Envie a requisição e observe a resposta "Olá, Mundo!".</p><h2>🏆 Conclusão e Próximos Passos</h2><p>Você configurou seu ambiente local com ==Node.js==, VS Code e ==Postman==.</p><p>Exploramos o conceito de versionamento de código e ambientes de desenvolvimento.</p><p>Nos próximos módulos, iremos aprofundar na programação server-side e em boas práticas de projeto.</p><h2>🎉 Parabéns pela conclusão desta primeira etapa!</h2><h2>🌐 GitHub da Disciplina</h2><p>Acesse o repositório oficial da disciplina em:</p><p>FaculdadeDescomplica/ProgramacaoII</p><p>Nele, você encontrará exemplos de código, APIs com Node.js, além de boas práticas de controle de autenticação e padrões de mercado.</p><h2>🎬 Conteúdo Bônus</h2><p>Para reforçar suas habilidades no VS Code, assista ao vídeo "Como Baixar e Configurar o Visual Studio Code Para Iniciantes" no canal Dev em Dobro.</p><h2>📚 Referências Bibliográficas</h2><p>ELMASRI, R.; NAVATHE, S. B. Sistemas de banco de dados. 7.ed. Pearson, 2018.</p><p>MEDEIROS, L. F. de. Banco de dados: princípios e prática. Intersaberes, 2013.</p><p>VICCI, C. (Org.). Banco de dados. Pearson, 2014.</p><p>CARDOSO, L. da C. Design de aplicativos. Intersaberes, 2022.</p><p>JOÃO, B. do N. Usabilidade e interface homem-máquina. Pearson, 2017.</p><p>LEAL, G. C. L. Linguagem, programação e banco de dados: guia prático de aprendizagem. Intersaberes, 2015.</p><p>PUGA, S.; FRANÇA, E.; GOYA, M. Banco de dados: implementação em SQL, PL/SQL e Oracle 11g. Pearson, 2013.</p><p>SETZER, V. W.; SILVA, F. S. C. Bancos de dados. Blucher, 2005.</p><h2>🔑 Dica: Continue revisitando estes tópicos conforme avançamos na disciplina. Prática e experimentação são fundamentais para solidificar o aprendizado!</h2><h2>📝 Bons estudos e até a próxima aula!</h2>
-    </div>
-  </div>
-  <script>
-    console.log("Página carregada com sucesso!");
-  </script>
-</body>
-</html>
+PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9InB0LUJSIj4KPGhlYWQ+CiAg
+PG1ldGEgY2hhcnNldD0iVVRGLTgiIC8+CiAgPHRpdGxlPnVuZGVmaW5lZDwv
+dGl0bGU+CiAgPHN0eWxlPgogICAgYm9keSB7CiAgICAgIGZvbnQtZmFtaWx5
+OiBBcmlhbCwgc2Fucy1zZXJpZjsKICAgICAgYmFja2dyb3VuZC1jb2xvcjog
+I2Y1ZjVmNTsKICAgICAgbWFyZ2luOiAwOwogICAgICBwYWRkaW5nOiAwOwog
+ICAgfQogICAgLmNvbnRhaW5lciB7CiAgICAgIG1heC13aWR0aDogODAwcHg7
+CiAgICAgIG1hcmdpbjogNDBweCBhdXRvOwogICAgICBiYWNrZ3JvdW5kLWNv
+bG9yOiAjZmZmOwogICAgICBib3JkZXItcmFkaXVzOiA4cHg7CiAgICAgIHBh
+ZGRpbmc6IDIwcHg7CiAgICAgIGJveC1zaGFkb3c6IDAgMCA2cHggcmdiYSgw
+LDAsMCwwLjEpOwogICAgfQogICAgaDEgewogICAgICBjb2xvcjogIzMzMzsK
+ICAgICAgdGV4dC1hbGlnbjogY2VudGVyOwogICAgfQogICAgaDIgewogICAg
+ICBmb250LXNpemU6IDIwcHg7CiAgICAgIG1hcmdpbi10b3A6IDIwcHg7CiAg
+ICAgIGNvbG9yOiAjMjIyOwogICAgfQogICAgcCB7CiAgICAgIGZvbnQtc2l6
+ZTogMTZweDsKICAgICAgbGluZS1oZWlnaHQ6IDEuNjsKICAgICAgY29sb3I6
+ICM0NDQ7CiAgICAgIG1hcmdpbjogOHB4IDA7CiAgICB9CiAgICBwcmUgewog
+ICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwMDA7CiAgICAgIGNvbG9yOiAj
+ZmZmZmY7CiAgICAgIHBhZGRpbmc6IDEwcHg7CiAgICAgIGJvcmRlci1yYWRp
+dXM6IDRweDsKICAgICAgb3ZlcmZsb3cteDogYXV0bzsKICAgICAgZm9udC1m
+YW1pbHk6IENvbnNvbGFzLCBtb25vc3BhY2U7CiAgICAgIG1hcmdpbjogOHB4
+IDA7CiAgICB9CiAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keT4KICA8ZGl2IGNs
+YXNzPSJjb250YWluZXIiPgogICAgPGgxPnVuZGVmaW5lZDwvaDE+CiAgICA8
+ZGl2PgogICAgICA8aDI+4pyoIEFwcmVzZW50YcOnw6NvIGRvIEFtYmllbnRl
+IGUgQ29uY2VpdG9zIELDoXNpY29zPC9oMj48cD5CZW0tdmluZG9zIMOgIHBy
+aW1laXJhIHBhcnRlIGRlIG5vc3NhIGF1bGEgZGUgUHJvZ3JhbWHDp8OjbyBJ
+SSEgQXF1aSB2YW1vcyBleHBsb3JhciBvcyBmdW5kYW1lbnRvcyBlc3NlbmNp
+YWlzIHBhcmEgbyBkZXNlbnZvbHZpbWVudG8gZGUgc29mdHdhcmUsIHV0aWxp
+emFuZG8gZmVycmFtZW50YXMgY29tbyA9PU5vZGUuanM9PSwgVmlzdWFsIFN0
+dWRpbyBDb2RlIChWUyBDb2RlKSwgPT1Qb3N0bWFuPT0sIGRlbnRyZSBvdXRy
+YXMuPC9wPjxoMj7wn46vIE9iamV0aXZvIEdlcmFsIGRhIERpc2NpcGxpbmE8
+L2gyPjxwPkFwcmVuZGVyIGEgY29uc3VtaXIgQVBJcywgZW50ZW5kZW5kbyBj
+b21vIHNlIGNvbXVuaWNhbSBlIGNvbW8gaW50ZWdyw6EtbGFzLjwvcD48cD5B
+cHJlbmRlciBib2FzIHByw6F0aWNhcyBkZSBhcnF1aXRldHVyYSwgb3JnYW5p
+emHDp8OjbyBkZSBjw7NkaWdvIGUgcGFkcsO1ZXMgZGUgcHJvamV0by48L3A+
+PHA+Rm9jYXIgZW0gdGVzdGVzIGUgY29udHJvbGUgZGUgYXV0ZW50aWNhw6fD
+o28sIGdhcmFudGluZG8gcXVhbGlkYWRlIGUgc2VndXJhbsOnYS48L3A+PGgy
+PvCfmoAgMS4gQW1iaWVudGUgZGUgRGVzZW52b2x2aW1lbnRvPC9oMj48aDI+
+8J+SoSBEaWNhOiBPIGFtYmllbnRlIGRlIGRlc2Vudm9sdmltZW50byByZcO6
+bmUgdG9kb3Mgb3MgcmVjdXJzb3MgbmVjZXNzw6FyaW9zIHBhcmEgY3JpYXIs
+IHRlc3RhciBlIGRlcHVyYXIgYXBsaWNhw6fDtWVzLiBFbGUgY29zdHVtYSBj
+b21lw6dhciBuYSBzdWEgbcOhcXVpbmEgbG9jYWwsIG1hcyBwb2RlIHNlIGVz
+dGVuZGVyIHBhcmEgYW1iaWVudGVzIGRlIHRlc3RlLCBob21vbG9nYcOnw6Nv
+IGUgcHJvZHXDp8Ojby48L2gyPjxwPlRpcG9zIGRlIEFtYmllbnRlPC9wPjxw
+PkxvY2FsOiBPbmRlIGNhZGEgZGVzZW52b2x2ZWRvciB0cmFiYWxoYSBpbmRp
+dmlkdWFsbWVudGUuPC9wPjxwPkRlc2Vudm9sdmltZW50bzogQ2VudHJhbGl6
+YSBhcyBhbHRlcmHDp8O1ZXMgZGUgY8OzZGlnbyBwYXJhIGEgZXF1aXBlLjwv
+cD48cD5UZXN0ZTogRm9jYWRvIGVtIHZhbGlkYcOnw7VlcyBtYWlzIHByb2Z1
+bmRhcywgZXZpdGFuZG8gYnVncyBlbSBwcm9kdcOnw6NvLjwvcD48cD5Ib21v
+bG9nYcOnw6NvOiBWZXJzw6NvIHF1YXNlIGZpbmFsLCBjb25mZXJpZGEgcGVs
+byB0aW1lIG91IGNsaWVudGUuPC9wPjxwPlByb2R1w6fDo286IFZlcnPDo28g
+cXVlIG8gdXN1w6FyaW8gZmluYWwgYWNlc3NhLjwvcD48aDI+8J+MkCAyLiBJ
+bnRyb2R1w6fDo28gYW8gTm9kZS5qczwvaDI+PHA+PT1Ob2RlLmpzPT0gw6kg
+dW0gcnVudGltZSBxdWUgZXhlY3V0YSA9PUphdmFTY3JpcHQ9PSBmb3JhIGRv
+IG5hdmVnYWRvci4gRWxlIHNlIGRlc3RhY2EgcG9ycXVlOjwvcD48cD5Db21w
+YXJ0aWxoYSBhIG1lc21hIGxpbmd1YWdlbSBkbyBmcm9udC1lbmQgZSBkbyBi
+YWNrLWVuZCAoSmF2YVNjcmlwdCkuPC9wPjxwPlRlbSBjdXJ2YSBkZSBhcHJl
+bmRpemFkbyByZWxhdGl2YW1lbnRlIHLDoXBpZGEuPC9wPjxwPlBlcm1pdGUg
+Y29uc3RydWlyIEFQSXMgZSBzZXJ2acOnb3MgZXNjYWzDoXZlaXMgZGUgZm9y
+bWEgc2ltcGxlcy48L3A+PHByZT48Y29kZT4vLyBWZXJpZmljYW5kbyB2ZXJz
+w6NvIGRvIE5vZGUuanMKbm9kZSAtLXZlcnNpb24KPC9jb2RlPjwvcHJlPjxw
+PlNlIHZvY8OqIG7Do28gdGVtIG8gTm9kZSBpbnN0YWxhZG8sIGJhaXhlIGRv
+IHNpdGUgb2ZpY2lhbDogTm9kZS5qcy48L3A+PGgyPvCflIAgMy4gVmVyc2lv
+bmFtZW50byBkZSBDw7NkaWdvPC9oMj48cD49PVZlcnNpb25hciBjw7NkaWdv
+PT0gw6kgcmVnaXN0cmFyIHRvZGFzIGFzIG11ZGFuw6dhcyBmZWl0YXMgYW8g
+bG9uZ28gZG8gdGVtcG8sIHBlcm1pdGluZG8gdHJhYmFsaGFyIGVtIGVxdWlw
+ZSBzZW0gcGVyZGVyIGhpc3TDs3JpY28uPC9wPjxwPlByaW5jaXBhaXMgVGlw
+b3M8L3A+PHA+TG9jYWw6IEFycmlzY2FkbyBlIHBvdWNvIGNvbGFib3JhdGl2
+byAoZXguOiBtYW50ZXIgc29tZW50ZSBuYSBzdWEgbcOhcXVpbmEpLjwvcD48
+cD5DZW50cmFsaXphZG86IE1lbGhvciBxdWUgbG9jYWwsIG1hcyBwb2RlIGdl
+cmFyIGNvbmZsaXRvcyBzZSBtdWl0b3MgdHJhYmFsaGFyZW0gYW8gbWVzbW8g
+dGVtcG8gKGV4LjogU1ZOKS48L3A+PHA+RGlzdHJpYnXDrWRvOiBPIG1haXMg
+dXRpbGl6YWRvIChleC46IEdpdCksIGNhZGEgZGVzZW52b2x2ZWRvciB0ZW0g
+dW1hIGPDs3BpYSBjb21wbGV0YSBkbyByZXBvc2l0w7NyaW8sIGZhY2lsaXRh
+bmRvIHJhbWlmaWNhw6fDtWVzIGUgZnVzw7VlcyBkZSBjw7NkaWdvLjwvcD48
+cD5FeGVtcGxvIGRlIGZsdXhvcyBkZSB2ZXJzw6NvOjwvcD48aDI+8J+ToSA0
+LiBQb3N0bWFuIGUgRmVycmFtZW50YXMgZGUgVGVzdGUgZGUgQVBJPC9oMj48
+cD5PID09UG9zdG1hbj09IMOpIGEgZmVycmFtZW50YSBtYWlzIGNvbmhlY2lk
+YSBwYXJhOjwvcD48cD5UZXN0YXIgcmVxdWlzacOnw7VlcyAoR0VULCBQT1NU
+LCBQVVQsIERFTEVURSBldGMuKS48L3A+PHA+RG9jdW1lbnRhciBBUElzLjwv
+cD48cD5Db2xhYm9yYXIgZW0gZXF1aXBlcy48L3A+PHA+4pqg77iPIEF0ZW7D
+p8OjbyDDoCBzZWd1cmFuw6dhOiBDb25maXJhIG9uZGUgc2V1cyBkYWRvcyAo
+Y2hhdmVzIGRlIGF1dGVudGljYcOnw6NvLCB0b2tlbnMpIHPDo28gYXJtYXpl
+bmFkb3MuPC9wPjxwPkZlcnJhbWVudGFzIHNpbWlsYXJlczo8L3A+PHA+SW5z
+b21uaWEsIFN3YWdnZXIsIFNvYXBVSSwgQXBpZ2VlIGV0Yy48L3A+PGgyPvCf
+m6DvuI8gNS4gSURFLCBQbHVnaW5zIGUgTmF2ZWdhZG9yZXM8L2gyPjxwPklE
+RTwvcD48cD5VbWEgPT1JREUgKEludGVncmF0ZWQgRGV2ZWxvcG1lbnQgRW52
+aXJvbm1lbnQpPT0gZmFjaWxpdGEgYSBlZGnDp8OjbywgY29tcGlsYcOnw6Nv
+IGUgZGVwdXJhw6fDo28gZGUgY8OzZGlnby48L3A+PHA+VmlzdWFsIFN0dWRp
+byBDb2RlIChWUyBDb2RlKTogTGV2ZSwgbXVsdGlwbGF0YWZvcm1hIGUgbXVp
+dG8gZXh0ZW5zw612ZWwuPC9wPjxwPk91dHJhcyBvcMOnw7VlczogSW50ZWxs
+aUosIEVjbGlwc2UsIE5ldEJlYW5zIGV0Yy48L3A+PHA+UGx1Z2lucyAoRXh0
+ZW5zw7Vlcyk8L3A+PHA+Q29kZSBSdW5uZXI6IEV4ZWN1dGFyIGPDs2RpZ28g
+cmFwaWRhbWVudGUuPC9wPjxwPlNvbmFyTGludDogRGV0ZWN0YXIgcHJvYmxl
+bWFzIGUgc3VnZXJpciBtZWxob3JpYXMuPC9wPjxwPkdpdExlbnM6IEludGVn
+cmFyIG8gaGlzdMOzcmljbyBkbyBHaXQgZGlyZXRhbWVudGUgbm8gZWRpdG9y
+LjwvcD48cD5OYXZlZ2Fkb3JlczwvcD48cD5Hb29nbGUgQ2hyb21lLCBNaWNy
+b3NvZnQgRWRnZSwgRmlyZWZveCBlIFNhZmFyaS48L3A+PHA+Q2FkYSB1bSBw
+b2RlIGV4aWJpciBlIGludGVycHJldGFyIEphdmFTY3JpcHQgZGUgbWFuZWly
+YXMgbGlnZWlyYW1lbnRlIGRpZmVyZW50ZXMuIFRlc3RlIGVtIG3Dumx0aXBs
+b3MgbmF2ZWdhZG9yZXMhPC9wPjxoMj7wn5K7IFBhc3NvIGEgUGFzc286IENv
+bmZpZ3VyYW5kbyBvIEFtYmllbnRlPC9oMj48cD4xKSBJbnN0YWxhbmRvIG8g
+VlMgQ29kZTwvcD48cD5BY2Vzc2UgbyBzaXRlIG9maWNpYWwgZG8gVmlzdWFs
+IFN0dWRpbyBDb2RlLjwvcD48cD5GYcOnYSBvIGRvd25sb2FkIGUgaW5zdGFs
+ZSBhIHZlcnPDo28gY29tcGF0w612ZWwgY29tIHNldSBzaXN0ZW1hLjwvcD48
+cD5BYnJhIG8gVlMgQ29kZSBlIHBlcnNvbmFsaXplICh0ZW1hLCBleHRlbnPD
+tWVzIGV0Yy4pLjwvcD48cD4yKSBDcmlhbmRvIHVtIFByb2pldG8gTm9kZS5q
+czwvcD48cD4jIERlbnRybyBkbyBWUyBDb2RlLCBhYnJhIG8gdGVybWluYWwg
+ZSBkaWdpdGU6PC9wPjxwPm5wbSBpbml0IC15PC9wPjxwPklzc28gY3JpYXLD
+oSBvIGFycXVpdm8gcGFja2FnZS5qc29uIGNvbSBjb25maWd1cmHDp8O1ZXMg
+aW5pY2lhaXMuPC9wPjxwPjMpIFNlcnZpZG9yIEhUVFAgQsOhc2ljbzwvcD48
+cD5DcmllIG8gYXJxdWl2byBpbmRleC5qcyBlIGFkaWNpb25lOjwvcD48cHJl
+Pjxjb2RlPmNvbnN0IGh0dHAgPSByZXF1aXJlKCdodHRwJyk7CjwvY29kZT48
+L3ByZT48cHJlPjxjb2RlPmNvbnN0IHNlcnZlciA9IGh0dHAuY3JlYXRlU2Vy
+dmVyKChyZXEsIHJlcykgPT4gewogIHJlcy53cml0ZUhlYWQoMjAwLCB7ICdD
+b250ZW50LVR5cGUnOiAndGV4dC9wbGFpbicgfSk7CiAgcmVzLmVuZCgnT2zD
+oSwgTXVuZG8hJyk7Cn0pOwo8L2NvZGU+PC9wcmU+PHByZT48Y29kZT5jb25z
+dCBQT1JUID0gMzAwMDsKc2VydmVyLmxpc3RlbihQT1JULCAoKSA9PiB7CiAg
+Y29uc29sZS5sb2coYFNlcnZpZG9yIHJvZGFuZG8gbmEgcG9ydGEgJHtQT1JU
+fWApOwp9KTsKPC9jb2RlPjwvcHJlPjxwPlBhcmEgcm9kYXIsIHVzZSBubyB0
+ZXJtaW5hbDo8L3A+PHA+bm9kZSBpbmRleC5qczwvcD48cD5BY2Vzc2UgaHR0
+cDovL2xvY2FsaG9zdDozMDAwIG5vIG5hdmVnYWRvciBlIHZlamEgYSBtZW5z
+YWdlbSAiT2zDoSwgTXVuZG8hIi48L3A+PGgyPvCfpJ0gVGVzdGFuZG8gQVBJ
+cyBjb20gUG9zdG1hbjwvaDI+PHA+QWJyYSBvID09UG9zdG1hbj09LjwvcD48
+cD5DcmllIHVtYSByZXF1aXNpw6fDo28gR0VUIHBhcmEgaHR0cDovL2xvY2Fs
+aG9zdDozMDAwLjwvcD48cD5FbnZpZSBhIHJlcXVpc2nDp8OjbyBlIG9ic2Vy
+dmUgYSByZXNwb3N0YSAiT2zDoSwgTXVuZG8hIi48L3A+PGgyPvCfj4YgQ29u
+Y2x1c8OjbyBlIFByw7N4aW1vcyBQYXNzb3M8L2gyPjxwPlZvY8OqIGNvbmZp
+Z3Vyb3Ugc2V1IGFtYmllbnRlIGxvY2FsIGNvbSA9PU5vZGUuanM9PSwgVlMg
+Q29kZSBlID09UG9zdG1hbj09LjwvcD48cD5FeHBsb3JhbW9zIG8gY29uY2Vp
+dG8gZGUgdmVyc2lvbmFtZW50byBkZSBjw7NkaWdvIGUgYW1iaWVudGVzIGRl
+IGRlc2Vudm9sdmltZW50by48L3A+PHA+Tm9zIHByw7N4aW1vcyBtw7NkdWxv
+cywgaXJlbW9zIGFwcm9mdW5kYXIgbmEgcHJvZ3JhbWHDp8OjbyBzZXJ2ZXIt
+c2lkZSBlIGVtIGJvYXMgcHLDoXRpY2FzIGRlIHByb2pldG8uPC9wPjxoMj7w
+n46JIFBhcmFiw6lucyBwZWxhIGNvbmNsdXPDo28gZGVzdGEgcHJpbWVpcmEg
+ZXRhcGEhPC9oMj48aDI+8J+MkCBHaXRIdWIgZGEgRGlzY2lwbGluYTwvaDI+
+PHA+QWNlc3NlIG8gcmVwb3NpdMOzcmlvIG9maWNpYWwgZGEgZGlzY2lwbGlu
+YSBlbTo8L3A+PHA+RmFjdWxkYWRlRGVzY29tcGxpY2EvUHJvZ3JhbWFjYW9J
+STwvcD48cD5OZWxlLCB2b2PDqiBlbmNvbnRyYXLDoSBleGVtcGxvcyBkZSBj
+w7NkaWdvLCBBUElzIGNvbSBOb2RlLmpzLCBhbMOpbSBkZSBib2FzIHByw6F0
+aWNhcyBkZSBjb250cm9sZSBkZSBhdXRlbnRpY2HDp8OjbyBlIHBhZHLDtWVz
+IGRlIG1lcmNhZG8uPC9wPjxoMj7wn46sIENvbnRlw7pkbyBCw7RudXM8L2gy
+PjxwPlBhcmEgcmVmb3LDp2FyIHN1YXMgaGFiaWxpZGFkZXMgbm8gVlMgQ29k
+ZSwgYXNzaXN0YSBhbyB2w61kZW8gIkNvbW8gQmFpeGFyIGUgQ29uZmlndXJh
+ciBvIFZpc3VhbCBTdHVkaW8gQ29kZSBQYXJhIEluaWNpYW50ZXMiIG5vIGNh
+bmFsIERldiBlbSBEb2Jyby48L3A+PGgyPvCfk5ogUmVmZXLDqm5jaWFzIEJp
+Ymxpb2dyw6FmaWNhczwvaDI+PHA+RUxNQVNSSSwgUi47IE5BVkFUSEUsIFMu
+IEIuIFNpc3RlbWFzIGRlIGJhbmNvIGRlIGRhZG9zLiA3LmVkLiBQZWFyc29u
+LCAyMDE4LjwvcD48cD5NRURFSVJPUywgTC4gRi4gZGUuIEJhbmNvIGRlIGRh
+ZG9zOiBwcmluY8OtcGlvcyBlIHByw6F0aWNhLiBJbnRlcnNhYmVyZXMsIDIw
+MTMuPC9wPjxwPlZJQ0NJLCBDLiAoT3JnLikuIEJhbmNvIGRlIGRhZG9zLiBQ
+ZWFyc29uLCAyMDE0LjwvcD48cD5DQVJET1NPLCBMLiBkYSBDLiBEZXNpZ24g
+ZGUgYXBsaWNhdGl2b3MuIEludGVyc2FiZXJlcywgMjAyMi48L3A+PHA+Sk/D
+g08sIEIuIGRvIE4uIFVzYWJpbGlkYWRlIGUgaW50ZXJmYWNlIGhvbWVtLW3D
+oXF1aW5hLiBQZWFyc29uLCAyMDE3LjwvcD48cD5MRUFMLCBHLiBDLiBMLiBM
+aW5ndWFnZW0sIHByb2dyYW1hw6fDo28gZSBiYW5jbyBkZSBkYWRvczogZ3Vp
+YSBwcsOhdGljbyBkZSBhcHJlbmRpemFnZW0uIEludGVyc2FiZXJlcywgMjAx
+NS48L3A+PHA+UFVHQSwgUy47IEZSQU7Dh0EsIEUuOyBHT1lBLCBNLiBCYW5j
+byBkZSBkYWRvczogaW1wbGVtZW50YcOnw6NvIGVtIFNRTCwgUEwvU1FMIGUg
+T3JhY2xlIDExZy4gUGVhcnNvbiwgMjAxMy48L3A+PHA+U0VUWkVSLCBWLiBX
+LjsgU0lMVkEsIEYuIFMuIEMuIEJhbmNvcyBkZSBkYWRvcy4gQmx1Y2hlciwg
+MjAwNS48L3A+PGgyPvCflJEgRGljYTogQ29udGludWUgcmV2aXNpdGFuZG8g
+ZXN0ZXMgdMOzcGljb3MgY29uZm9ybWUgYXZhbsOnYW1vcyBuYSBkaXNjaXBs
+aW5hLiBQcsOhdGljYSBlIGV4cGVyaW1lbnRhw6fDo28gc8OjbyBmdW5kYW1l
+bnRhaXMgcGFyYSBzb2xpZGlmaWNhciBvIGFwcmVuZGl6YWRvITwvaDI+PGgy
+PvCfk50gQm9ucyBlc3R1ZG9zIGUgYXTDqSBhIHByw7N4aW1hIGF1bGEhPC9o
+Mj4KICAgIDwvZGl2PgogIDwvZGl2PgogIDxzY3JpcHQ+CiAgICBjb25zb2xl
+LmxvZygiUMOhZ2luYSBjYXJyZWdhZGEgY29tIHN1Y2Vzc28hIik7CiAgPC9z
+Y3JpcHQ+CjwvYm9keT4KPC9odG1sPgo=
