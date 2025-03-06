@@ -135,84 +135,53 @@
         <header>
             <h1>📚 Repositório de Estudos</h1>
             <div class="search-bar" role="search">
-                🔍 Pesquisar aulas...
+                <input type="text" placeholder="🔍 Pesquisar aulas..." id="searchInput">
             </div>
         </header>
-
-        <main>
-            <div class="modules-grid">
-                <!-- Módulo 1B -->
-                <section class="module-card">
-                    <h2 class="module-title">
-                        <span class="icon">📂</span>
-                        1B - Programming I
-                    </h2>
-                    <div class="lessons-list">
-                        <a href="Faculdade - Engenharia de Software/1B - Programming I/Abstração de dados.html" class="lesson-item">
-                            <span class="icon">📄</span>
-                            Abstração de dados
-                        </a>
-                        <!-- Adicione os demais links seguindo o mesmo padrão -->
-                        <a href="Faculdade - Engenharia de Software/1B - Programming I/Algoritmos.html" class="lesson-item">
-                            <span class="icon">📄</span>
-                            Algoritmos
-                        </a>
-                    </div>
-                </section>
-
-                <!-- Módulo 2A -->
-                <section class="module-card">
-                    <h2 class="module-title">
-                        <span class="icon">📂</span>
-                        2A - POO
-                    </h2>
-                    <div class="lessons-list">
-                        <a href="Faculdade - Engenharia de Software/2A - POO/Ambiente-Java.html" class="lesson-item">
-                            <span class="icon">📄</span>
-                            Ambiente Java
-                        </a>
-                        <!-- Adicione os demais links -->
-                    </div>
-                </section>
-
-                <!-- Módulo 3A -->
-                <section class="module-card">
-                    <h2 class="module-title">
-                        <span class="icon">📂</span>
-                        3A - Smart Data Structures
-                    </h2>
-                    <div class="lessons-list">
-                        <a href="Faculdade - Engenharia de Software/3A - Smart Data Structure/Aplicação-com-Banco-de-Dados.html" class="lesson-item">
-                            <span class="icon">📄</span>
-                            Aplicação com Banco de Dados
-                        </a>
-                        <!-- Adicione os demais links -->
-                    </div>
-                </section>
-            </div>
-        </main>
+        <main id="modulesContainer"></main>
     </div>
 
     <script>
-        // Script para funcionalidade básica de busca
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchBox = document.querySelector('.search-bar');
-            
-            searchBox.addEventListener('input', (e) => {
-                const searchTerm = e.target.value.toLowerCase();
-                document.querySelectorAll('.lesson-item').forEach(item => {
-                    const text = item.textContent.toLowerCase();
-                    item.style.display = text.includes(searchTerm) ? 'flex' : 'none';
-                });
-            });
-        });
+        // Função para renderizar os módulos
+        async function renderModules() {
+            try {
+                const response = await fetch('data.json');
+                const modules = await response.json();
+                const container = document.getElementById('modulesContainer');
+                
+                container.innerHTML = modules.map(module => `
+                    <section class="module-card">
+                        <h2 class="module-title">
+                            <span class="icon">📂</span>
+                            ${module.name}
+                        </h2>
+                        <div class="lessons-list">
+                            ${module.lessons.map(lesson => `
+                                <a href="${lesson.path}" class="lesson-item">
+                                    <span class="icon">📄</span>
+                                    ${lesson.name}
+                                </a>
+                            `).join('')}
+                        </div>
+                    </section>
+                `).join('');
 
-        // Adicionar toggle para módulos
-        document.querySelectorAll('.module-title').forEach(title => {
-            title.addEventListener('click', () => {
-                title.parentElement.querySelector('.lessons-list').classList.toggle('collapsed');
-            });
-        });
+                // Adicionar funcionalidade de busca
+                document.getElementById('searchInput').addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase();
+                    document.querySelectorAll('.lesson-item').forEach(item => {
+                        item.style.display = item.textContent.toLowerCase().includes(term) ? 'flex' : 'none';
+                    });
+                });
+
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                container.innerHTML = '<p>⚠️ Erro ao carregar os dados das aulas</p>';
+            }
+        }
+
+        // Inicializar
+        renderModules();
     </script>
 </body>
 </html>
