@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Módulos e matrizes em Java</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Módulos e matrizes em Java</h1>
+    <div>
+      <p>Resumo Detalhado sobre Módulos e Matrizes em Java</p><p>No universo da programação em Java, dois conceitos fundamentais se destacam: matrizes e modularização. Ambos desempenham papéis essenciais para criar códigos organizados, eficientes e fáceis de manter.</p><p>Matrizes em Java</p><p>Matrizes, também chamadas de arrays, são estruturas de dados que armazenam elementos do mesmo tipo de forma organizada. Podem ser:</p><p>Unidimensionais (Vetores): Uma sequência linear de elementos acessados por índices. Por exemplo: int[] vetor = {2, 4, 6, 8, 10};.</p><p>Multidimensionais (Matrizes): Armazenam dados em formato de tabelas com linhas e colunas, acessadas por múltiplos índices. Exemplo: double[][] matriz = new double[2][2];.</p><p>As matrizes oferecem uma forma estruturada de organizar e acessar grandes quantidades de dados. Para manipulá-las, é comum o uso de laços de repetição como for ou while, que percorrem os elementos e permitem realizar operações sobre eles, como cálculos ou exibição.</p><p>Exemplo Prático:</p><p>Um vetor unidimensional pode ser usado para armazenar notas de alunos e calcular sua média. Já uma matriz bidimensional pode guardar os dados de vendas de um produto por diferentes meses e regiões.</p><p>Modularização no Java</p><p>A modularização organiza o programa em métodos (também chamados de módulos), permitindo dividir um problema maior em tarefas menores e específicas. Isso melhora a manutenção, reutilização e legibilidade do código. Em Java, há quatro tipos principais de métodos:</p><p>Procedimento sem Parâmetro: Executa uma tarefa sem receber dados externos e não retorna nenhum valor.</p><p>Procedimento com Parâmetro: Recebe dados externos como entrada e realiza uma tarefa com esses dados, mas não retorna valor.</p><p>Função sem Parâmetro: Não recebe dados, mas retorna um valor após realizar alguma operação.</p><p>Função com Parâmetro: Recebe dados externos e retorna um valor como resultado de uma operação.</p><p>Vantagens de Métodos com Parâmetros</p><p>Flexibilidade: Um único método pode ser usado para várias entradas diferentes.</p><p>Reutilização: Métodos podem ser chamados em diferentes partes do programa.</p><p>Organização: Reduz a redundância de código.</p><p>Exemplo Prático:</p><p>Um programa que calcula a soma e o produto de elementos de um vetor:</p><p>Um procedimento com parâmetro calcula a soma.</p><p>Uma função com parâmetro retorna o produto.</p><p>Código Simplificado:</p><p>public class Exemplo {</p><p>    public static void calcularSoma(int[] vetor) {</p><p>        int soma = 0;</p><p>        for (int valor : vetor) {</p><p>            soma += valor;</p><p>        }</p><p>        System.out.println("Soma: " + soma);</p><p>    }</p><p>    public static int calcularProduto(int[] vetor) {</p><p>        int produto = 1;</p><p>        for (int valor : vetor) {</p><p>            produto *= valor;</p><p>        }</p><p>        return produto;</p><p>    }</p><p>    public static void main(String[] args) {</p><p>        int[] numeros = {2, 4, 6};</p><p>        calcularSoma(numeros);</p><p>        int produto = calcularProduto(numeros);</p><p>        System.out.println("Produto: " + produto);</p><p>    }</p><p>}</p><p>Conclusão</p><p>Matrizes e modularização são pilares da programação Java:</p><p>Matrizes armazenam dados de forma estruturada, permitindo operações complexas em conjuntos de informações.</p><p>Modularização, através de métodos, divide problemas grandes em partes menores e mais gerenciáveis, aumentando a clareza e a eficiência do código.</p><p>Dominar esses conceitos é essencial para criar aplicações robustas e escaláveis, seja para manipular grandes volumes de dados ou organizar a lógica de sistemas complexos.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
