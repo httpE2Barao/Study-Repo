@@ -1,1 +1,15 @@
-
+{
+  "data": [
+    
+,
+    {
+      "novo_item": Faculdade - Engenharia de Software/3A - Smart Data Structures/Aplicação-com-Banco-de-Dados.html,
+      "verificado_em": "@{datetime.now()}"
+    }
+  ],
+  "metadados": {
+    "total_itens": 2,
+    "caminho_verificado": "Faculdade - Engenharia de Software/3A - Smart Data Structures/Aplicação-com-Banco-de-Dados.html",
+    "status": "atualizado"
+  }
+}
