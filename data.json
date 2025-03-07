@@ -15,13 +15,13 @@
   }
 },
     {
-      "novo_item": Faculdade - Engenharia de Software/3A - Smart Data Structures/Iniciando-com-o-Node.js.html,
+      "novo_item": Faculdade - Engenharia de Software/3A - Smart Data Structures/Apresentação-do-Ambiente-e-Conceitos-Básicos.html,
       "verificado_em": "@{datetime.now()}"
     }
   ],
   "metadados": {
     "total_itens": 333,
-    "caminho_verificado": "Faculdade - Engenharia de Software/3A - Smart Data Structures/Iniciando-com-o-Node.js.html",
+    "caminho_verificado": "Faculdade - Engenharia de Software/3A - Smart Data Structures/Apresentação-do-Ambiente-e-Conceitos-Básicos.html",
     "status": "atualizado"
   }
 }
