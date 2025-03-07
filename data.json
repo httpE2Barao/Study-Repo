@@ -1,5 +1,7 @@
 {
   "data": [
+    ...{
+  "data": [
     ...,
     {
       "novo_item": Faculdade - Engenharia de Software/2A - POO/String-e-Arrays.html,
@@ -9,6 +11,17 @@
   "metadados": {
     "total_itens": ,
     "caminho_verificado": "Faculdade - Engenharia de Software/2A - POO/String-e-Arrays.html",
+    "status": "atualizado"
+  }
+},
+    {
+      "novo_item": Faculdade - Engenharia de Software/3A - Smart Data Structures/Aplicação-com-Banco-de-Dados.html,
+      "verificado_em": "@{datetime.now()}"
+    }
+  ],
+  "metadados": {
+    "total_itens": 333,
+    "caminho_verificado": "Faculdade - Engenharia de Software/3A - Smart Data Structures/Aplicação-com-Banco-de-Dados.html",
     "status": "atualizado"
   }
 }
