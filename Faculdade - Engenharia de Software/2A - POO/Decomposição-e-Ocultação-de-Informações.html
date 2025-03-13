@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Decomposição e Ocultação de Informações</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Decomposição e Ocultação de Informações</h1>
+    <div>
+      <p>Princípios Essenciais para um Design de Software Robustecido</p><h2>🔍 Princípios Fundamentais</h2><h2>1. Princípio da Separação de Conceitos (SOC) 🧠</h2><p>O que é?</p><p>Dividir o sistema em partes distintas, cada uma focada em uma preocupação específica.</p><p>Benefícios:</p><p>Exemplo Prático: Classe Smartphone</p><pre><code>// ❌ Anti-padrão (Baixa Coesão)
+class Smartphone {
+    void fazerLigacao() { /*...*/ }
+    void tirarFoto() { /*...*/ }
+}
+</code></pre><pre><code>// ✅ Refatorado (Separação de Conceitos)
+class Telefone { /* Responsável por chamadas */ }
+class Camera { /* Responsável por fotos */ }
+</code></pre><h2>2. Decomposição ✂️</h2><p>O que é?</p><p>Dividir sistemas complexos em componentes menores e gerenciáveis.</p><p>Vantagens:</p><p>Exemplo: Classe Biblioteca</p><pre><code>// ❌ Classe monolítica
+class Biblioteca {
+    List<Livro> livros;
+    List<Usuario> usuarios;
+    void emprestarLivro() { /*...*/ }
+}
+</code></pre><pre><code>// ✅ Decomposição
+class Livro { /* Atributos: título, autor */ }
+class Usuario { /* Atributos: nome, ID */ }
+class Emprestimo { /* Gerencia datas e registros */ }
+</code></pre><h2>3. Ocultação de Informações 🔒</h2><p>O que é?</p><p>Expor apenas o necessário para interação entre módulos, ocultando detalhes internos.</p><p>Benefícios:</p><p>Práticas Recomendadas</p><p>Use modificadores de acesso: private, protected, public.</p><p>Encapsule atributos com getters e setters.</p><h2>🖥️ Astah e Ocultação de Informações</h2><p>Diagrama de Classes 📊</p><p>classDiagram</p><p>    class Livro {</p><p>        -String titulo</p><p>        #String autor</p><p>        -int quantidade</p><p>        ~double preco</p><p>        +getTitulo() String</p><p>    }</p><p>Passo a Passo no Astah</p><p>Crie classes com atributos e métodos.</p><p>Defina modificadores de acesso:</p><p>Gere código Java diretamente do diagrama.</p><p>Exemplo de Código Gerado</p><p>public class Livro {</p><p>    public String titulo;</p><p>    protected String autor;</p><p>    private int quantidade;</p><p>    double preco; // Visibilidade de pacote (~)</p><p>    public String getTitulo() { return titulo; }</p><p>}</p><h2>🎥 Conteúdo Bônus</h2><p>Assista ao vídeo:</p><p>Engenharia de Software: Reúso de Software - UNIVESP</p><h2>📚 Referências</h2><h2>📖 "Engenharia de Software" - Sommerville</h2><h2>📖 "Arquitetura de Software" - Gallotti</h2><p>📖 "Fundamentos da Programação" - Ascêncio & Campos</p><h2>💡 Dicas de Implementação</h2><p>Use o Astah para sincronizar diagramas e código (ida e volta).</p><p>Priorize atributos privados e métodos públicos para encapsulamento.</p><p>Documente interfaces para garantir clareza nas interações.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
