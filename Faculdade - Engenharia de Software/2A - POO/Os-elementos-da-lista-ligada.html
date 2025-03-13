@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Os elementos da lista ligada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Os elementos da lista ligada</h1>
+    <div>
+      <h2>🔗 Introdução às Listas Ligadas</h2><p>Listas ligadas são estruturas de dados lineares em que os elementos são armazenados em nós conectados por ponteiros. Ao contrário dos vetores, a alocação de memória é dinâmica, ocorrendo apenas conforme necessário. Isso significa que a memória não é desperdiçada, pois é reservada somente quando há inserção de novos elementos. Essa característica torna as listas ligadas muito úteis quando há necessidade de inserções e remoções frequentes em qualquer posição da lista.</p><h2>✅ Vantagens</h2><p>Alocação Dinâmica:</p><p>A memória é alocada somente quando um novo nó é inserido, economizando recursos.</p><p>Flexibilidade na Inserção/Remoção:</p><p>É possível inserir ou remover elementos no início, no final ou em qualquer posição intermediária sem necessidade de realocar toda a estrutura.</p><p>Utilização em Outras Estruturas:</p><p>Pode ser adaptada para implementar outras estruturas, como pilhas e filas.</p><p>⚠️ Desvantagens</p><p>Complexidade na Implementação:</p><p>A manipulação de ponteiros pode ser complicada e exige cuidado para evitar a perda de ligações entre os nós.</p><p>Acesso Sequencial:</p><p>Para acessar um elemento específico, é necessário percorrer a lista desde o início, o que pode resultar em uma busca menos eficiente em comparação a estruturas indexadas como os vetores.</p><h2>🔧 Operações em Listas Ligadas</h2><p>Inserção</p><p>Inserir no Início:</p><p>Inserir no Final:</p><p>Inserir no Meio:</p><p>Remoção</p><p>Remover Elemento:</p><p>Remove um nó da lista (seja no início, meio ou final) e ajusta os ponteiros para manter a integridade da estrutura.</p><p>Outras Operações</p><p>Lista Vazia:</p><p>Verifica se a lista não contém nenhum nó.</p><p>Elemento do Início/Final:</p><p>Permite visualizar, sem remover, o primeiro ou último elemento da lista.</p><p>Contar Nós:</p><p>Retorna a quantidade total de nós presentes.</p><p>Mostrar Lista:</p><p>Exibe todos os elementos da lista na ordem correta.</p><p>Buscar:</p><p>Percorre a lista em busca de um elemento específico e retorna sua cópia, caso encontrado.</p><p>Destruir:</p><p>Elimina todos os nós, liberando a memória alocada.</p><h2>📊 Representação Visual</h2><p>Exemplo Prático com Letras</p><p>Lista Inicial Vazia:</p><p>Inserção de Elementos:</p><p>Remoção de Elemento:</p><h2>💼 Exemplificando Aplicações</h2><p>Imagine um sistema de senhas em um banco:</p><p>Os clientes retiram uma senha numérica e se acomodam em cadeiras sem formar uma fila física ordenada.</p><p>Quando o painel chama a próxima senha, o cliente correspondente se levanta e vai para o caixa.</p><p>Aqui, a lista ligada organiza as senhas (números) e permite inserções dinâmicas sem a necessidade de reorganizar uma fila tradicional.</p><h2>📚 Atividade Extra</h2><p>Indicação de leitura:</p><p>Você pode aprofundar seus conhecimentos com o livro:</p><p>Estrutura de Dados: algoritmos, análise da complexidade e implementações em Java e C/C++</p><p>Capítulo 3 – Listas Ligadas</p><p>Autoras: Ana Fernanda Gomes Ascencio e Graziela Santos de Araújo</p><h2>📖 Referências Bibliográficas</h2><p>CORMEN, T. H.; LEISERSON, C. E.; RIVEST, R. L.; STEIN, C.Algoritmos: Teoria e Prática. 3ª Edição. Editora Cammpus, 2012.</p><p>GOODRICH, M. T.; TAMASSIA, R.Estruturas de Dados & Algoritmos em Java. 5ª Edição. Editora Grupo A: Bookman, 2013.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
