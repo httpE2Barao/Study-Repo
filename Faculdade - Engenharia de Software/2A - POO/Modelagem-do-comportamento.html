@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modelagem do comportamento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Modelagem do comportamento</h1>
+    <div>
+      <h2>1. Diagrama de Atividade 🎯</h2><p>"O fluxo do processo passo a passo"</p><p>O que é?</p><p>Ferramenta UML que representa o fluxo de trabalho de um sistema, mostrando a sequência de atividades e decisões. Ideal para processos de negócio e algoritmos.</p><p>Elementos Principais</p><p>Exemplo: Processamento de Pedidos 🛒</p><p>Início → Cliente realiza pedido.</p><p>Verificação de Estoque → Sistema confirma disponibilidade.</p><p>Pagamento → [Aprovado] → Embalagem ou [Negado] → Cancelamento.</p><p>Fluxo Paralelo → Embalagem + Verificação de Transporte.</p><p>Despacho → Pedido enviado.</p><h2>2. Diagrama de Interação 🤝</h2><p>"Combinação de fluxos e sequências"</p><p>Componentes Chave</p><p>Atividades: Etapas do processo (ex: "Análise de histórico financeiro").</p><p>Pontos de Decisão ❓: Losangos com condições (ex: "[Risco baixo?]").</p><p>Concorrência ⚡: Atividades paralelas (ex: verificação de dados em paralelo).</p><p>Exemplo: Empréstimo Bancário 🏦</p><p>Solicitação → Cliente envia pedido.</p><p>Análise Financeira → Sistema avalia crédito.</p><p>Avaliação de Risco → [Aprovado] → Contrato ou [Negado] → Rejeição.</p><h2>3. Diagrama de Comunicação 📡</h2><p>"Interações entre objetos sem ordem fixa"</p><p>Características</p><p>Objetos: Entidades que interagem (ex: Organizador de Eventos).</p><p>Mensagens: Troca de informações (ex: "Reservar salão").</p><p>Exemplo: Reserva de Eventos 🎪</p><p>Organizador → Solicita salão ao Gestor de Espaços.</p><p>Gestor de Espaços → Confirma disponibilidade.</p><p>Organizador → Solicita vagas ao Gestor de Estacionamento.</p><h2>4. Diagrama de Tempo ⏳</h2><p>"Mudanças de estado ao longo do tempo"</p><p>Elementos</p><p>Linha de Vida 📉: Duração de um objeto (ex: Protetor de Tela).</p><p>Estados 🔵: Condições do objeto (ex: "Ligado", "Desligado").</p><p>Exemplo: Protetor de Tela 🖥️</p><p>Estado Inicial: Desligado.</p><p>Após 2s sem atividade → Ligado.</p><p>Tecla pressionada → Volta para Desligado.</p><h2>✨ Conteúdo Bônus</h2><p>Vídeo Recomendado 🎥</p><p>Título: Diagrama de Atividades na Prática | UML</p><p>Canal: Pisani da ArcH (YouTube)</p><p>Descrição: Dicas para criar diagramas claros e evitar erros comuns!</p><h2>📚 Referências Bibliográficas</h2><p>MEDEIROS, E. Desenvolvendo software com UML 2.0 definitivo.</p><p>SOMMERVILLE, I. Engenharia de software.</p><h2>🚀 Exercícios Práticos</h2><p>Modele um Diagrama de Atividade para um processo de login com verificação em duas etapas.</p><p>Crie um Diagrama de Comunicação para um sistema de delivery de comida.</p><h2>🔗 Acesse o template editável aqui.</h2>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
