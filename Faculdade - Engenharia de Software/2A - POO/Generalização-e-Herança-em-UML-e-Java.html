@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Generalização e Herança em UML e Java</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Generalização e Herança em UML e Java</h1>
+    <div>
+      <h2>🧬 Generalização e Herança em UML e Java</h2><h2>1. Introdução à Generalização</h2><h2>1.1 Conceito de Generalização em UML</h2><p>🔹 Estabelece uma relação hierárquica entre classes, onde:</p><p>Superclasse: Classe geral com atributos/métodos comuns.</p><p>Subclasses: Classes especializadas que herdam e estendem funcionalidades.</p><p>🔹 Representada por uma seta vazada no diagrama UML (ex: Cachorro → Animal).</p><h2>1.2 Vantagens</h2><h2>✅ Reutilização de código: Evita duplicação.</h2><h2>✅ Organização: Estrutura hierárquica clara.</h2><p>✅ Manutenção simplificada: Mudanças na superclasse refletem nas subclasses.</p><h2>2. Implementação em UML</h2><h2>2.1 Exemplo: Hierarquia Animal</h2><p>Animal (Superclasse)</p><p>├─ nome: String</p><p>├─ idade: int</p><p>└─ mover(): void</p><p>Cachorro (Subclasse)</p><p>└─ latir(): void</p><p>Gato (Subclasse)</p><p>└─ miar(): void</p><h2>🔸 Diagrama UML:</h2><p>(Seta vazada indica herança)</p><h2>2.2 Herança Multinível</h2><p>Animal</p><p>└─ Mamífero</p><p>   ├─ Cachorro</p><p>   └─ Gato</p><p>🔹 Astah: Crie hierarquias com Generalization e adicione interfaces (ex: ICaça).</p><h2>3. Implementação em Java</h2><h2>3.1 Herança com extends</h2><p>class Animal {</p><p>    String nome;</p><p>    int idade;</p><p>    void mover() { System.out.println("Movendo..."); }</p><p>}</p><p>class Cachorro extends Animal {</p><p>    void latir() { System.out.println("Au au!"); }</p><p>}</p><h2>3.2 Classes Abstratas</h2><h2>🔸 Use abstract para impedir instanciação direta:</h2><p>abstract class Animal {</p><p>    abstract void fazerSom(); // Método abstrato</p><p>}</p><p>class Gato extends Animal {</p><p>    @Override</p><p>    void fazerSom() { System.out.println("Miau!"); }</p><p>}</p><p>3.3 Sobrescrita (Overriding) vs Sobrecarga (Overloading)</p><h2>4. Interfaces em Java</h2><h2>4.1 Definição e Implementação</h2><p>🔹 Interface: Define métodos abstratos (sem implementação).</p><p>interface IVeiculo {</p><p>    void ligar();</p><p>    void desligar();</p><p>}</p><p>class Carro implements IVeiculo {</p><p>    @Override</p><p>    public void ligar() { System.out.println("Carro ligado!"); }</p><p>}</p><h2>4.2 Métodos Default e Estáticos (Java 8+)</h2><p>interface Animal {</p><p>    default void respirar() { System.out.println("Respirando..."); }</p><p>    static boolean éVivo() { return true; }</p><p>}</p><h2>5. Geração de Código com Astah</h2><h2>5.1 Passo a Passo</h2><p>Crie um diagrama de classes com herança e interfaces.</p><p>Exporte para Java: Tools > Java > Export Java.</p><p>Abra no Android Studio para editar implementações.</p><h2>5.2 Exemplo Gerado</h2><p>public interface Animal {</p><p>    void falar();</p><p>    void mover();</p><p>}</p><p>public class Morcego extends Mamífero {</p><p>    private double envergaduraAsas;</p><p>    @Override</p><p>    public void mover() { /* Implementação específica */ }</p><p>}</p><p>⚠️ Riscos da Herança</p><h2>6.1 Princípio de Substituição de Liskov (LSP)</h2><p>🔸 Regra: Subclasses devem substituir superclasses sem quebrar o programa.</p><p>Animal animal = new Cachorro();</p><p>animal.mover(); // Deve funcionar como esperado!</p><h2>6.2 Cuidados</h2><h2>❌ Evite herança quando:</h2><p>Subclasses não adicionam comportamentos novos.</p><p>A hierarquia viola o LSP (ex: Pinguim não pode voar se herdar de AveVoadora).</p><h2>📚 Conteúdo Bônus</h2><p>▶️ Vídeo Recomendado: Herança em Java e UML - Parte 01 (Canal Kane Chan Dev).</p><p>Referências</p><p>SOMMERVILLE, I. Engenharia de software. 10.ed. Pearson, 2019.</p><p>ASCENCIO, A. F. G. Fundamentos da programação de computadores. Pearson, 2012.</p><p>Exercícios Práticos</p><p>Modele uma classe Veículo com subclasses Carro e Moto no Astah.</p><p>Implemente a sobrescrita do método acelerar() para cada subclasse em Java.</p><p>✨ Dica: Use o Astah para gerar o código base e complete a lógica no Android Studio!</p><p>Formatação Notion:</p><p>Use toggle lists para detalhar conceitos complexos.</p><p>Destaque código com blocos Java ou plaintext.</p><p>Ícones: 🧬 (generalização), 🛠️ (implementação), ⚠️ (riscos).</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
