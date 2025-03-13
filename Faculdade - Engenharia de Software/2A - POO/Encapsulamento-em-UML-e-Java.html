@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encapsulamento em UML e Java</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Encapsulamento em UML e Java</h1>
+    <div>
+      <h2>1. Introdução ao Encapsulamento</h2><h2>1.1 Conceito</h2><p>Princípio da POO que oculta detalhes internos de um objeto, expondo apenas métodos necessários.</p><p>Objetivo: Proteger a implementação interna, garantindo acesso controlado via métodos públicos.</p><p>Exemplo em UML: Classe ContaBancaria com atributos privados (saldo, numeroDaConta) e métodos públicos (+depositar(), +sacar()).</p><h2>1.2 Benefícios (Toggle List)</h2><p><details></p><p><summary>🔍 Ver benefícios</summary></p><p>Proteção: Detalhes de implementação ficam privados, evitando alterações indevidas.</p><p>Manutenção facilitada: Mudanças internas não afetam classes dependentes.</p><p>Abstração: Interface clara e controlada para interação com o objeto.</p><p></details></p><h2>2. Modelagem em UML com Astah</h2><h2>2.1 Prática: Classe "Aluno"</h2><p>Atributos privados:</p><p>Métodos públicos:</p><h2>2.2 Regras de Visibilidade no Astah</h2><p>Privado (): Atributos.</p><p>Público (+): Métodos (getters, setters, ações).</p><h2>3. Encapsulamento em Java</h2><h2>3.1 Implementação Básica</h2><p>Atributos declarados como private.</p><p>Métodos public para acesso (getters/setters).</p><p>Exemplo: Classe Funcionario:</p><h2>3.2 Vantagens</h2><p>Segurança: Atributos protegidos de acesso direto.</p><p>Validação centralizada: Controle de regras nos setters (ex: idade não pode ser negativa).</p><h2>4. Geração de Código com Astah</h2><h2>4.1 Passo a Passo</h2><p>Crie o diagrama de classes (ex: Aluno, Curso).</p><p>Exporte para Java: Tools > Java > Export Java.</p><p>Abra o código gerado em uma IDE (ex: Android Studio).</p><h2>4.2 Exemplo de Código Gerado</h2><p>public class Curso {</p><p>    private String nome;</p><p>    private int creditos;</p><p>    private int disciplinas;</p><p>    public String getNome() { return nome; }</p><p>    public void setNome(String nome) { this.nome = nome; }</p><pre><code>    // (...)
+}
+</code></pre><h2>4.3 Integração com IDEs</h2><p>Edite o código no Android Studio e sincronize alterações com o Astah.</p><p>Gere diagramas a partir do código existente.</p><h2>5. Conteúdo Bônus</h2><p>▶️ Vídeo Recomendado: Encapsulamento em 10 minutos (Canal DevSuperior).</p><h2>6. Referências Bibliográficas</h2><p>ASCENCIO, A. F. G. Fundamentos da programação de computadores. 3.ed. Pearson, 2012.</p><p>SOMMERVILLE, I. Engenharia de software. 10.ed. Pearson, 2019.</p><p>BRAGA, P. H. Teste de software. Pearson, 2016.</p><p>Exercícios Práticos</p><p>Modele uma classe Livro no Astah com atributos privados (titulo, autor, ano) e métodos getters/setters.</p><p>Implemente a classe em Java e adicione validação no setter ano (não permitir anos futuros).</p><p>✨ Dica: Use o Astah para gerar o esqueleto do código e complete a lógica na sua IDE preferida!</p><p>Formatação Notion:</p><p>Use Toggle Lists para seções detalhadas.</p><p>Destaque código com blocos Code ou Java Syntax Highlighting.</p><p>Inclua ícones (🔍, ▶️) para melhorar a visualização.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
