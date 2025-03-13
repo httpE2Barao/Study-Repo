@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diagrama de Sequência</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Diagrama de Sequência</h1>
+    <div>
+      <h2>🎬 Diagrama de Sequência UML: Guia Completo</h2><h2>🔍 Visão Geral</h2><p>O Diagrama de Sequência é uma ferramenta essencial em UML para modelar interações dinâmicas entre objetos ao longo do tempo. Ele detalha como objetos trocam mensagens para executar processos, refinando casos de uso e oferecendo uma visão clara do fluxo de tarefas.</p><h2>🎯 Importância e Objetivo</h2><p>Objetivo: Visualizar a sequência de interações entre objetos em um sistema, garantindo clareza no fluxo de processos.</p><p>Complementaridade: Trabalha em conjunto com o Diagrama de Classes (estrutura estática) para representar o comportamento dinâmico do sistema.</p><h2>🛠️ Elementos do Diagrama de Sequência</h2><p><details></p><p><summary>👤 Atores</summary></p><p>Entidades externas (usuários, sistemas) que interagem com o sistema. Posicionados à esquerda do diagrama.</p><p></details></p><p><details></p><p><summary>📦 Objetos</summary></p><p>Representados por retângulos com nome da classe (ex: :SistemaBiblioteca).</p><p>Organizados da esquerda para a direita, no topo do diagrama.</p><p></details></p><p><details></p><p><summary>⏳ Linha de Vida</summary></p><p>Linha tracejada vertical abaixo do objeto, indicando sua duração no processo.</p><p>Ativação: Caixa retangular na linha de vida (período de execução de uma ação).</p><p></details></p><p><details></p><p><summary>📨 Mensagens</summary></p><p>Síncrona (seta sólida ➔): Remetente espera resposta.</p><p>Assíncrona (seta vazada ⇨): Remetente não espera resposta.</p><p>Criação/Exclusão: create (nova instância) ou X (fim da linha de vida).</p><p></details></p><p><details></p><p><summary>🔄 Operadores de Controle</summary></p><p>Opt: Ação opcional (ex: opt [condição]).</p><p>Loop: Repetição (ex: loop 3 vezes).</p><p>Par: Execução paralela.</p><p>Gate: Conexão com outros diagramas.</p><p></details></p><h2>💻 Diagrama de Sequência no Astah</h2><p>Principais Funcionalidades</p><p>✅ Diagramação Automática: Organiza elementos visualmente.</p><h2>✅ Drag-and-Drop: Adiciona objetos facilmente.</h2><p>✅ Integração com Diagrama de Classes: Vincula operações do diagrama de sequência a métodos de classes.</p><p>Passo a Passo no Astah</p><p>Criar Diagrama: Menu > Diagrama de Sequência.</p><p>Adicionar Objetos: Arraste classes/objetos para o diagrama.</p><p>Inserir Mensagens: Conecte objetos com setas (síncronas/assíncronas).</p><p>Configurar Operadores: Use Opt, Loop, etc., para fluxos complexos.</p><h2>📚 Exemplo Prático: Sistema de Reserva de Livros</h2><p>Componentes</p><p>Usuário: Solicita reserva.</p><p>Sistema de Biblioteca: Processa a requisição.</p><p>Catálogo de Livros: Verifica disponibilidade.</p><p>Banco de Dados: Armazena informações.</p><p>Sequência de Mensagens</p><p>Usuário → Interface: "Reservar livro X".</p><p>Interface → SistemaBiblioteca: Encaminha solicitação.</p><p>SistemaBiblioteca → Catálogo: Verifica disponibilidade.</p><p>Catálogo → BancoDeDados: Confirma reserva.</p><p>BancoDeDados → Catálogo: Retorna status.</p><p>SistemaBiblioteca → Usuário: "Reserva confirmada!".</p><p>@startuml</p><p>Usuário -> Interface: Reservar livro X</p><p>Interface -> SistemaBiblioteca: solicitarReserva()</p><p>SistemaBiblioteca -> Catálogo: verificarDisponibilidade()</p><p>Catálogo -> BancoDeDados: consultar()</p><p>BancoDeDados --> Catálogo: disponível</p><p>Catálogo --> SistemaBiblioteca: true</p><p>SistemaBiblioteca --> Usuário: "Reserva confirmada!"</p><p>@enduml</p><p>▶️ Conteúdo Bônus</p><p>Vídeo Recomendado: Diagrama de Atividades no Astah</p><p>Canal: Prof. Osvaldo Mesquita</p><h2>📚 Referências Bibliográficas</h2><p>SOMMERVILLE, I. Engenharia de software. 10.ed. Pearson, 2019.</p><p>MEDEIROS, E. Desenvolvendo software com UML 2.0 definitivo. Pearson, 2004.</p><p>Formatação Notion:</p><p>Use toggle lists para detalhar elementos complexos.</p><p>Destaque código com blocos PlantUML ou plaintext.</p><p>Ícones: 🎬 (fluxo), 🛠️ (elementos), 💻 (ferramentas).</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
