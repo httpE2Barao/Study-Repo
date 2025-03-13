@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aplicações de Pilha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Aplicações de Pilha</h1>
+    <div>
+      <h2>🔍 Introdução às Operações de Pilha</h2><p>Uma pilha é uma estrutura de dados LIFO (Last In, First Out), onde o último elemento inserido é o primeiro a ser removido. Abaixo, detalhamos suas operações essenciais:</p><h2>🛠️ Operações Básicas da Pilha</h2><p><details></p><p><summary>📥 Pilha Vazia (isEmpty)</summary></p><p>Verifica se a pilha está sem elementos.</p><p>Condição: topo == -1.</p><p>public boolean isEmpty() {</p><p>    return (topo == -1);</p><p>}</p><p></details></p><p><details></p><p><summary>📦 Pilha Cheia (isFull)</summary></p><p>Verifica se a pilha atingiu sua capacidade máxima.</p><p>Condição: topo >= tamanho - 1.</p><p>public boolean isFull() {</p><p>    return (topo >= tamanho - 1);</p><p>}</p><p></details></p><p><details></p><p><summary>🚀 Empilhar (push)</summary></p><p>Adiciona um elemento ao topo da pilha (se houver espaço).</p><p>public void push(int elemento) {</p><p>    if (!isFull()) {</p><p>        topo++;</p><p>        vetor[topo] = elemento;</p><p>    } else {</p><p>        System.out.println("Pilha Cheia!");</p><p>    }</p><p>}</p><p></details></p><p><details></p><p><summary>🎯 Desempilhar (pop)</summary></p><p>Remove e retorna o elemento do topo (se a pilha não estiver vazia).</p><p>public int pop() {</p><p>    if (isEmpty()) {</p><p>        System.out.println("Pilha Vazia!");</p><p>        return 0;</p><p>    } else {</p><p>        int elemento = vetor[topo];</p><p>        topo--;</p><p>        return elemento;</p><p>    }</p><p>}</p><p></details></p><p><details></p><p><summary>👁️ Elemento do Topo (peek)</summary></p><p>Retorna o elemento no topo sem removê-lo.</p><p>public void peek() {</p><p>    if (topo >= 0) {</p><p>        System.out.println("Topo: " + vetor[topo]);</p><p>    } else {</p><p>        System.out.println("Pilha Vazia!");</p><p>    }</p><p>}</p><p></details></p><p><details></p><p><summary>🔄 Mostrar Pilha (display)</summary></p><p>Exibe todos os elementos, do topo à base.</p><p>public void display() {</p><p>    for (int i = topo; i >= 0; i--) {</p><p>        System.out.println("Posição " + i + ": " + vetor[i]);</p><p>    }</p><p>}</p><p></details></p><h2>💻 Implementação da Classe Pilha em Java</h2><p>public class Pilha {</p><p>    private int tamanho;</p><p>    private int topo;</p><p>    private int[] vetor;</p><pre><code>    // Construtor
+    public Pilha(int capacidade) {
+        tamanho = capacidade;
+        topo = -1;
+        vetor = new int[tamanho];
+    }
+</code></pre><pre><code>    // Métodos (isEmpty, isFull, push, pop, peek, display)
+    // ...
+}
+</code></pre><h2>🚀 Exemplo de Uso: Pilha de Inteiros</h2><p>Algoritmo</p><p>Cria uma pilha com capacidade para 5 elementos.</p><p>Solicita 5 números ao usuário e os empilha.</p><p>Exibe a pilha.</p><p>import javax.swing.JOptionPane;</p><p>public class Main {</p><p>    public static void main(String[] args) {</p><p>        Pilha pilha = new Pilha(5);</p><p>        for (int i = 0; i < 5; i++) {</p><p>            int num = Integer.parseInt(</p><p>                JOptionPane.showInputDialog("Digite um número:")</p><p>            );</p><p>            pilha.push(num);</p><p>        }</p><p>        pilha.display();</p><p>    }</p><p>}</p><h2>🔧 Atividade Prática</h2><p>Título: Implementação de uma Pilha em Java</p><p>Objetivo:</p><p>Criar um programa que gerencie uma pilha de inteiros com as operações básicas.</p><p>Passos:</p><p>Implemente a classe Pilha com métodos push, pop, peek e display.</p><p>Crie um menu interativo no main para testar as operações.</p><p>Valide entradas do usuário (ex: evitar empilhar em pilha cheia).</p><p>Código Base:</p><pre><code>// Exemplo de menu
+System.out.println("1 - Empilhar");
+System.out.println("2 - Desempilhar");
+System.out.println("3 - Ver Topo");
+System.out.println("4 - Mostrar Pilha");
+System.out.println("0 - Sair");
+</code></pre><h2>📖 Referências</h2><p>PUGA, S.; RISSETTI, G. Lógica de Programação e Estruturas de Dados com Java. Pearson, 2016.</p><p>FORBELLONE, A.L.V. Lógica de Programação. Prentice Hall, 2005.</p><h2>✨ Dicas e Recursos Adicionais</h2><p>Livro Recomendado: Estrutura de Dados: algoritmos, análise da complexidade e implementações em Java e C/C++ (Capítulo 4).</p><p>Ferramentas: Use o NetBeans para desenvolvimento e depuração.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
