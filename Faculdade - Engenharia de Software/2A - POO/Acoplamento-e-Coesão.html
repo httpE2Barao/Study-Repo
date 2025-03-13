@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acoplamento e Coesão</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Acoplamento e Coesão</h1>
+    <div>
+      <h2>📚 Conceitos Fundamentais</h2><h2>🔗 O que é Acoplamento?</h2><p>Mede a dependência entre componentes/classes</p><p>🚫 Alto acoplamento = Mudanças em um componente afetam outros</p><p>✅ Baixo acoplamento = Componentes independentes e flexíveis</p><h2>🧩 O que é Coesão?</h2><p>Grau de foco e unidade em um módulo/classe</p><p>🎯 Alta coesão = Métodos/atributos com objetivo único</p><p>🚫 Baixa coesão = Responsabilidades dispersas e confusas</p><p>⚖️ Relação Entre Acoplamento e Coesão</p><h2>💡 Objetivo Ideal:</h2><h2>🛠️ Boas Práticas</h2><h2>🔧 Reduzir Acoplamento</h2><h2>🎭 Usar interfaces (contratos entre classes)</h2><h2>🔄 Princípio da Inversão de Dependência (DIP)</h2><h2>🚫 Evitar métodos estáticos/variáveis públicas</h2><h2>📦 Design modular (ex: microsserviços)</h2><h2>🎯 Aumentar Coesão</h2><p>⭐ SRP (Single Responsibility Principle)</p><h2>🔐 OCP (Open/Closed Principle)</h2><h2>✂️ ISP (Interface Segregation Principle)</h2><h2>📌 Agrupar funcionalidades relacionadas</h2><h2>💡 Exemplos Práticos</h2><h2>🏨 Caso 1: Classe GerenciadorHotel</h2><pre><code>// ❌ Anti-padrão (Baixa Coesão)
+class GerenciadorHotel {
+  void fazerReserva() { /*...*/ }
+  void calcularConta() { /*...*/ }
+  void enviarConfirmacao() { /*...*/ }
+}
+</code></pre><pre><code>// ✅ Refatorado (Alta Coesão)
+class GerenciadorReservas { /*...*/ }
+class CalculadoraContas { /*...*/ }
+class EnviadorConfirmacoes { /*...*/ }
+</code></pre><h2>💳 Caso 2: Processamento de Pagamentos</h2><pre><code>// ❌ Interface monolítica
+interface ProcessadorPagamento {
+  void cartao();
+  void boleto();
+  void pix();
+}
+</code></pre><pre><code>// ✅ ISP aplicado
+interface ProcessadorPix { /*...*/ }
+interface ProcessadorCartao { /*...*/ }
+</code></pre><h2>🖥️ Diagramas no Astah</h2><h2>📉 Exemplo de Alto Acoplamento</h2><p>classDiagram</p><p>    Pedido --> CalculadorDeTotal</p><p>    Pedido --> ValidadorDePedido</p><p>    Pedido --> ProcessadorDePagamento</p><p>⚠️ Problema: Mudanças em pagamentos afetam toda a classe Pedido</p><h2>📈 Refatoração para Baixo Acoplamento</h2><p>classDiagram</p><p>    Pedido o-- CalculadorDeTotal</p><p>    Pedido o-- ValidadorDePedido</p><p>    Pedido o-- ProcessadorDePagamento</p><h2>✅ Solução: Dependências fracas via composição</h2><h2>🎥 Conteúdo Bônus</h2><p>Assista: Aula sobre Coesão e Acoplamento - André Constantino</p><h2>📚 Referências</h2><p>📖 "Fundamentos da Programação de Computadores" - Ascêncio & Campos</p><h2>📖 "Engenharia de Software" - Sommerville</h2><h2>📖 "Arquitetura de Software" - Gallotti</h2><p>✨ Dica Final: Use diagramas UML para visualizar dependências e sempre reavalie o equilíbrio entre acoplamento/coesão!</p><p>Formate no Notion com cores, ícones e divisores personalizados! 🎨</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
