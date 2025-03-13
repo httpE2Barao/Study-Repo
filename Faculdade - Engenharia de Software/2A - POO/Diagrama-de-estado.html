@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diagrama de estado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Diagrama de estado</h1>
+    <div>
+      <p>Visão Geral do Diagrama de Estado</p><p>O Diagrama de Estado (ou Diagrama de Máquina de Estado) é uma ferramenta da UML usada para representar os estados de um objeto e as transições entre eles, em resposta a eventos ou condições. Ele é ideal para sistemas onde objetos mudam de comportamento conforme seu estado interno, como semáforos, sistemas de login ou dispositivos eletrônicos.</p><p>Exemplo Prático:</p><p>Um tocador de música tem estados como ocioso, em reprodução, pausado.</p><p>Transições ocorrem via eventos: play pressionado, música concluída, etc.</p><p>Elementos do Diagrama de Estado</p><h2>1. Estados</h2><p>Representação: Retângulo com cantos arredondados.</p><p>Tipos:</p><h2>2. Transições</h2><p>Representação: Seta entre estados, com rótulo no formato:evento [condição] / ação</p><h2>3. Eventos e Ações</h2><p>Evento: Gatilho que inicia uma transição (ex: botão pressionado, tempo expirado).</p><p>Ações:</p><h2>4. Estado Inicial e Final</h2><p>Estado Inicial: Círculo preto sólido (ex: início do semáforo em Verde).</p><p>Estado Final: Círculo com borda dupla (ex: sistema desligado).</p><p>Exemplo: Diagrama de Estado de um Semáforo</p><p>Estados</p><p>Verde: Permite passagem (dura 60 segundos).</p><p>Amarelo: Alerta redução de velocidade (5 segundos).</p><p>Vermelho: Interrompe o tráfego (55 segundos).</p><p>Transições</p><p>Verde → Amarelo: Evento tempo = 60s.</p><p>Amarelo → Vermelho: Evento tempo = 5s.</p><p>Vermelho → Verde: Evento tempo = 55s.</p><p>Ações</p><p>Estado Verde:</p><p>Estado Amarelo:</p><p>Estado Vermelho:</p><p>Modelando no Astah</p><p>Passo a Passo</p><p>Criar Estados:</p><p>Definir Transições:</p><p>Configurar Ações:</p><p>Estado Inicial:</p><p>Dica de Organização</p><p>Use cores correspondentes aos estados do semáforo para melhor visualização.</p><p>Orientações para Atividades Práticas</p><p>Identifique Estados: Liste todos os estados possíveis do objeto.</p><p>Desenhe Transições: Conecte-os com eventos e condições.</p><p>Adicione Detalhes: Inclua ações de entrada/saída e estados compostos, se necessário.</p><p>Valide a Lógica: Garanta que as transições formem um ciclo coerente (ex: semáforo nunca fica "preso" em um estado).</p><p>Referências e Conteúdo Bônus</p><p>Livros Recomendados</p><p>MEDEIROS, E. Desenvolvendo software com UML 2.0 definitivo. Pearson: 2004.</p><p>SOMMERVILLE, I. Engenharia de software. 10.ed. Pearson: 2019.</p><p>Vídeo Complementar</p><p>Aula 21 - Conhecendo os diagramas de máquina de estado</p><p>Exercício Prático</p><p>Desafio: Modele o diagrama de estado de um micro-ondas, considerando:</p><p>Estados: Desligado, Ligado, Funcionando, Pausado.</p><p>Eventos: Abrir porta, Iniciar, Pausar, Tempo concluído.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
