@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aplicações de Fila</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Aplicações de Fila</h1>
+    <div>
+      <h2>🎯 Definições das Operações de Fila</h2><p>Esta página apresenta, de forma detalhada, as operações fundamentais de uma estrutura de dados Fila – desde funções que verificam seu estado até os procedimentos para inserir, remover e exibir elementos. Confira abaixo cada operação e exemplos práticos, inclusive com pseudocódigo e implementação em Java.</p><h2>🔎 Introdução</h2><p>A estrutura de dados Fila opera com o princípio FIFO (First-In, First-Out), onde o primeiro elemento a ser enfileirado é o primeiro a ser desenfileirado. As operações básicas garantem que os elementos sejam manipulados de forma organizada e segura.</p><h2>📌 Operações Básicas da Fila</h2><h2>1. Fila Vazia e Fila Cheia</h2><p>Fila Vazia</p><p>Fila Cheia</p><p>Pseudocódigo – Fila Vazia</p><p>lógico FilaVazia()</p><p>início_módulo</p><p>    se (total = 0) então</p><p>        retornar verdadeiro;</p><p>    senão</p><p>        retornar falso;</p><p>    fimse;</p><p>fim_módulo;</p><p>Pseudocódigo – Fila Cheia</p><p>lógico FilaCheia()</p><p>início_módulo</p><p>    se (total >= tamanho) então</p><p>        retornar verdadeiro;</p><p>    senão</p><p>        retornar falso;</p><p>    fimse;</p><p>fim_módulo;</p><h2>2. Enfileirar</h2><p>Enfileirar é um procedimento que insere um elemento no final da fila, desde que não esteja cheia.</p><p>Em filas circulares, se o ponteiro do final (fim) alcançar o final do vetor, ele é reiniciado para o início.</p><p>Pseudocódigo – Enfileirar</p><p>Enfileirar(elemento numérico_inteiro)</p><p>início_módulo</p><p>    se (não FilaCheia()) então</p><p>        vetor[fim] ← elemento;</p><p>        fim ← fim + 1;</p><p>        total ← total + 1;</p><p>        se (fim >= tamanho) então</p><p>            fim ← 0;</p><p>        fimse;</p><p>    senão</p><p>        escrever("Fila Cheia");</p><p>    fimse;</p><p>fim_módulo;</p><h2>3. Desenfileirar</h2><p>Desenfileirar é uma função que remove e retorna o elemento do início da fila.</p><p>Caso a fila esteja vazia, exibe uma mensagem de erro (por exemplo, “Fila Vazia”).</p><p>Pseudocódigo – Desenfileirar</p><p>numérico_inteiro Desenfileirar()</p><p>início_módulo</p><p>    declarar desenfileirado ← 0 numérico_inteiro;</p><p>    se (FilaVazia()) então</p><p>        escrever("Fila Vazia");</p><p>    senão</p><p>        desenfileirado ← vetor[inicio];</p><p>        inicio ← inicio + 1;</p><p>        total ← total - 1;</p><p>        se (inicio >= tamanho) então</p><p>            inicio ← 0;</p><p>        fimse;</p><p>    fimse;</p><p>    retornar desenfileirado;</p><p>fim_módulo;</p><h2>4. Elemento Início e Mostrar Fila</h2><p>Elemento Início</p><p>Mostrar Fila</p><p>Pseudocódigo – Elemento Início</p><p>ElementoInicio()</p><p>início_módulo</p><p>    se (não FilaVazia()) então</p><p>        escrever("O primeiro elemento da fila é ", vetor[inicio]);</p><p>    senão</p><p>        escrever("Fila Vazia");</p><p>    fimse;</p><p>fim_módulo;</p><p>Pseudocódigo – Mostrar Fila</p><p>MostrarFila()</p><p>início_módulo</p><p>    declarar i, aux numérico_inteiro;</p><p>    aux ← inicio;</p><p>    para i de 1 até total passo +1 faça</p><p>        escrever("Elemento ", vetor[aux], " posição ", i);</p><p>        aux ← aux + 1;</p><p>        se (aux >= tamanho) então</p><p>            aux ← 0;</p><p>        fimse;</p><p>    fimpara;</p><p>fim_módulo;</p><h2>💻 Implementação de Operações de Fila em Java</h2><p>A seguir, um exemplo de implementação em Java que demonstra as operações básicas de uma fila:</p><p>import javax.swing.*;</p><p>class Fila {</p><p>    int tamanho, inicio, fim, total;</p><p>    int[] vetor;</p><p>    Fila(int tam) {</p><p>        inicio = 0;</p><p>        fim = 0;</p><p>        total = 0;</p><p>        tamanho = tam;</p><p>        vetor = new int[tam];</p><p>    }</p><p>    public boolean FilaVazia() {</p><p>        return total == 0;</p><p>    }</p><p>    public boolean FilaCheia() {</p><p>        return total >= tamanho;</p><p>    }</p><p>    public void Enfileirar(int elemento) {</p><p>        if (!FilaCheia()) {</p><p>            vetor[fim] = elemento;</p><p>            fim = fim + 1;</p><p>            total = total + 1;</p><p>            if (fim >= tamanho) {</p><p>                fim = 0;</p><p>            }</p><p>        } else {</p><p>            System.out.println("Fila Cheia");</p><p>        }</p><p>    }</p><p>    public int Desenfileirar() {</p><p>        int desenfileirado = 0;</p><p>        if (FilaVazia()) {</p><p>            System.out.println("Fila Vazia");</p><p>        } else {</p><p>            desenfileirado = vetor[inicio];</p><p>            inicio = inicio + 1;</p><p>            total = total - 1;</p><p>            if (inicio >= tamanho) {</p><p>                inicio = 0;</p><p>            }</p><p>        }</p><p>        return desenfileirado;</p><p>    }</p><p>    public void ElementoInicio() {</p><p>        if (!FilaVazia()) {</p><p>            System.out.println("O primeiro elemento é " + vetor[inicio]);</p><p>        } else {</p><p>            System.out.println("Fila Vazia");</p><p>        }</p><p>    }</p><p>    public void MostrarFila() {</p><p>        int aux = inicio;</p><p>        for (int i = 1; i <= total; i++) {</p><p>            JOptionPane.showMessageDialog(null, "Elemento " + vetor[aux] + " posição " + i);</p><p>            aux = aux + 1;</p><p>            if (aux >= tamanho) {</p><p>                aux = 0;</p><p>            }</p><p>        }</p><p>    }</p><p>}</p><p>class ExemploPares {</p><p>    public static void main(String[] args) {</p><p>        Fila intFila = new Fila(10);</p><p>        int entrada;</p><p>        for (int i = 1; i <= 10; i++) {</p><p>            entrada = Integer.parseInt(JOptionPane.showInputDialog("Digite um valor inteiro"));</p><pre><code>            // Armazena apenas os números pares
+            if (entrada % 2 == 0) {
+                intFila.Enfileirar(entrada);
+            }
+        }
+        intFila.MostrarFila();
+        System.exit(0);
+    }
+}
+</code></pre><h2>🚀 Aplicando Filas em Problemas Práticos</h2><p>Exemplo de Algoritmo com Fila</p><p>Objetivo:</p><p>Desenvolver um algoritmo que receba dez números inteiros, armazene apenas os números pares em uma fila com capacidade para dez elementos e, em seguida, exiba os elementos da fila.</p><p>Fluxo do Algoritmo:</p><p>Verificar Fila Vazia:</p><p>Se a fila estiver vazia, exibir mensagem correspondente.</p><p>Enfileirar Elementos:</p><p>Inserir cada número par no final da fila.</p><p>Mostrar Fila:</p><p>Exibir todos os elementos em ordem.</p><p>Representação Visual do Funcionamento:</p><p>Imagens ilustrativas ajudam a compreender o fluxo, como a exibição do estado da fila após cada operação.</p><h2>📚 Referências Bibliográficas</h2><p>CORMEN, T. H.; LEISERSON, C. E.; RIVEST, R. L.; STEIN, C.Algoritmos: Teoria e Prática. 3ª ed., Editora Campus, 2012.</p><p>GOODRICH, M. T.; TAMASSIA, R.Estruturas de Dados & Algoritmos em Java. 5ª ed., Editora Grupo A: Bookman, 2013.</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
