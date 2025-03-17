@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Árvores Binárias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Árvores Binárias</h1>
+    <div>
+      <h2>🌳 Árvores Binárias de Busca (ABB)</h2><p>Estruturas eficientes para organização e busca de dados</p><h2>🌿 Introdução</h2><p>Árvore Binária de Busca (ABB) é uma estrutura hierárquica onde:</p><p>👈 Subárvore esquerda: Valores menores que o nó atual.</p><p>👉 Subárvore direita: Valores maiores/iguais que o nó atual.</p><p>Objetivo: Permitir buscas eficientes (O(log n) em casos balanceados).</p><p>Exemplo de inserção de letras em uma ABB</p><h2>🔧 Operações Básicas</h2><h2>➕ Inserção</h2><p>Passo a passo:</p><p># Pseudocódigo de inserção recursiva</p><p>def inserir(arvore, valor):</p><p>    if arvore is None:</p><p>        return NovoNo(valor)</p><p>    elif valor < arvore.valor:</p><p>        arvore.esq = inserir(arvore.esq, valor)</p><p>    else:</p><p>        arvore.dir = inserir(arvore.dir, valor)</p><p>    return arvore</p><h2>➖ Remoção</h2><p>Exemplo de remoção da raiz (E):</p><h2>🔍 Exibição</h2><pre><code>// Exemplo de exibição à esquerda
+void exibirEsquerdo(BIntNo arv) {
+    if (arv != null) {
+        exibirEsquerdo(arv.esq);
+        System.out.print(arv.valor + " ");
+    }
+}
+</code></pre><p>☕ Implementação em Java</p><p>Estrutura do Nó:</p><p>class BIntNo {</p><p>    int valor;</p><p>    BIntNo esq;</p><p>    BIntNo dir;</p><p>    public BIntNo(int valor) {</p><p>        this.valor = valor;</p><p>        esq = dir = null;</p><p>    }</p><p>}</p><p>Classe Principal:</p><p>public class ArvoreBinaria {</p><p>    private BIntNo raiz;</p><p>    public void inserirNo(int valor) {</p><p>        raiz = inserir(raiz, valor);</p><p>    }</p><p>    private BIntNo inserir(BIntNo no, int valor) {</p><p>        if (no == null) return new BIntNo(valor);</p><p>        if (valor < no.valor) no.esq = inserir(no.esq, valor);</p><p>        else no.dir = inserir(no.dir, valor);</p><p>        return no;</p><p>    }</p><p>}</p><p>Interface de inserção no NetBeans</p><h2>🖼️ Exemplos Práticos</h2><p>Inserção Sequencial:</p><p>Inserir E → A → O → I:</p><p>Remoção de Nós:</p><p>Folha (I): Remoção direta.</p><p>Nó Interno (O): Substituição por I.</p><p>Raiz (E): Substituição por I.</p><h2>📝 Exercícios</h2><p>Implemente uma ABB que insira [5, 3, 7, 1, 4] e exiba em-ordem.</p><p>Desenhe a árvore resultante após remover o nó 5 da árvore acima.</p><p><details></p><p><summary>🔍 Gabarito (clique para ver)</summary></p><p>Em-ordem: 1 → 3 → 4 → 5 → 7</p><p>Nova raiz: 7 (substituído pelo menor da direita).</p><p></details></p><h2>📚 Referências</h2><p>ASCENCIO, A. F. G. Estruturas de Dados em Java. Cap. 7.</p><p>CORMEN, T. H. Algoritmos: Teoria e Prática. Ed. Campus.</p><p>✨ Dica: Use /code no Notion para destacar snippets!</p><p>Acessibilidade: Pressione Ctrl+Alt+H para ajustar contraste.</p><h2>🛠 Recursos do Notion</h2><p>Adicione /callout para notas importantes.</p><p>Use /toggle para criar quizzes interativos.</p><p>Incorpore diagramas com /embed.</p><p>Esta página combina teoria, código e visualizações para um aprendizado completo sobre ABBs. Adapte com seus exemplos! 🚀</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
