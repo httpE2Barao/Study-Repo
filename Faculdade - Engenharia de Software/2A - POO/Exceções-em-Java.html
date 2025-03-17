@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exceções em Java</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Exceções em Java</h1>
+    <div>
+      <p>Esta página explora de forma aprofundada o conceito de exceções em Java, seus tipos e as melhores práticas para tratá-las. Mergulhe nos tópicos e descubra como garantir que seu programa lide de forma robusta com erros e condições excepcionais!</p><h2>📖 Introdução às Exceções em Java</h2><p>Exceções vs. Erros</p><p>O que é uma Exceção?</p><h2>🔍 Exceções Verificadas vs. Não Verificadas</h2><p>Exceções Verificadas (Checked Exceptions)</p><p>Exceções Não Verificadas (Unchecked Exceptions)</p><h2>🔧 Tratamento de Exceções: Try-Catch-Finally</h2><h2>🔹 Bloco Try-Catch</h2><p>try: Envolve o código que pode gerar uma exceção.</p><p>catch: Captura e trata a exceção lançada.</p><p>Exemplo: Divisão por Zero</p><p>try {</p><p>    int resultado = numerador / denominador;</p><p>    System.out.println("Resultado: " + resultado);</p><p>} catch (ArithmeticException e) {</p><p>    System.out.println("Erro: Divisão por zero não é permitida!");</p><p>}</p><h2>🔹 Tratamento de Múltiplas Exceções</h2><p>Utilize vários blocos catch para tratar exceções específicas.</p><p>Dica: Sempre ordene os blocos do mais específico para o mais genérico.</p><p>try {</p><pre><code>    // Código que pode lançar diferentes exceções
+} catch (NumberFormatException e) {
+    System.out.println("Erro: Formato numérico inválido!");
+} catch (ArithmeticException e) {
+    System.out.println("Erro: Operação aritmética inválida!");
+} catch (Exception e) {
+    System.out.println("Erro genérico: " + e.getMessage());
+}
+</code></pre><h2>🔹 Bloco Finally</h2><p>O bloco finally é executado independentemente de uma exceção ter sido lançada ou capturada.</p><p>É ideal para liberar recursos, como fechar conexões de banco de dados ou arquivos.</p><p>try {</p><pre><code>    // Código propenso a exceções
+} catch (Exception e) {
+    System.out.println("Ocorreu um erro: " + e.getMessage());
+} finally {
+    System.out.println("Executando o bloco finally para limpeza de recursos.");
+    // Exemplo: fechar conexões, arquivos, etc.
+}
+</code></pre><h2>🌀 Exceções Aninhadas (Nested Try-Catch)</h2><p>Conceito: Um bloco try pode estar dentro de outro bloco try.</p><p>Permite um tratamento granular das exceções, onde cada nível cuida de um tipo específico de erro.</p><p>try {</p><pre><code>    // Primeiro nível: código geral
+    try {
+        // Segundo nível: código específico (ex.: aritmético)
+    } catch (ArithmeticException a) {
+        System.out.println("Erro aritmético: " + a.getMessage());
+    }
+} catch (Exception e) {
+    System.out.println("Erro geral: " + e.getMessage());
+}
+</code></pre><h2>🛠️ Exceções Personalizadas</h2><p>Você pode criar suas próprias classes de exceção para oferecer mensagens mais específicas e tratar situações particulares do seu domínio de aplicação.</p><p>Exemplo:</p><p>public class MinhaExcecao extends Exception {</p><p>    public MinhaExcecao(String mensagem) {</p><p>        super(mensagem);</p><p>    }</p><p>}</p><pre><code>// Utilizando a exceção personalizada:
+if (condicaoIndesejada) {
+    throw new MinhaExcecao("Ocorreu um erro específico na aplicação!");
+}
+</code></pre><h2>💻 Exceções em Conexões de Banco de Dados</h2><p>Ao trabalhar com conexões JDBC, é fundamental usar try-catch-finally para garantir que as conexões sejam fechadas corretamente.</p><p>Exemplo Simplificado:</p><p>Connection con = null;</p><p>try {</p><p>    con = DriverManager.getConnection(url, user, password);</p><pre><code>    // Operações com o banco de dados
+} catch (SQLException e) {
+    System.out.println("Erro na conexão: " + e.getMessage());
+} finally {
+    try {
+        if (con != null) {
+            con.close();
+        }
+    } catch (SQLException e) {
+        System.out.println("Erro ao fechar a conexão: " + e.getMessage());
+    }
+}
+</code></pre><h2>📝 Boas Práticas e Considerações</h2><p>Sempre trate as exceções: Evite que erros inesperados interrompam a execução do seu programa.</p><p>Use finally para liberar recursos: Isso é vital para evitar vazamentos de memória e outros problemas.</p><p>Crie exceções personalizadas quando necessário: Permite mensagens mais claras e específicas para os usuários ou para o log do sistema.</p><p>Organize seu tratamento de exceções: Utilize vários blocos catch e exceções aninhadas conforme a complexidade do seu código.</p><h2>📚 Atividades Extras e Referências</h2><p>Atividade Extra:</p><p>Referências Bibliográficas:</p><h2>✅ Ir para Exercício</h2><p>Exercício 1: Implementar tratamento de divisão por zero.</p><p>Exercício 2: Criar exceção personalizada.</p><p>Exercício 3: Aninhar blocos try-catch para múltiplos tipos de exceção.</p><p>Exercício 4: Conectar a um banco de dados com tratamento de exceções.</p><p>Exercício 5: Refatorar código utilizando finally para limpeza de recursos.</p><p>Esse guia foi preparado para ajudar você a dominar o tratamento de exceções em Java. Explore, pratique e transforme erros em oportunidades de aprendizado! 🚀👨‍💻</p><p>Você pode copiar e colar essa estrutura no Notion e ajustar conforme suas necessidades. Boa prática e bons estudos!</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
