@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Usando Collection - Parte 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Usando Collection - Parte 2</h1>
+    <div>
+      <p>📚 Java Collections Framework - Parte 2: Mapas e Utilitários</p><h2>🗺️ Introdução aos Mapas em Java</h2><p>Mapas são estruturas chave-valor (como dicionários), ideais para buscas eficientes por chaves.</p><p>Principais características:</p><p>Chaves únicas, valores podem ser duplicados.</p><p>Não indexados por posição (busca pela chave).</p><p>Implementações: HashMap, LinkedHashMap, TreeMap.</p><h2>🔍 Tipos de Mapas e Aplicações</h2><h2>1. HashMap</h2><p>Ordenação: Não ordenado.</p><p>Performance: ⚡ Mais rápido (tabela hash).</p><p>Thread-Safety: ❌ Não sincronizado.</p><p>Uso Ideal: Quando a ordem não importa e busca rápida é essencial.</p><p>Exemplo:</p><p>HashMap<String, Integer> estoque = new HashMap<>();</p><p>estoque.put("Maçã", 50);</p><p>estoque.put("Banana", 30);</p><p>System.out.println(estoque.get("Maçã")); // 50</p><h2>2. LinkedHashMap</h2><p>Ordenação: Mantém ordem de inserção.</p><p>Performance: 🐢 Um pouco mais lento (lista encadeada + tabela hash).</p><p>Uso Ideal: Quando a ordem de inserção deve ser preservada.</p><p>Exemplo:</p><p>LinkedHashMap<Integer, String> alunos = new LinkedHashMap<>();</p><p>alunos.put(1, "Maria");</p><p>alunos.put(2, "Pedro");</p><p>System.out.println(alunos); // {1=Maria, 2=Pedro}</p><h2>3. TreeMap</h2><p>Ordenação: Chaves ordenadas (crescente/personalizada).</p><p>Performance: 🐢 Mais lento (árvore rubro-negra).</p><p>Uso Ideal: Quando é necessário ordenação natural ou personalizada.</p><p>Exemplo:</p><p>TreeMap<String, Integer> frutas = new TreeMap<>();</p><p>frutas.put("Laranja", 10);</p><p>frutas.put("Abacaxi", 5);</p><p>System.out.println(frutas); // {Abacaxi=5, Laranja=10}</p><h2>📊 Comparação Entre Mapas</h2><p>⚙️ Classe Collections (Utilitários)</p><p>Métodos estáticos para manipulação de coleções:</p><p>Métodos Principais:</p><p>sort(List): Ordena uma lista (ordem natural ou via Comparator).</p><p>reverse(List): Inverte a ordem dos elementos.</p><p>shuffle(List): Embaralha elementos aleatoriamente.</p><p>frequency(Collection, Object): Conta ocorrências de um elemento.</p><p>Exemplo de Ordenação:</p><p>List<String> nomes = new ArrayList<>(Arrays.asList("Zélia", "Ana", "Carlos"));</p><p>Collections.sort(nomes);</p><p>System.out.println(nomes); // [Ana, Carlos, Zélia]</p><h2>🚨 Cuidados Importantes</h2><p>HashMap vs. HashTable:</p><p>Ordenação no TreeMap:</p><h2>📌 Resumo de Métodos Úteis</h2><h2>🔗 Referências</h2><p>Documentação Oracle: Map</p><p>Vídeo: Ordenação com Collections</p><p>Domine os Mapas e utilitários para otimizar suas estruturas de dados em Java! 🚀</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
