@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modificadores de Acesso</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Modificadores de Acesso</h1>
+    <div>
+      <p>Programação Orientada a Objetos (POO) organiza código como entidades do mundo real. Em Java, tudo é representado por classes (modelos) e objetos (instâncias). Os modificadores de acesso controlam a visibilidade de atributos e métodos, garantindo encapsulamento e segurança! 🧰</p><h2>🔒 Encapsulamento: Por que é importante?</h2><p>Protege dados de acesso indevido.</p><p>Controla alterações com regras definidas.</p><p>Organiza o código limitando operações externas.</p><p>Exemplo de classe Pessoa:</p><p>public class Pessoa {</p><p>    private String nome; // 🔒 Atributo privado</p><p>    private int idade;</p><pre><code>    // Construtor
+    public Pessoa(String nome, int idade) {
+        setNome(nome); // Usa método para validar
+        setIdade(idade);
+    }
+</code></pre><pre><code>    // Métodos públicos para acesso (getters/setters)
+    public void setNome(String nome) {
+        if (nome != null) this.nome = nome;
+    }
+}
+</code></pre><h2>📚 Modificadores de Acesso</h2><h2>1. 🌐 Public</h2><p>Visibilidade: Ilimitada (classe, mesmo pacote, outros pacotes).</p><p>Uso Ideal: Métodos que precisam ser acessados globalmente.</p><p>Exemplo:</p><p>public class Calculadora {</p><p>    public int somar(int a, int b) { // 🌐 Método público</p><p>        return a + b;</p><p>    }</p><p>}</p><h2>2. 🔐 Private</h2><p>Visibilidade: Apenas na própria classe.</p><p>Uso Ideal: Atributos e métodos internos (ex: calcularMedia()).</p><p>Exemplo:</p><p>public class Aluno {</p><p>    private double[] notas; // 🔐 Atributo privado</p><p>    private double calcularMedia() { // 🔐 Método interno</p><pre><code>        // Lógica da média
+    }
+}
+</code></pre><h2>3. 🛡️ Protected</h2><p>Visibilidade: Classe atual, subclasses e mesmo pacote.</p><p>Cuidado: Pode causar alto acoplamento. Prefira getters/setters!</p><p>Exemplo:</p><p>public class Veiculo {</p><p>    protected String modelo; // 🛡️ Visível para subclasses</p><p>    protected void iniciarMotor() {</p><pre><code>        // Método acessível por herança
+    }
+}
+</code></pre><h2>4. 📦 Default (Pacote)</h2><p>Visibilidade: Classes do mesmo pacote (sem modificador explícito).</p><p>Não recomendado: Falta de controle. Prefira private + getters públicos.</p><p>Exemplo:</p><p>class Produto { // 📦 Modificador default (sem "public")</p><p>    int estoque; // Visível apenas no pacote</p><p>}</p><h2>📌 Tabela Comparativa</h2><h2>💡 Boas Práticas</h2><p>Atributos: Sempre use private + getters/setters públicos.</p><p>Métodos internos: Marque como private para ocultar implementação.</p><p>Herança: Evite protected excessivo. Use composição se possível.</p><p>Default: Evite! Priorize visibilidade explícita.</p><h2>🔗 Links Úteis</h2><p>Artigo: Getters e Setters (FreeCodeCamp)</p><p>Documentação Java (Oracle)</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
