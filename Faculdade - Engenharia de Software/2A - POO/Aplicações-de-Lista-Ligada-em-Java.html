@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aplicações de Lista Ligada em Java</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Aplicações de Lista Ligada em Java</h1>
+    <div>
+      <h2>🔍 Operações Avançadas</h2><h2>➕ Inserção no Meio</h2><p>public void InserirMeio(No novoNo, int posicao) {</p><p>    No temp = primeiro;</p><p>    int totalNos = ContarNos();</p><p>    if(posicao <= 1) {</p><p>        InserirInicio(novoNo);</p><p>    } else if(posicao > totalNos) {</p><p>        InserirFinal(novoNo);</p><p>    } else {</p><p>        for(int i=1; i < posicao-1; i++) {</p><p>            temp = temp.prox;</p><p>        }</p><p>        novoNo.prox = temp.prox;</p><p>        temp.prox = novoNo;</p><p>    }</p><p>}</p><p>Funcionamento:</p><p>Verifica posições extremas</p><p>Navega até a posição anterior</p><p>Ajusta os ponteiros:</p><h2>✂️ Remoção de Elementos</h2><p>public void Remover(double elemento) {</p><p>    if(primeiro.elemento == elemento) {</p><p>        primeiro = primeiro.prox;</p><p>    } else {</p><p>        No anterior = null;</p><p>        No atual = primeiro;</p><p>        while(atual != null && atual.elemento != elemento) {</p><p>            anterior = atual;</p><p>            atual = atual.prox;</p><p>        }</p><p>        if(atual != null) {</p><p>            anterior.prox = atual.prox;</p><p>            if(atual == ultimo) {</p><p>                ultimo = anterior;</p><p>            }</p><p>        }</p><p>    }</p><p>}</p><p>Casos Especiais:</p><p>Remoção do primeiro elemento</p><p>Remoção do último elemento</p><p>Elemento não encontrado</p><h2>🔎 Busca de Elementos</h2><p>public No BuscarNo(double elemento) {</p><p>    No temp = primeiro;</p><p>    int posicao = 1;</p><p>    while(temp != null) {</p><p>        if(temp.elemento == elemento) {</p><p>            System.out.println("Encontrado na posição: " + posicao);</p><p>            return temp;</p><p>        }</p><p>        posicao++;</p><p>        temp = temp.prox;</p><p>    }</p><p>    return null;</p><p>}</p><p>Complexidade: O(n) no pior caso</p><h2>🧩 Aplicação Prática: Filtro de Números</h2><p>Problema Proposto</p><p>[✅] Receber 10 números inteiros</p><p>[✅] Armazenar apenas divisíveis por 3</p><p>[✅] Lista pode ficar vazia</p><p>Solução em Java</p><pre><code>// Classe principal
+public class FiltroDiv3 {
+    public static void main(String[] args) {
+        ListaLigada lista = new ListaLigada();
+        Scanner input = new Scanner(System.in);
+</code></pre><p>        for(int i=0; i<10; i++) {</p><p>            System.out.print("Digite número " + (i+1) + ": ");</p><p>            int num = input.nextInt();</p><p>            if(num % 3 == 0) {</p><p>                lista.InserirFinal(new No(num));</p><p>            }</p><p>        }</p><p>        lista.MostrarLista();</p><p>    }</p><p>}</p><h2>🛠 Estrutura Completa da Lista</h2><p>Diagrama de Classes</p><p>classDiagram</p><p>    class No {</p><p>        +double elemento</p><p>        +No prox</p><p>        +No(double elem)</p><p>    }</p><p>    class ListaLigada {</p><p>        +No primeiro</p><p>        +No ultimo</p><p>        +ListaLigada()</p><p>        +InserirInicio(No)</p><p>        +InserirFinal(No)</p><p>        +Remover(double)</p><p>        +BuscarNo(double) No</p><p>        +MostrarLista()</p><p>    }</p><h2>💻 Implementação Completa</h2><p>Classe Node</p><p>public class No {</p><p>    public double elemento;</p><p>    public No prox;</p><p>    public No(double elemento) {</p><p>        this.elemento = elemento;</p><p>        this.prox = null;</p><p>    }</p><p>}</p><p>Classe LinkedList</p><p>public class ListaLigada {</p><p>    private No primeiro;</p><p>    private No ultimo;</p><pre><code>    // Construtor
+    public ListaLigada() {
+        primeiro = ultimo = null;
+    }
+</code></pre><pre><code>    // Demais métodos aqui...
+}
+</code></pre><h2>📝 Atividade Prática</h2><p>Exercício Proposto</p><p>[🎯] Implementar lista para números reais</p><p>[📥] Receber 5 números do usuário</p><p>[🔄] Inserir todos no final</p><p>[📤] Exibir lista completa</p><p>Passo a Passo:</p><p>Criar novo projeto Java</p><p>Implementar classes No e ListaLigada</p><p>Adicionar métodos básicos:</p><p>Testar com valores decimais</p><h2>📌 Dicas Importantes</h2><p>Boas Práticas</p><h2>1. [🔒] Sempre verificar lista vazia</h2><h2>2. [🔄] Atualizar ponteiro último nas remoções</h2><h2>3. [🧹] Permitir coleta de lixo (GC)</h2><h2>4. [✅] Validar entradas do usuário</h2><p>Erros Comuns</p><p>- [❌] Esquecer de atualizar múltiplos ponteiros</p><p>- [❌] Acessar elemento de nó nulo</p><p>- [❌] Loop infinito em navegação</p><h2>📚 Recursos Adicionais</h2><p>Formatação Notion:</p><p>Use toggle blocks para detalhes de implementação</p><p>Adicione tags: #lista-ligada #java #estrutura-de-dados</p><p>Inclua ícones em títulos para melhor navegação</p><p>Utilize callouts para dicas e avisos importantes</p><pre><code>// Exemplo de código em toggle block
+public void MostrarLista() {
+    No temp = primeiro;
+    while(temp != null) {
+        System.out.print(temp.elemento + " -> ");
+        temp = temp.prox;
+    }
+    System.out.println("null");
+}
+</code></pre>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
