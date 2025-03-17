@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Usando Collection - Parte 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Usando Collection - Parte 1</h1>
+    <div>
+      <h2>📚 Java Collections Framework</h2><p>Estruturas de dados poderosas para organizar e manipular grupos de objetos!</p><h2>🧩 Introdução às Coleções</h2><p>O que são?</p><p>Objetos que encapsulam estruturas de dados, oferecendo métodos para adicionar, remover, buscar e iterar elementos.</p><p>Benefícios:</p><h2>📜 Principais Interfaces e Classes</h2><h2>1. List (Listas)</h2><p>Características:</p><p>Exemplo ArrayList:</p><p>ArrayList<String> frutas = new ArrayList<>();</p><p>frutas.add("Maçã");</p><p>frutas.add(1, "Banana"); // Adiciona no índice 1</p><p>System.out.println(frutas.get(0)); // "Maçã"</p><h2>2. Set (Conjuntos)</h2><p>Características:</p><p>Exemplo HashSet:</p><p>HashSet<Integer> numeros = new HashSet<>();</p><p>numeros.add(10);</p><p>numeros.add(10); // Ignorado (duplicado)</p><p>System.out.println(numeros.size()); // 1</p><h2>3. Map (Mapas)</h2><p>Características:</p><p>Exemplo HashMap:</p><p>HashMap<String, Integer> estoque = new HashMap<>();</p><p>estoque.put("Maçã", 50);</p><p>estoque.put("Banana", 30);</p><p>System.out.println(estoque.get("Maçã")); // 50</p><h2>🔄 Iteradores (Iterator)</h2><p>Para que servem?</p><p>Percorrer elementos de uma coleção de forma uniforme, independente da implementação.</p><p>Exemplo:</p><p>Iterator<String> it = frutas.iterator();</p><p>while(it.hasNext()) {</p><p>    System.out.println(it.next());</p><p>}</p><h2>📊 Comparadores (Comparator)</h2><p>Função:</p><p>Definir critérios personalizados de ordenação.</p><p>Exemplo de ordenação decrescente:</p><p>Comparator<Integer> comparatorDecrescente = (a, b) -> b - a;</p><p>TreeSet<Integer> numerosOrdenados = new TreeSet<>(comparatorDecrescente);</p><p>numerosOrdenados.addAll(Arrays.asList(5, 1, 3));</p><p>System.out.println(numerosOrdenados); // [5, 3, 1]</p><p>⚡ ArrayList vs LinkedList</p><h2>🌳 TreeSet vs LinkedHashSet</h2><h2>🛠 Métodos Úteis</h2><p>ArrayList</p><p>add(elemento): Adiciona um elemento.</p><p>remove(índice): Remove pelo índice.</p><p>contains(elemento): Verifica existência.</p><p>HashSet</p><p>addAll(coleção): Adiciona múltiplos elementos.</p><p>retainAll(coleção): Mantém apenas elementos comuns.</p><p>TreeSet</p><p>first(): Retorna o primeiro elemento.</p><p>last(): Retorna o último elemento.</p><h2>🚨 Cuidados e Boas Práticas</h2><p>Prefira ArrayList a Vector (a menos que precise de thread-safety).</p><p>Use LinkedList para inserções/remoções frequentes no meio da lista.</p><p>Evite duplicatas? Escolha HashSet, TreeSet ou LinkedHashSet.</p><h2>📊 Resumo das Coleções</h2><h2>🔗 Recursos Adicionais</h2><p>Documentação Oracle: Java Collections</p><p>Vídeo: Dominando Collections</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
