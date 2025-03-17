@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exceções Direcionadas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Exceções Direcionadas</h1>
+    <div>
+      <p>Domine a criação e tratamento de erros específicos em suas aplicações!</p><h2>📌 Introdução e Conceitos</h2><p>⚡ O que são?</p><p>Exceções criadas por você para representar erros específicos do seu domínio, herdando de Exception ou subclasses.</p><h2>🎯 Por que usar?</h2><p>Representar problemas únicos da sua aplicação</p><p>Organizar erros em hierarquias claras</p><p>Facilitar tratamento granular de falhas</p><p>public class SaldoContaException extends Exception { // 🎯 Exemplo</p><pre><code>    // Implementação personalizada
+}
+</code></pre><h2>🔧 Implementação Passo a Passo</h2><h2>📥 1. Criando a Classe de Exceção</h2><p>public class SaldoContaException extends Exception {</p><p>    private float saldoConta;</p><pre><code>    // 🛠️ Construtor com mensagem personalizada
+    public SaldoContaException(float saldo) {
+        super("Saldo excedeu o limite! Valor: " + saldo);
+        this.saldoConta = saldo;
+    }
+</code></pre><p>    public float getSaldoConta() { return saldoConta; }</p><p>}</p><h2>🚨 2. Declarando e Lançando a Exceção</h2><p>public float adicionaValor(float montante) throws SaldoContaException {</p><p>    float total = saldoAtual + montante;</p><p>    if (total > 20000) {</p><p>        throw new SaldoContaException(total); // 💥 Lançando exceção</p><p>    }</p><p>    return total;</p><p>}</p><h2>🛡️ 3. Tratando a Exceção</h2><p>try {</p><p>    float valorTotal = conta.adicionaValor(novoValor);</p><p>} catch (SaldoContaException e) {</p><p>    System.out.println("Erro: " + e.getMessage());</p><pre><code>    // 🏦 Lógica para criar depósito fixo
+}
+</code></pre><h2>✅ Boas Práticas</h2><p>🎯 Seja específico: Crie exceções para cada tipo de erro relevante</p><p>📚 Hierarquia: Organize exceções em classes pai/filho (ex: FinanceiroException → SaldoException)</p><p>📝 Mensagens claras: Descreva o erro de forma autoexplicativa</p><p>🧹 Não abuse: Use apenas para casos excepcionais, não para fluxo normal</p><h2>🌐 Propagação de Exceções</h2><p>graph LR</p><p>    A[Método X] -->|lança exceção| B[Método Y]</p><p>    B -->|propaga| C[Método Z]</p><p>    C -->|trata com try-catch| D[Resolução]</p><h2>🛠️ Exemplo Prático: Sistema Bancário</h2><h2>💻 Código Completo</h2><pre><code>// ✅ Implementação da exceção
+class SaldoContaException extends Exception {
+    // ... (construtores e métodos)
+}
+</code></pre><pre><code>// 🏦 Classe principal
+public class GerenciaConta {
+    public static void main(String[] args) {
+        // ... (lógica com try-catch)
+    }
+</code></pre><p>    public float adicionaValor(float montante) throws SaldoContaException {</p><pre><code>        // ... (validação e lançamento)
+    }
+}
+</code></pre><h2>🖥️ Saída do Programa</h2><p>Por favor, insira um valor: 6000</p><p>Agora, o saldo da sua conta é superior a 20.000!</p><p>Criando FD no valor de: 1000.0</p><h2>📚 Recursos Adicionais</h2><h2>🎥 Vídeo Aula: Exceções Personalizadas na Prática</h2><h2>📖 Livros Recomendados:</h2>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
