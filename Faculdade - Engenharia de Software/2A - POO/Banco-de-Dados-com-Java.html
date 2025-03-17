@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Banco de Dados com Java</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+    pre {
+      background-color: #00000;
+      color: #fffff;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Banco de Dados com Java</h1>
+    <div>
+      <p>Esta página reúne conceitos, práticas e exemplos de bancos de dados e a integração com aplicações Java via JDBC. Explore os tópicos abaixo e marque seus aprendizados!</p><h2>📚 Introdução aos Bancos de Dados</h2><p>Existem diversos fornecedores de bancos de dados relacionais, como Oracle, MySQL, PostgreSQL e Aurora.</p><p>Esses bancos de dados armazenam informações em tabelas e são amplamente utilizados no mercado.</p><h2>🛠️ SGBDs e Interação com Bancos de Dados</h2><p>SGBD (Sistema de Gerenciamento de Banco de Dados):</p><p>Em vez de acessar diretamente o banco, utiliza-se um SGBD para gerenciar, organizar e proteger os dados – como um almoxarifado com um almoxarife.</p><h2>🔌 Conexão com Banco de Dados em Java usando JDBC</h2><p>JDBC (Java Database Connectivity):</p><p>Uma API que atua como uma ponte entre sua aplicação Java e o banco de dados.</p><p>Para conectar, é necessário:</p><p>⚙️ Preparando o Ambiente para Conexão JDBC</p><p>Passos iniciais:</p><h2>💾 Persistência de Dados e Operações CRUD</h2><p>CRUD:</p><p>Abreviação para as operações de Create (inclusão), Retrieve (consulta), Update (atualização) e Delete (exclusão).</p><p>Essas operações permitem manipular os dados armazenados no banco.</p><h2>🔗 Conectando ao Banco de Dados com Java</h2><p>Para conectar:</p><h2>🛡️ Inclusão e Atualização com PreparedStatement</h2><p>PreparedStatement:</p><p>Permite a parametrização das consultas, utilizando interrogações (?) para inserir valores de forma segura, evitando SQL Injection.</p><p>Use-o tanto para inserir (INSERT) quanto para atualizar (UPDATE) dados.</p><h2>📖 Leitura de Dados com ResultSet</h2><p>ResultSet:</p><p>Responsável por armazenar os resultados de uma consulta SQL (SELECT).</p><p>Principais pontos:</p><h2>❌ Exclusão de Dados com DELETE</h2><p>Para excluir dados, utilize a instrução SQL DELETE com a cláusula WHERE para especificar os registros que serão removidos.</p><h2>🔍 Boas Práticas e Padrões de Projeto</h2><p>Encapsulamento:</p><p>Organize as operações de banco de dados em classes separadas.</p><p>Padrões de Projeto:</p><p>Adote padrões como o DAO (Data Access Object) e DAO Factory para facilitar a manutenção e escalabilidade da aplicação.</p><h2>🖥️ JDBC: Conceitos e Arquitetura</h2><h2>🤔 O que é o JDBC?</h2><p>API Java padrão que permite a comunicação entre uma aplicação e diversas bases de dados.</p><p>Possibilita a escrita de programas independentes do SGBD utilizado.</p><h2>📦 Principais Funções do JDBC</h2><p>Conexão: Estabelecer comunicação com o banco.</p><p>Execução: Enviar e executar comandos SQL.</p><p>Manipulação: Recuperar e manipular os dados retornados.</p><p>Portabilidade: Código que funciona com diferentes SGBDs, desde que o driver esteja disponível.</p><h2>🏗️ Arquitetura Básica do JDBC</h2><p>API JDBC: Liga a aplicação ao DriverManager.</p><p>DriverManager: Gerencia e escolhe o driver adequado para a conexão.</p><p>Driver JDBC: Conecta o DriverManager ao banco de dados.</p><p>⚙️ Passos para Estabelecer Conexão JDBC</p><h2>🔧 1. Importar os Pacotes Necessários</h2><p>import java.sql.*;      // Para operações JDBC</p><p>import java.math.*;     // Suporte a BigDecimal e BigInteger</p><h2>🔧 2. Registrar o Driver JDBC</h2><p>Abordagem I:</p><p>Abordagem II:</p><h2>🔧 3. Formular a URL do Banco de Dados</h2><p>Exemplo para Oracle:</p><h2>🔧 4. Criar o Objeto de Conexão</h2><p>Connection con = DriverManager.getConnection(</p><p>    "jdbc:oracle:thin:@192.0.0.1:1521:FUNC", "username", "password"</p><p>);</p><h2>🔧 5. Fechar a Conexão</h2><p>Sempre feche a conexão para liberar os recursos:</p><h2>📝 Manipulação de Dados com JDBC</h2><h2>🖊️ Executando Instruções SQL</h2><p>Statement:</p><p>Crie um statement e execute comandos SQL:</p><p>PreparedStatement:</p><p>Para comandos parametrizados:</p><h2>🔍 Trabalhando com ResultSet</h2><p>Para ler os resultados de uma consulta:</p><p>Lembre-se de fechar tanto o ResultSet quanto o Statement após o uso.</p><h2>📚 Conceitos Adicionais sobre Bancos de Dados</h2><h2>🔄 Modelo Relacional</h2><p>Proposto por: E.F. Codd (1970)</p><p>Características:</p><h2>🔀 Bases de Dados Não Relacionais (NoSQL)</h2><p>Características:</p><p>Exemplos:</p><p>MongoDB, Cassandra, Redis, Neo4j.</p><h2>🔗 Referências e Atividades Extras</h2><p>Atividade Extra:</p><p>Referências Bibliográficas:</p>
+    </div>
+  </div>
+  <script>
+    console.log("Página carregada com sucesso!");
+  </script>
+</body>
+</html>
